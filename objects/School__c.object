@@ -154,6 +154,49 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Class__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Student Class ?</inlineHelpText>
+        <label>Class</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Parent Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Student_Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Email</inlineHelpText>
+        <label>Student Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Student_Name__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>New Student</inlineHelpText>
+        <label>Student Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
     <nameField>
         <label>School Name</label>
