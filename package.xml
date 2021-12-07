@@ -2,10 +2,13 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>School__c.Class__c</members>
-        <members>School__c.Parent_Details__c</members>
-        <members>School__c.Student_Email__c</members>
-        <members>School__c.Student_Name__c</members>
+        <members>School__c.Contact_Number__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>School__c-New Student</members>
+        <members>School__c-School Layout</members>
+        <name>Layout</name>
     </types>
     <version>53.0</version>
 </Package>
