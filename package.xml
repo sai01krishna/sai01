@@ -5,10 +5,5 @@
         <members>School__c-School Layout</members>
         <name>Layout</name>
     </types>
-    <types>
-        <members>Admin</members>
-        <members>Indus EM High School</members>
-        <name>Profile</name>
-    </types>
     <version>53.0</version>
 </Package>
