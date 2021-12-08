@@ -284,6 +284,16 @@
         </valueSet>
         <visibleLines>4</visibleLines>
     </fields>
+    <fields>
+        <fullName>Test_Connection_beharvior__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Connection beharvior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
     <nameField>
         <label>School Name</label>
