@@ -290,6 +290,11 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Schools</pluralLabel>
+    <recordTypes>
+        <fullName>New_Student</fullName>
+        <active>true</active>
+        <label>New Student</label>
+    </recordTypes>
     <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
