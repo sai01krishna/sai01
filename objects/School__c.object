@@ -176,6 +176,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CT_2__c</fullName>
+        <externalId>false</externalId>
+        <label>CT 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Class__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Student Class ?</inlineHelpText>
