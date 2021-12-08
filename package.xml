@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>School__c.Age__c</members>
-        <members>School__c.Class__c</members>
-        <members>School__c.Promoted_To__c</members>
-        <members>School__c.Studying__c</members>
-        <members>School__c.Subjects__c</members>
-        <name>CustomField</name>
+        <members>School__c.New_Student</members>
+        <name>RecordType</name>
     </types>
     <version>53.0</version>
 </Package>
