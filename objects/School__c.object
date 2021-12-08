@@ -155,6 +155,17 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Class__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Student Class ?</inlineHelpText>
@@ -186,6 +197,19 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Promoted_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>Class__c  + 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Promoted To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Student_Email__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Email</inlineHelpText>
@@ -205,6 +229,60 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Studying__c</fullName>
+        <externalId>false</externalId>
+        <formula>Age__c  - 5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formula field</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subjects__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Student can choose the subjects</inlineHelpText>
+        <label>Subjects</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English,</fullName>
+                    <default>false</default>
+                    <label>English,</label>
+                </value>
+                <value>
+                    <fullName>Hindi,</fullName>
+                    <default>false</default>
+                    <label>Hindi,</label>
+                </value>
+                <value>
+                    <fullName>Maths,</fullName>
+                    <default>false</default>
+                    <label>Maths,</label>
+                </value>
+                <value>
+                    <fullName>Science.</fullName>
+                    <default>false</default>
+                    <label>Science.</label>
+                </value>
+                <value>
+                    <fullName>Social,</fullName>
+                    <default>false</default>
+                    <label>Social,</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
     </fields>
     <label>School</label>
     <nameField>
