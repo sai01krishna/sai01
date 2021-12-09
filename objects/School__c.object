@@ -314,6 +314,16 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>ct3__c</fullName>
+        <externalId>false</externalId>
+        <label>ct3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
     <nameField>
         <label>School Name</label>
