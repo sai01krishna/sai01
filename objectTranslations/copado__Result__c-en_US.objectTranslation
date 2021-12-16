@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- This field is updated automatically by Copado. --></help>
+        <label><!-- Apex Callback --></label>
+        <name>copado__ApexCallback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Function Used Credits --></label>
+        <name>copado__Custom_Function_Used_Credits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Function Used Minutes --></label>
+        <name>copado__Custom_Function_Used_Minutes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to track multi-step deployment overall results. --></help>
+        <label><!-- Deployment --></label>
+        <name>copado__Deployment__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total time duration of the job. Use this value to track job performance. --></help>
+        <label><!-- Duration (in seconds) --></label>
+        <name>copado__Duration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date time when the job ended. --></help>
+        <label><!-- End Time --></label>
+        <name>copado__End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Code --></label>
+        <name>copado__Error_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>copado__Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Function Worker Size --></label>
+        <name>copado__Function_Worker_Size__c</name>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M</masterLabel>
+            <translation><!-- M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S</masterLabel>
+            <translation><!-- S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XL</masterLabel>
+            <translation><!-- XL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Copado Function that triggered this result. --></help>
+        <label><!-- Function --></label>
+        <name>copado__Function__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Job Step --></label>
+        <name>copado__JobStep__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Unique identifier for the jobs. This is as an External Id for mapping this result with an external job. --></help>
+        <label><!-- Job Id --></label>
+        <name>copado__Job_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Type --></label>
+        <name>copado__Job_Type__c</name>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Link to open more information about the results. --></help>
+        <label><!-- Link --></label>
+        <name>copado__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentId --></label>
+        <name>copado__ParentId__c</name>
+    </fields>
+    <fields>
+        <help><!-- This status is used to track the current job activity. --></help>
+        <label><!-- Progress Status --></label>
+        <name>copado__Progress_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to track job results triggered from promotion events. --></help>
+        <label><!-- Promotion --></label>
+        <name>copado__Promotion__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Result Data --></label>
+        <name>copado__Result_Data__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date time when the job started. --></help>
+        <label><!-- Start Time --></label>
+        <name>copado__Start_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Current status of the result. Confirms if the result is pending or completed. --></help>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test --></label>
+        <name>copado__Test__c</name>
+        <relationshipLabel><!-- Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Timeout --></label>
+        <name>copado__Timeout__c</name>
+    </fields>
+    <fields>
+        <help><!-- User story that originated the result. --></help>
+        <label><!-- User Story --></label>
+        <name>copado__User_Story__c</name>
+        <relationshipLabel><!-- Result --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>
