@@ -26,4 +26,14 @@
         <default>false</default>
         <label>Other</label>
     </standardValue>
+    <standardValue>
+        <fullName>Poduct Specifications</fullName>
+        <default>false</default>
+        <label>Poduct Specifications</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shipping</fullName>
+        <default>false</default>
+        <label>Shipping</label>
+    </standardValue>
 </StandardValueSet>
