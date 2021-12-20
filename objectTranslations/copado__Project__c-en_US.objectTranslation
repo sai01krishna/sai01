@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- If working with Copado Change Management, the Project must be linked to a Pipeline. --></help>
+        <label><!-- Pipeline --></label>
+        <name>copado__Deployment_Flow__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>copado__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Tabs from Promotion Page --></label>
+        <name>copado__Exclude_Tabs_from_Promotion_Page__c</name>
+        <picklistValues>
+            <masterLabel>Promotion User Story Metadata</masterLabel>
+            <translation><!-- Promotion User Story Metadata --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selenium Test</masterLabel>
+            <translation><!-- Selenium Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Static Code Analysis Summary</masterLabel>
+            <translation><!-- Static Code Analysis Summary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- When this field is checked, Copado will index the metadata selected against the user stories into the User Story Metadata custom object. Indexed metadata can be used for reporting and compliance, and it&apos;s also used by Copado overlap awareness feature. --></help>
+        <label><!-- Index Metadata --></label>
+        <name>copado__Index_Metadata__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>copado__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned</masterLabel>
+            <translation><!-- Planned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Copado Integration Setting --></label>
+        <name>copadoccmint__Copado_Integration_Setting__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enable to sync User Stories assigned to community users. --></help>
+        <label><!-- Enable Community Users --></label>
+        <name>copadoccmint__Enable_Community_User__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you are fetching more then 500 records from the third party platform, we recommend you to disable this checkbox to be able to prevent heap size too large issue. --></help>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you want to add an additional filter to your JIRA callout, you can just modify this field.
+Usage exp: issueType=Story and resolution=Duplicate --></help>
+        <label><!-- JQL Extended Filter --></label>
+        <name>copadoccmint__JQL_Extended_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project External Id --></label>
+        <name>copadoccmint__Project_External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- If in case, you are getting too many callout issue due to more number of User Stories per Sprint or due to more number of sprint.
+    You can reduce the batch size in this field. --></help>
+        <label><!-- Sprint Per Batch Chunk Size --></label>
+        <name>copadoccmint__Sprint_Per_Batch_Chunk_Size__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comma separated Team Name/Id to fetch Team sprints. Exp: Frontend Team,Backend Team,QA Team --></help>
+        <label><!-- Team Info --></label>
+        <name>copadoccmint__Team_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workspace Id --></label>
+        <name>copadoccmint__Workspace_Id__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Sync_External_User_Stories --></label>
+        <name>copadoccmint__Sync_External_User_Stories</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sync_External_User_Stories_With_Sprint --></label>
+        <name>copadoccmint__Sync_External_User_Stories_With_Sprint</name>
+    </webLinks>
+</CustomObjectTranslation>
