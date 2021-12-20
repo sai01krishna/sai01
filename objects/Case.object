@@ -196,6 +196,26 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
+    <businessProcesses>
+        <fullName>Inquiry Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
