@@ -1,0 +1,15 @@
+<apex:page standardController="copado__Deployment__c" extensions="copado.DW_IntermediaryExtension" id="DW_Intermediary" lightningStylesheets="true" sideBar="false" docType="html-5.0" title="Deployment Intermediary">
+    <apex:slds />
+    <c:IncludeStaticsResourceComponent addJQuery="true" addUIjs="true" />
+    <apex:includeScript value="{!$Resource.copado__DW_javascript}" />
+    <script>
+        $copado(document).ready(() => {
+            lockScreen();
+            redirectToCorrectPage();
+        });
+    </script>
+    <apex:form >
+        <c:CopadoSpinner />
+        <apex:actionFunction name="redirectToCorrectPage" action="{!goToCorrespondingDeploymentPage}" onComplete="unlockScreen();" reRender="noNeedRender" />
+    </apex:form>
+</apex:page>

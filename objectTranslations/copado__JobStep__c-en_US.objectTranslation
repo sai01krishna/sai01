@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Api Name --></label>
+        <name>copado__ApiName__c</name>
+    </fields>
+    <fields>
+        <label><!-- ConfigJson --></label>
+        <name>copado__ConfigJson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Type --></label>
+        <name>copado__CustomType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Destination Id --></label>
+        <name>copado__Destination_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Execution Sequence --></label>
+        <name>copado__ExecutionSequence__c</name>
+        <picklistValues>
+            <masterLabel>after</masterLabel>
+            <translation><!-- after --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>before</masterLabel>
+            <translation><!-- before --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Git Repository --></label>
+        <name>copado__Git_Repository__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Execution --></label>
+        <name>copado__JobExecution__c</name>
+        <relationshipLabel><!-- Job Steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Job Template --></label>
+        <name>copado__JobTemplate__c</name>
+        <relationshipLabel><!-- Job Steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>copado__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Owner Id --></label>
+        <name>copado__Parent_Owner_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pipeline Id --></label>
+        <name>copado__Pipeline_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Data Json --></label>
+        <name>copado__ResultDataJson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result --></label>
+        <name>copado__Result__c</name>
+        <relationshipLabel><!-- Job Steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source Id --></label>
+        <name>copado__Source_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>copado__Type__c</name>
+        <picklistValues>
+            <masterLabel>Flow</masterLabel>
+            <translation><!-- Flow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Function</masterLabel>
+            <translation><!-- Function --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User Story --></label>
+        <name>copado__UserStory__c</name>
+        <relationshipLabel><!-- Deployment Steps --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Execution Sequence is required for Deployment steps --></errorMessage>
+        <name>copado__Execution_Sequence_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JobTemplate, Execution, or User Story is required --></errorMessage>
+        <name>copado__Template_OR_Execution_Is_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

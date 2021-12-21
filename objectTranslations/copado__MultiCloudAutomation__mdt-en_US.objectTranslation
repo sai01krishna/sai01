@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- DeployAPIName --></label>
+        <name>copado__DeployAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PackageImportAPIName --></label>
+        <name>copado__PackageImportAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PackageVersionCreateApiName --></label>
+        <name>copado__PackageVersionCreateApiName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PlatformName --></label>
+        <name>copado__PlatformName__c</name>
+    </fields>
+    <fields>
+        <label><!-- PromoteAPIName --></label>
+        <name>copado__PromoteAPIName__c</name>
+    </fields>
+</CustomObjectTranslation>

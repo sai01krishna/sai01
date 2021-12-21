@@ -230,6 +230,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Roll_back_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Roll back 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Student_Email__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Email</inlineHelpText>
@@ -303,6 +313,16 @@
             </valueSetDefinition>
         </valueSet>
         <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Test_956__c</fullName>
+        <externalId>false</externalId>
+        <label>Test_956</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Test_Connection_beharvior__c</fullName>
