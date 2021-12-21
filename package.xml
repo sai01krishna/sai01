@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>School__c.CT_1__c</members>
-        <name>CustomField</name>
+        <members>School__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
-        <members>de</members>
-        <name>Translations</name>
+        <members>School_object</members>
+        <name>PermissionSet</name>
     </types>
     <version>53.0</version>
 </Package>
