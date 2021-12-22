@@ -166,6 +166,26 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CT_1__c</fullName>
+        <externalId>false</externalId>
+        <label>CT 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CT_2__c</fullName>
+        <externalId>false</externalId>
+        <label>CT 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Class__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Student Class ?</inlineHelpText>
@@ -185,6 +205,16 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Coonection_behavior__c</fullName>
+        <externalId>false</externalId>
+        <label>Coonection behavior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Parent_Details__c</fullName>
@@ -207,6 +237,16 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Roll_back_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Roll back 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -283,6 +323,36 @@
             </valueSetDefinition>
         </valueSet>
         <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Test_Connection_beharvior__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Connection beharvior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ct3__c</fullName>
+        <externalId>false</externalId>
+        <label>ct3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ct4__c</fullName>
+        <externalId>false</externalId>
+        <label>ct4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <label>School</label>
     <nameField>
