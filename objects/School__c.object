@@ -207,6 +207,16 @@
         <type>Phone</type>
     </fields>
     <fields>
+        <fullName>Coonection_behavior__c</fullName>
+        <externalId>false</externalId>
+        <label>Coonection behavior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Parent_Details__c</fullName>
         <externalId>false</externalId>
         <label>Parent Details</label>
