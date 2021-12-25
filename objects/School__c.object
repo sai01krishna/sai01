@@ -217,6 +217,14 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Primary_contact_disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary contact disable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Promoted_To__c</fullName>
         <externalId>false</externalId>
         <formula>Class__c  + 1</formula>
