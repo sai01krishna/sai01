@@ -57,7 +57,7 @@
                 <behavior>Edit</behavior>
                 <field>Website</field>
             </layoutItems>
-            <layoutItems>
+            <layoutItems> //test
                 <behavior>Edit</behavior>
                 <field>TickerSymbol</field>
             </layoutItems>
