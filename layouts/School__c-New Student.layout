@@ -26,6 +26,7 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Age__c</field>
+                <field>Ake__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
