@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Indus_EM_High_School_profilePasswordPolicy1640057960065</members>
-        <name>ProfilePasswordPolicy</name>
+        <members>School__c-New Student</members>
+        <name>Layout</name>
     </types>
     <version>53.0</version>
 </Package>
