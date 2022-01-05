@@ -142,7 +142,7 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <showEmailCheckbox>false</showEmailCheckbox>
+    <showEmailCheckbox>true</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
