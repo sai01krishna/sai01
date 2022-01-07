@@ -4,5 +4,9 @@
         <members>School__c.Roll_back_2__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>CaseType</members>
+        <name>StandardValueSet</name>
+    </types>
     <version>53.0</version>
 </Package>
