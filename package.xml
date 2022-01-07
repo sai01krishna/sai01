@@ -4,5 +4,9 @@
         <members>School__c-New Student</members>
         <name>Layout</name>
     </types>
+    <types>
+        <members>CaseType</members>
+        <name>StandardValueSet</name>
+    </types>
     <version>53.0</version>
 </Package>
