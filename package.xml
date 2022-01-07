@@ -4,5 +4,9 @@
         <members>CaseType</members>
         <name>StandardValueSet</name>
     </types>
+    <types>
+        <members>CaseType</members>
+        <name>StandardValueSet</name>
+    </types>
     <version>53.0</version>
 </Package>
