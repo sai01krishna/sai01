@@ -166,6 +166,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CDC_without_uat__c</fullName>
+        <externalId>false</externalId>
+        <label>CDC without uat</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CT_1__c</fullName>
         <externalId>false</externalId>
         <label>CT 1</label>
@@ -207,6 +217,16 @@
         <type>Phone</type>
     </fields>
     <fields>
+        <fullName>Coonection_behavior__c</fullName>
+        <externalId>false</externalId>
+        <label>Coonection behavior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Parent_Details__c</fullName>
         <externalId>false</externalId>
         <label>Parent Details</label>
@@ -215,6 +235,14 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_contact_disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary contact disable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Promoted_To__c</fullName>
@@ -313,6 +341,16 @@
             </valueSetDefinition>
         </valueSet>
         <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Test_956__c</fullName>
+        <externalId>false</externalId>
+        <label>Test_956</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Test_Connection_beharvior__c</fullName>
