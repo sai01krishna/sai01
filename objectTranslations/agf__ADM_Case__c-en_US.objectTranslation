@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account ID --></label>
+        <name>agf__Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>agf__Account_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>agf__Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Red Account Stage --></label>
+        <name>agf__Account_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Support SBR Category --></label>
+        <name>agf__Account_Support_SBR_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age (Days) --></label>
+        <name>agf__Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Created --></label>
+        <name>agf__Case_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case ID Set --></label>
+        <name>agf__Case_ID_Set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case ID --></label>
+        <name>agf__Case_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Number --></label>
+        <name>agf__Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Owner ID --></label>
+        <name>agf__Case_Owner_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Owner --></label>
+        <name>agf__Case_Owner_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Owner --></label>
+        <name>agf__Case_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Reason --></label>
+        <name>agf__Case_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Status --></label>
+        <name>agf__Case_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>agf__Case_Subject_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Subject --></label>
+        <name>agf__Case_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cases Link --></label>
+        <name>agf__Cases_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed --></label>
+        <name>agf__Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/Time Closed --></label>
+        <name>agf__Date_Time_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Escalated Status --></label>
+        <name>agf__Escalated_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Functional Area --></label>
+        <name>agf__FunctionalArea__c</name>
+    </fields>
+    <fields>
+        <label><!-- General Application Area --></label>
+        <name>agf__General_Application_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geo --></label>
+        <name>agf__Geo__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Feature or Release Related --></label>
+        <name>agf__New_Feature_Release_Related__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account ID --></label>
+        <name>agf__Parent_Account_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account --></label>
+        <name>agf__Parent_Account_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account Name --></label>
+        <name>agf__Parent_Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support_Skill_Group --></label>
+        <name>agf__Support_Skill_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support Tier 3 Owner --></label>
+        <name>agf__Support_Tier_3_Owner_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support Tier 3 Owner Name --></label>
+        <name>agf__Support_Tier_3_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support Tier 3 Owner --></label>
+        <name>agf__Support_Tier_3_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- 62 Org Cases --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

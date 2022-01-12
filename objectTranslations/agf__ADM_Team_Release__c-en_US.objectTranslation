@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Build --></label>
+        <name>agf__Build__c</name>
+        <relationshipLabel><!-- Team Builds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Goals --></label>
+        <name>agf__Release_Goals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scrum Team --></label>
+        <name>agf__Scrum_Team__c</name>
+        <relationshipLabel><!-- Team Releases --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- You must select a Build. --></errorMessage>
+        <name>agf__Build_cannot_be_empty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The scrum team you selected is not active. --></errorMessage>
+        <name>agf__Scrum_Team_Is_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select a Scrum Team. --></errorMessage>
+        <name>agf__Team_cannot_be_empty</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Recalc_Burnup_Burndown --></label>
+        <name>agf__Recalc_Burnup_Burndown</name>
+    </webLinks>
+</CustomObjectTranslation>

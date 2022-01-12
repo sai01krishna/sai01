@@ -274,25 +274,22 @@ var operationTypeAttachmentName;
     app.refreshRecentChanges = function (orgId) {
         const core = app.conf.ns ? window[app.conf.ns.split('__')[0]] : window;
         core.GitCommit_GridController.retrieveRecentChanges(orgId, function (result, event) {
-           if (event.status) {
+            if (event.status) {
                 const sourceMembers = result;
                 if (sourceMembers && sourceMembers.length) {
                     const mdtAtt = dw.u.getDecodedAttach(orgId, 'MetaData');
-
                     const allMdt = JSON.parse(mdtAtt.Body);
-
                     for (const member of sourceMembers) {
-                        const isEqual = (mdt) => mdt.t === member.MemberType && mdt.n === member.MemberName;
+                        const isEqual = (mdt) => mdt.t === member.MemberType && (mdt.n === encodeURIComponent(member.MemberName));
                         const index = allMdt.findIndex(isEqual);                       
                         const mdtWrapper = {
                             t: member.MemberType,
-                            n: member.MemberName,
+                            n: encodeURIComponent(member.MemberName),
                             b: dw.u.getHtmlDecodedString(member.LastModifiedBy.Name),
                             d: member.LastModifiedDate.substr(0, member.LastModifiedDate.indexOf('T')),
                             cb: dw.u.getHtmlDecodedString(member.CreatedBy.Name),
                             cd: member.CreatedDate.substr(0, member.CreatedDate.indexOf('T'))
                         };
-
                         if (index != -1) {
                             if (member.IsNameObsolete) {
                                 allMdt.splice(index, 1);

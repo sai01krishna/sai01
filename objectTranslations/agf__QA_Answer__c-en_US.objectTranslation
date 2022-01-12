@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>agf__Question__c</name>
+        <relationshipLabel><!-- Answers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>agf__Status__c</name>
+        <picklistValues>
+            <masterLabel>Considered</masterLabel>
+            <translation><!-- Considered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not apply</masterLabel>
+            <translation><!-- Does not apply --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Consideration</masterLabel>
+            <translation><!-- Under Consideration --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Plan --></label>
+        <name>agf__Test_Plan__c</name>
+        <relationshipLabel><!-- Answers --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

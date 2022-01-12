@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>agf__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level --></label>
+        <name>agf__Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max # of Records --></label>
+        <name>agf__Max_Number_of_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Column --></label>
+        <name>agf__Parent_Column__c</name>
+        <relationshipLabel><!-- Columns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>agf__Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- PreId --></label>
+        <name>agf__PreId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre_ParentId --></label>
+        <name>agf__Pre_ParentId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team --></label>
+        <name>agf__Team__c</name>
+        <relationshipLabel><!-- Columns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>agf__Type__c</name>
+    </fields>
+</CustomObjectTranslation>

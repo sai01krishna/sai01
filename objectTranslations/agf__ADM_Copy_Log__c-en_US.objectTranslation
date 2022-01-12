@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Copied From --></label>
+        <name>agf__Copied_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copied On --></label>
+        <name>agf__Copied_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Failures --></label>
+        <name>agf__Failures__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text --></label>
+        <name>agf__Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>agf__Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>agf__Type__c</name>
+        <picklistValues>
+            <masterLabel>Changelist</masterLabel>
+            <translation><!-- Changelist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Work</masterLabel>
+            <translation><!-- Work --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inserts/Updates --></label>
+        <name>agf__Upserts__c</name>
+    </fields>
+</CustomObjectTranslation>

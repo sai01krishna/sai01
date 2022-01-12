@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Brief Description --></label>
+        <name>agf__Brief_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Count the number of completed automated executions --></help>
+        <label><!-- Count Automated Executions --></label>
+        <name>agf__Count_Automated_Executions__c</name>
+    </fields>
+    <fields>
+        <help><!-- Counts the number of automated executions that are not done --></help>
+        <label><!-- Count Automation To Complete --></label>
+        <name>agf__Count_Automation_To_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Execution Type --></label>
+        <name>agf__Execution_Type__c</name>
+        <picklistValues>
+            <masterLabel>.Net</masterLabel>
+            <translation><!-- .Net --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automated</masterLabel>
+            <translation><!-- Automated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boundary</masterLabel>
+            <translation><!-- Boundary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CTI - script</masterLabel>
+            <translation><!-- CTI - script --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Automation</masterLabel>
+            <translation><!-- Client Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End To End</masterLabel>
+            <translation><!-- End To End --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual</masterLabel>
+            <translation><!-- Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProdTest - API</masterLabel>
+            <translation><!-- ProdTest - API --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProdTest - Selenium</masterLabel>
+            <translation><!-- ProdTest - Selenium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sanity</masterLabel>
+            <translation><!-- Sanity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silktest</masterLabel>
+            <translation><!-- Silktest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systest</masterLabel>
+            <translation><!-- Systest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade Script</masterLabel>
+            <translation><!-- Upgrade Script --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utest</masterLabel>
+            <translation><!-- Utest --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expected Results --></label>
+        <name>agf__Expected_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ftest Id --></label>
+        <name>agf__Ftest_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy --></label>
+        <name>agf__Hierarchy__c</name>
+    </fields>
+    <fields>
+        <help><!-- A test case is automated when the ftest ID field of any of its children if non-null OR when there is a child execution with type=ftest/prodtest/silk/selenium and its status is Passed --></help>
+        <label><!-- Automation Completed? --></label>
+        <name>agf__Is_Automated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Obsolete --></label>
+        <name>agf__Is_Obsolete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Can be in one of three values:
+Manual, Automated, and Incomplete Automation.
+Incomplete Automation = invalid annotation or Execution not Marked as Passed or Failed --></help>
+        <label><!-- Is Automated and Annotated? --></label>
+        <name>agf__Manual_Auto_Annotation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of this test case in the hierarchy --></help>
+        <label><!-- Order --></label>
+        <name>agf__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>agf__Owner__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>agf__Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Details of the test case. Setup info, steps to follow, etc. --></help>
+        <label><!-- Long Description --></label>
+        <name>agf__Steps_to_Reproduce__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will be automatically populated if the test case has a test execution, otherwise it can be manually populated. --></help>
+        <label><!-- Team --></label>
+        <name>agf__Team__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Incorrect Priority Value. Must be: High, Medium, or Low --></errorMessage>
+        <name>agf__Invalid_Priority_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Order cannot be Negative --></errorMessage>
+        <name>agf__Order</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GenerateAnnotations --></label>
+        <name>agf__GenerateAnnotations</name>
+    </webLinks>
+</CustomObjectTranslation>

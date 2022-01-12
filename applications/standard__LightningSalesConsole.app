@@ -19,9 +19,13 @@
     <tabs>standard-Feed</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>standard-File</tabs>
+    <tabs>School__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>School__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

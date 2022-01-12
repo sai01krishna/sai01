@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Completed --></label>
+        <name>agf__Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted --></label>
+        <name>agf__Deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group ID --></label>
+        <name>agf__Group_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inserted --></label>
+        <name>agf__Inserted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>agf__Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scrumteam Or Scrumteam Member --></label>
+        <name>agf__ScrumteamOrScrumteamMember__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>agf__Type__c</name>
+    </fields>
+</CustomObjectTranslation>

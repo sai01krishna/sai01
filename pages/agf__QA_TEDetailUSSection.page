@@ -1,0 +1,5 @@
+<apex:page standardController="agf__QA_Test_Execution__c" extensions="agf.QA_TEDetailUSSectionController">
+
+This page has been deprecated.
+
+</apex:page>

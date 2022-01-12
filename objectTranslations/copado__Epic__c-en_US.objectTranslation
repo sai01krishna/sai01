@@ -10,6 +10,10 @@
         <name>copado__Cancelled_Reason__c</name>
     </fields>
     <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
+    </fields>
+    <fields>
         <label><!-- Epic Details --></label>
         <name>copado__Epic_Details__c</name>
     </fields>
@@ -45,5 +49,9 @@
             <masterLabel>Planned</masterLabel>
             <translation><!-- Planned --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Technical Assumptions --></label>
+        <name>copado__Technical_Assumptions__c</name>
     </fields>
 </CustomObjectTranslation>

@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Application lists resources associated with the release and management of any system that is released (has Releases).</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>agf__Applicable_Moratoriums__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Moratoriums that impact the application&apos;s release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Moratoriums that impact the application&apos;s release.</inlineHelpText>
+        <label>Applicable Moratoriums</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Dreamforce</fullName>
+                    <default>false</default>
+                    <label>Dreamforce</label>
+                </value>
+                <value>
+                    <fullName>EOM</fullName>
+                    <default>false</default>
+                    <label>EOM</label>
+                </value>
+                <value>
+                    <fullName>EOY / Holidays</fullName>
+                    <default>false</default>
+                    <label>EOY / Holidays</label>
+                </value>
+                <value>
+                    <fullName>Major Release</fullName>
+                    <default>false</default>
+                    <label>Major Release</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Application_Planned_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Planned Duration</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Application_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Application Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Core Salesforce Application</fullName>
+                    <default>false</default>
+                    <label>Core Salesforce Application</label>
+                </value>
+                <value>
+                    <fullName>Distributed Customer Facing Application</fullName>
+                    <default>false</default>
+                    <label>Distributed Customer Facing Application</label>
+                </value>
+                <value>
+                    <fullName>Documentation</fullName>
+                    <default>false</default>
+                    <label>Documentation</label>
+                </value>
+                <value>
+                    <fullName>Independent R&amp;D</fullName>
+                    <default>false</default>
+                    <label>Independent R&amp;D</label>
+                </value>
+                <value>
+                    <fullName>Infrastructure</fullName>
+                    <default>false</default>
+                    <label>Infrastructure</label>
+                </value>
+                <value>
+                    <fullName>Internal Monitoring &amp; Management</fullName>
+                    <default>false</default>
+                    <label>Internal Monitoring &amp; Management</label>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <label>IT</label>
+                </value>
+                <value>
+                    <fullName>Moratorium</fullName>
+                    <default>false</default>
+                    <label>Moratorium</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Case_Description_Footer__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is appended to the bottom of the Description field of the Case created by Release Planning (when enabled).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the text to be appended to the bottom of the Description field of the Case created by Release Planning (if enabled).</inlineHelpText>
+        <label>Case Description Footer</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Case_Description_Header__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field is appended to the top of the Description field of the Case created by Release Planning (when enabled).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the text to be appended to the top of the Description field of the Case created by Release Planning (if enabled).</inlineHelpText>
+        <label>Case Description Header</label>
+        <length>4000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Case_Team__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the ID of the Scrum Team (ADM_Scrum_Team__c) to be entered in Cases generated with the Run Case Generation function.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the ID of the Scrum Team to be entered in Cases created by Run Case Generation.</inlineHelpText>
+        <label>Case Team</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Category__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Category indicates the stage of an application (Preproduction, Active, Retired or Maintenance) or whether the application represents an activity that is to appear on the Release Schedule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select &quot;Schedule&quot; if this Application object represents an activity that is to appear on the Release schedule (eg, Moratorium, Maintenance or Infrastructure), otherwise select the Application&apos;s life-cycle stage.</inlineHelpText>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Preproduction</fullName>
+                    <default>false</default>
+                    <label>Preproduction</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Retired</fullName>
+                    <default>false</default>
+                    <label>Retired</label>
+                </value>
+                <value>
+                    <fullName>Schedule</fullName>
+                    <default>false</default>
+                    <label>Schedule</label>
+                </value>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                    <label>Maintenance</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>agf__Chatter_Post_Group__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the Chatter Group to which the Release Alert will be posted via the &quot;Post Release Alert&quot; button in the Release Records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the 15 character ID for the Chatter group to which Release Alerts will be posted when the &quot;Post Release Alert&quot; button is selected.</inlineHelpText>
+        <label>Chatter Post Group</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Current_Major_Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>For Applications that have staggered Major Release deployments with overlapping active release lines, the Current Major Release is the older of the two active release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the initial Major Release record for the older of the two active Major Releases.</inlineHelpText>
+        <label>Current Major Release</label>
+        <referenceTo>agf__ADM_Release__c</referenceTo>
+        <relationshipLabel>Applications</relationshipLabel>
+        <relationshipName>Applications</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>agf__Daily_Header_Text_Next_Major__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted before the Schedule of generated Release Alert posts for Daily and Emergency Releases which are under the Next Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Release Alert header text for Daily Releases of the Next Major Release.</inlineHelpText>
+        <label>Daily Header Text [Next Major]</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Daily_Release_Stagger__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted before the Schedule of generated Release Alert posts for Daily and Emergency Releases which are under the Current Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Release Alert header text for Daily Releases of the Current Major Release.</inlineHelpText>
+        <label>Daily Header Text [Current Major]</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Duplicate_Application_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This field is set by the ADM_Application.trigger with the Application record&apos;s name to detect when duplicate names are used.</description>
+        <externalId>false</externalId>
+        <label>Duplicate Application Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Enable_ERR_Notification_Emails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Set this checkbox to enable notification emails for eRelease Requests. This functionality replaces the workflow-based notifications. The corresponding workflow for this Application should be deactivated when this box is checked, otherwise recipients may receive duplicate notifications.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set this checkbox to enable notification emails for eRelease Requests. To avoid duplicate notifications, disable the corresponding eRelease Request notification workflow for this Application.</inlineHelpText>
+        <label>Enable ERR Notification Emails</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Enable_Release_Planning_Case_Creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked, the Release Planning system will generate Cases for generated Release Events.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When Release Planning is enabled, will generate Cases for generated Release Events.</inlineHelpText>
+        <label>Enable Release Planning Case Creation</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Enable_Release_Planning__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables Release Planning for this Application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to enable Release Planning for this Application.</inlineHelpText>
+        <label>Enable Release Planning</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Internal_Instances__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Space separated list of instances to be excluded from customer facing posts of Planned Release Schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter a space separated list of instances to be excluded from customer facing posts of Planned Release Schedule</inlineHelpText>
+        <label>Internal Instances</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Is_Customer_Facing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>A check in this field indicates that the application is customer-facing, not internal-only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A check in this field indicates that the application is customer-facing, not internal-only.</inlineHelpText>
+        <label>Is Customer Facing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>agf__Major_Release_Stagger__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field contains the template for the Major Release Stagger</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the template for the Major Release Stagger</inlineHelpText>
+        <label>Major Release Stagger</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Next_Major_Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>For Applications that have staggered Major Release deployments with overlapping active release lines, the Next Major Release is the newer of the two active release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the initial Major Release record for the newer of the two active Major Releases.</inlineHelpText>
+        <label>Next Major Release</label>
+        <referenceTo>agf__ADM_Release__c</referenceTo>
+        <relationshipLabel>Applications (Next Major Release)</relationshipLabel>
+        <relationshipName>Applications1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>agf__Other_Release_Stagger__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This contains the release stagger for any distributed apps or other releases that are not Major, Patches, or eReleases.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This contains the release stagger for any distributed apps or other releases that are not Major, Patches, or eReleases.</inlineHelpText>
+        <label>Other Release Stagger</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Patch_Header_Text_Next_Major__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted before the Schedule of generated Release Alert posts for Patch Releases which are under the Next Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Release Alert header text for patch releases of the Next Major Release.</inlineHelpText>
+        <label>Patch Header Text [Next Major]</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Patch_Stagger__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted before the Schedule of generated Release Alert posts for Patch Releases which are under the Current Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Release Alert header text for patch releases of the Current Major Release.</inlineHelpText>
+        <label>Patch Header Text [Current Major]</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Planned_Schedule_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address where the Planned Schedule text for releases should be sent when posting Release Alerts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the email address where the customer facing Planned Schedule for release should be sent.</inlineHelpText>
+        <label>Planned Schedule Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Primary_Chatter_Post_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted below the Schedule of generated Release Alert posts for posts to the Primary Chatter group for all Releases which are under the Current Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Primary Chatter group Release Alert footer text for Releases of the Current Major Release.</inlineHelpText>
+        <label>Primary Footer Text [Current Major]</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Primary_Footer_Text_Next_Major__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted below the Schedule of generated Release Alert posts for posts to the Primary Chatter group for all Releases which are under the Next Major Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Primary Chatter group Release Alert footer text for Releases of the Next Major Release.</inlineHelpText>
+        <label>Primary Footer Text [Next Major]</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Primary_Release_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The Primary Release Manager has primary responsibility for managing the releases for teams supported by this .</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the Release Manager with primary responsibility for the releases of products supported by this Application.</inlineHelpText>
+        <label>Primary Release Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ADM_Application_RM1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>agf__Second_Chatter_Post_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address to send an external post of a Release Alert, for example, an external Chatter group. Intended for sending Release Alerts to a Chatter group in a different Salesforce org.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter an email address to which Release Alerts will be posted when the &quot;Post Release Alert&quot; button is selected, for example, an external Chatter group.</inlineHelpText>
+        <label>External Post Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>agf__Secondary_Chatter_Post_Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This text field is inserted below the Schedule of generated Release Alert posts for posts to the Secondary Chatter group for all Releases.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Secondary Chatter group Release Alert footer text for all Releases.</inlineHelpText>
+        <label>Secondary Footer Text</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>agf__Secondary_Release_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Secondary or backup Release Manager for this Application.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the secondary or backup Release Manager for this Application.</inlineHelpText>
+        <label>Secondary Release Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ADM_Application_RM2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Application</label>
+    <listViews>
+        <fullName>agf__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>agf__All_Details</fullName>
+        <columns>NAME</columns>
+        <columns>agf__Application_Type__c</columns>
+        <columns>agf__Primary_Release_Manager__c</columns>
+        <columns>agf__Secondary_Release_Manager__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All - Details</label>
+    </listViews>
+    <nameField>
+        <label>Application Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Applications</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>agf__Application_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>agf__Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>agf__Primary_Release_Manager__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>agf__Secondary_Release_Manager__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>agf__Enable_ERR_Notification_Emails__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>agf__Application_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>agf__Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>agf__Primary_Release_Manager__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>agf__Application_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>agf__Category__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>agf__Primary_Release_Manager__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>agf__Application_Type__c</searchFilterFields>
+        <searchFilterFields>agf__Category__c</searchFilterFields>
+        <searchFilterFields>agf__Primary_Release_Manager__c</searchFilterFields>
+        <searchResultsAdditionalFields>agf__Application_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>agf__Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>agf__Primary_Release_Manager__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>agf__Secondary_Release_Manager__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>agf__Enable_ERR_Notification_Emails__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>agf__Release_Planning_Must_Be_Enabled_Case</fullName>
+        <active>false</active>
+        <description>Release Planning must be enabled to enable Case Creation.</description>
+        <errorConditionFormula>agf__Enable_Release_Planning__c != true &amp;&amp; agf__Enable_Release_Planning_Case_Creation__c == true</errorConditionFormula>
+        <errorDisplayField>agf__Enable_Release_Planning__c</errorDisplayField>
+        <errorMessage>Release Planning must be enabled to enable Case Creation.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>agf__Space_Separated_Instances</fullName>
+        <active>true</active>
+        <description>Format is: blank, NA1 (one or two digits)  NA1 NA2 or NA1 NA2 ... NA99</description>
+        <errorConditionFormula>NOT(REGEX( agf__Internal_Instances__c , &quot;|^(?:NA|CS|AP|EU|GS|SR)[0-9][0-9]?$|^(?:NA|CS|AP|EU|GS|SR)[0-9][0-9]?((?: (?:NA|CS|AP|EU|GS|SR)[0-9][0-9]?)+)* (?:NA|CS|AP|EU|GS|SR)[0-9][0-9]?&quot;))</errorConditionFormula>
+        <errorDisplayField>agf__Internal_Instances__c</errorDisplayField>
+        <errorMessage>Instance list must be of the form: NA1 NA2 CS2 ...
+Use capital letters and only a space between instances.
+Allowed prefixes are NA, CS, EU, AP, GS or SR only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>agf__Specify_Application_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(TEXT(agf__Application_Type__c))</errorConditionFormula>
+        <errorDisplayField>agf__Application_Type__c</errorDisplayField>
+        <errorMessage>Application Type must be specified.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>agf__Specify_Category</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(TEXT( agf__Category__c ))</errorConditionFormula>
+        <errorDisplayField>agf__Category__c</errorDisplayField>
+        <errorMessage>The Application&apos;s Category must be specified.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

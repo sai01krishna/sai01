@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Child Scheduled Build --></label>
+        <name>agf__Child_Scheduled_Build__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Scrum Team --></label>
+        <name>agf__Child_Scrum_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Sprint --></label>
+        <name>agf__Child_Sprint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Subject --></label>
+        <name>agf__Child_Subject__c</name>
+    </fields>
+    <fields>
+        <help><!-- The closed flag for the child work record.  Will be 0 or 1 depending on the status of the work record. --></help>
+        <label><!-- Child Work Closed --></label>
+        <name>agf__Child_Work_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Child Work --></label>
+        <name>agf__Child_Work__c</name>
+        <relationshipLabel><!-- Parent Work Records --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>agf__Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is child a duplicate of parent? --></label>
+        <name>agf__Duplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Scheduled Build --></label>
+        <name>agf__Parent_Scheduled_Build__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Scrum Team --></label>
+        <name>agf__Parent_Scrum_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Sprint --></label>
+        <name>agf__Parent_Sprint__c</name>
+    </fields>
+    <fields>
+        <help><!-- The closed flag for the parent work record. Will be 0 or 1 depending on the status of the work record. --></help>
+        <label><!-- Parent Work Closed --></label>
+        <name>agf__Parent_Work_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Work Subject --></label>
+        <name>agf__Parent_Work_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Work --></label>
+        <name>agf__Parent_Work__c</name>
+        <relationshipLabel><!-- Child Work Records --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>agf__Sort_Order__c</name>
+    </fields>
+</CustomObjectTranslation>

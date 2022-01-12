@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- CCE and Operations Signoff --></label>
+        <name>agf__CCE_and_Operations_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- CCE and Operations --></label>
+        <name>agf__CCE_and_Operations__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (CCE and Operations) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Capacity Approver Signoff --></label>
+        <name>agf__Capacity_Approver_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capacity Approver --></label>
+        <name>agf__Capacity_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Capacity Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chatter Now Approver --></label>
+        <name>agf__Chatter_Now_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Chatter Now Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chatter Now Signoff --></label>
+        <name>agf__Chatter_Now_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dev Approver --></label>
+        <name>agf__Dev_Mgr_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Dev Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dev Signoff --></label>
+        <name>agf__Dev_Mgr_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dev Approver --></label>
+        <name>agf__Dev_VP_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Dev Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dev Signoff --></label>
+        <name>agf__Dev_VP_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineering Signoff --></label>
+        <name>agf__Development_Engineering_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineering --></label>
+        <name>agf__Development_Engineering__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Engineering) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- FFX Approver --></label>
+        <name>agf__FFX_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (FFX Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- FFX Signoff --></label>
+        <name>agf__FFX_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- HBase Approver --></label>
+        <name>agf__HBase_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (HBase Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- HBase Signoff --></label>
+        <name>agf__HBase_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insights Approver --></label>
+        <name>agf__Insights_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Insights Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Insights Signoff --></label>
+        <name>agf__Insights_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- LiveAgent Approver --></label>
+        <name>agf__LiveAgent_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (LiveAgent Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LiveAgent Signoff --></label>
+        <name>agf__LiveAgent_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- M&amp;M Approver --></label>
+        <name>agf__M_M_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (M&amp;M Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- M&amp;M Signoff --></label>
+        <name>agf__M_M_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- SR Approver --></label>
+        <name>agf__OSC_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (SR Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SR Approver --></label>
+        <name>agf__OSC_Exec_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (SR Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SR Signoff --></label>
+        <name>agf__OSC_Exec_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- SR Signoff --></label>
+        <name>agf__OSC_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- PODOps PO Approver --></label>
+        <name>agf__PODSquad_PO_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (PODOps PO Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PODOps PO Signoff --></label>
+        <name>agf__PODSquad_PO_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- QE Approver --></label>
+        <name>agf__QE_Mgr_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (QE Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- QE Signoff --></label>
+        <name>agf__QE_Mgr_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- QE Approver --></label>
+        <name>agf__QE_VP_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (QE Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- QE Signoff --></label>
+        <name>agf__QE_VP_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Approved --></label>
+        <name>agf__Release_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- RM Approver --></label>
+        <name>agf__Release_Management_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (RM Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RM Approver --></label>
+        <name>agf__Release_Management_Exec_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (RM Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RM Signoff --></label>
+        <name>agf__Release_Management_Exec_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- RM Signoff --></label>
+        <name>agf__Release_Management_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sandbox Approver --></label>
+        <name>agf__Sandbox_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Sandbox Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sandbox Signoff --></label>
+        <name>agf__Sandbox_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled Signoff Date --></label>
+        <name>agf__Scheduled_Signoff_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Approver --></label>
+        <name>agf__Search_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Search Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Search Signoff --></label>
+        <name>agf__Search_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infrastructure Engineering Signoff --></label>
+        <name>agf__Service_Delivery_TechOps_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infrastructure Engineering --></label>
+        <name>agf__Service_Delivery_Technical_Operations__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Infrastructure Engineering) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sites Approver --></label>
+        <name>agf__Sites_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Sites Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sites Signoff --></label>
+        <name>agf__Sites_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Staggered Release --></label>
+        <name>agf__Staggered_Release__c</name>
+        <picklistValues>
+            <masterLabel>GUS</masterLabel>
+            <translation><!-- GUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R0</masterLabel>
+            <translation><!-- R0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R1</masterLabel>
+            <translation><!-- R1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R2</masterLabel>
+            <translation><!-- R2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB</masterLabel>
+            <translation><!-- SB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TCR Approver --></label>
+        <name>agf__TBR_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (TCR Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TCR Signoff --></label>
+        <name>agf__TBR_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- TechOps Eng Approver --></label>
+        <name>agf__TechOps_Eng_VP_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (TechOps Eng Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TechOps Eng Signoff --></label>
+        <name>agf__TechOps_Eng_VP_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- TechOps Operations Approver --></label>
+        <name>agf__TechOps_Operations_Approver__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (TechOps Operations Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TechOps Operations Signoff --></label>
+        <name>agf__TechOps_Operations_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chief Infrastructure Officer Signoff --></label>
+        <name>agf__Technology_Exec_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chief Infrastructure Officer --></label>
+        <name>agf__Technology_Exec__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Chief Infrastructure Officer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Technology &amp; Products Operations Signoff --></label>
+        <name>agf__Technology_Products_Operations_Signoff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Technology &amp; Products Operations --></label>
+        <name>agf__Technology_Products_Operations__c</name>
+        <relationshipLabel><!-- Release Signoffs Infrastructure (Technology &amp; Products Operations) --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <description><!-- Tracks approvals for new POD buildouts --></description>
+        <label><!-- New Pods --></label>
+        <name>agf__New_Pods</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Tracks approvals for POD migrations and splits --></description>
+        <label><!-- Splits &amp; Migrations --></label>
+        <name>agf__Splits_Migrations</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Signoff dates cannot be in the future. --></errorMessage>
+        <name>agf__Dates_must_not_be_future</name>
+    </validationRules>
+</CustomObjectTranslation>

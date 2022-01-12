@@ -1,0 +1,23 @@
+<apex:page controller="agf.ADM_KanbanBoardPurgeController" >
+
+<apex:form >
+
+  <apex:slds />
+
+    <div class="slds-grid slds-grid_vertical" style="padding:100px">
+
+        <div class="slds-col">
+              <span>Kanban Clean up</span>
+        </div>
+        <div class="slds-col">
+          <span>This script will clean up a Kanban board failing with a Heap Error. Pleaes insert the team ID in the text box below.</span>
+        </div>
+        <div class="slds-col">
+        <span><input id="teamId" type="text" name="teamId" /> <apex:commandButton action="{!purge}" value="Clean Up" id="cleanUpButton"/></span>
+        </div>
+        
+    </div>
+    
+</apex:form>
+
+</apex:page>

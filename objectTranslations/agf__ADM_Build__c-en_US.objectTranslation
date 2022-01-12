@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Freeze --></label>
+        <name>agf__Release_Freeze__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scrumforce ID --></label>
+        <name>agf__Scrumforce_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weeks prior to release --></label>
+        <name>agf__Weeks_prior_to_release__c</name>
+    </fields>
+</CustomObjectTranslation>

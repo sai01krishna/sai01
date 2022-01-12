@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Comment --></label>
+        <name>agf__Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comment Created By --></label>
+        <name>agf__Comment_Created_By__c</name>
+        <relationshipLabel><!-- Comments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comment Created Date --></label>
+        <name>agf__Comment_Created_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created By --></label>
+        <name>agf__Created_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Copy --></label>
+        <name>agf__Is_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- LocaleCreatedDate --></label>
+        <name>agf__LocaleCreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Posted to Chatter --></label>
+        <name>agf__Posted_to_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preserve Formatting --></label>
+        <name>agf__Preserve_Formatting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority Override Explanation --></label>
+        <name>agf__Priority_Override_Explanation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>agf__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- Comments --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- The comment body cannot be blank! --></errorMessage>
+        <name>agf__Body_is_not_null</name>
+    </validationRules>
+</CustomObjectTranslation>

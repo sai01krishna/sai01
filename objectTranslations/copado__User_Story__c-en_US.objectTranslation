@@ -13,6 +13,10 @@
         <name>copado__Commit_Files_Information</name>
     </fieldSets>
     <fieldSets>
+        <label><!-- Commit Page --></label>
+        <name>copado__Commit_Page</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- Copado Header Fields --></label>
         <name>copado__Copado_Header_Fields</name>
     </fieldSets>
@@ -193,11 +197,6 @@
         <help><!-- Number of Apex Class methods that failed during the Apex Test Run execution. --></help>
         <label><!-- Failing Methods --></label>
         <name>copado__Failing_Methods__c</name>
-    </fields>
-    <fields>
-        <label><!-- Feature --></label>
-        <name>copado__Feature__c</name>
-        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Functional Specifications --></label>

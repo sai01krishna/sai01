@@ -1,0 +1,15 @@
+<apex:page >
+
+<apex:form >
+
+  <apex:slds />
+
+    <div class="slds-grid slds-grid_vertical" style="padding:100px">
+
+      <h1>Your request has been enqueued. Please allow up to an hour for this process to complete.</h1>
+
+    </div>
+
+</apex:form>
+
+</apex:page>

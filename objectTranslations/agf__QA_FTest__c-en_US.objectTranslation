@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Has Annotation --></label>
+        <name>agf__Annotation_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- FTest ID --></label>
+        <name>agf__FTest_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude from Report --></label>
+        <name>agf__Report_Exception__c</name>
+        <picklistValues>
+            <masterLabel>Generated Test</masterLabel>
+            <translation><!-- Generated Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLSQL Findbugs</masterLabel>
+            <translation><!-- PLSQL Findbugs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Test</masterLabel>
+            <translation><!-- Unit Test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scrum Team --></label>
+        <name>agf__Scrum_Team__c</name>
+        <relationshipLabel><!-- FTests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Labels --></label>
+        <name>agf__Test_Labels__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Suite --></label>
+        <name>agf__Test_Suite__c</name>
+        <picklistValues>
+            <masterLabel>basic</masterLabel>
+            <translation><!-- basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>extended</masterLabel>
+            <translation><!-- extended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>standard</masterLabel>
+            <translation><!-- standard --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Backlog --></label>
+        <name>agf__Backlog__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Items Completed --></label>
+        <name>agf__Committed_Items_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Items --></label>
+        <name>agf__Committed_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Story Points --></label>
+        <name>agf__Committed_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Story Points Completed --></label>
+        <name>agf__Committed_Story_Points_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed Items --></label>
+        <name>agf__Completed_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Velocity --></label>
+        <name>agf__Completed_Story_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Forecast Items --></label>
+        <name>agf__Completion_Committed_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Forecast Story Points --></label>
+        <name>agf__Completion_Committed_Story_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Items --></label>
+        <name>agf__Completion_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completion Story Points --></label>
+        <name>agf__Completion_Story_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Remaining --></label>
+        <name>agf__Days_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Done Met --></label>
+        <name>agf__Definition_of_Done_Met__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition of Ready Met --></label>
+        <name>agf__Definition_of_Ready_Met__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount work time (%) --></label>
+        <name>agf__Discount_Work__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>agf__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Goals --></label>
+        <name>agf__Goals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours in a work day --></label>
+        <name>agf__Hours_in_a_work_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- NameValidator --></label>
+        <name>agf__NameValidator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Velocity --></label>
+        <name>agf__Projected_Velocity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Burndown Calculated --></label>
+        <name>agf__Release_Burndown_Calc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retrospective --></label>
+        <name>agf__Retrospective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risks --></label>
+        <name>agf__Risks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scrum Team --></label>
+        <name>agf__Scrum_Team__c</name>
+        <relationshipLabel><!-- Sprints --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sprint Timeframe YYYY.MMx --></label>
+        <name>agf__Sprint_Timeframe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>agf__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Workdays --></label>
+        <name>agf__Total_Workdays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transformed --></label>
+        <name>agf__Transformed__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Hours in a work day cannot exceed 24 --></errorMessage>
+        <name>agf__Hours_In_A_Work_Day</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hours in a work day cannot be a negative number --></errorMessage>
+        <name>agf__Hours_In_A_Work_Day_Neg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Projected velocity cannot be a negative number --></errorMessage>
+        <name>agf__Projected_Velocity_Neg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The scrum team you selected is not active. --></errorMessage>
+        <name>agf__Scrum_Team_Is_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Your End Date must be after your Start Date --></errorMessage>
+        <name>agf__Verify_end_date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A sprint can&apos;t be longer than one month (31 days). Please correct your end date and click &apos;Save&apos;. --></errorMessage>
+        <name>agf__Verify_length_of_sprint</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Your sprint should follow the format: YYYY.MM(0-9 or a-f) - &lt;Team Name&gt;4 digit year, 2 digit month, optional (0-9 or a-f) - &lt;your team name&gt; --></errorMessage>
+        <name>agf__Verify_name_format</name>
+    </validationRules>
+</CustomObjectTranslation>

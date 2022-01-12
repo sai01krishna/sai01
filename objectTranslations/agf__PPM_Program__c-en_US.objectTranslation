@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- End Date for the Program. --></help>
+        <label><!-- End Date --></label>
+        <name>agf__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Executive Sponsor --></label>
+        <name>agf__Executive_Sponsor__c</name>
+        <relationshipLabel><!-- Programs (Executive Sponsor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portfolio --></label>
+        <name>agf__Portfolio__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Goals --></label>
+        <name>agf__Program_Goals__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicate the program health comments. --></help>
+        <label><!-- Program Health Comments --></label>
+        <name>agf__Program_Health_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Health --></label>
+        <name>agf__Program_Health__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Track</masterLabel>
+            <translation><!-- On Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Watch</masterLabel>
+            <translation><!-- Watch --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program Manager --></label>
+        <name>agf__Program_Manager__c</name>
+        <relationshipLabel><!-- Programs (Program Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Summary --></label>
+        <name>agf__Program_Summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Start Date for the Program or Close Date. --></help>
+        <label><!-- Start Date --></label>
+        <name>agf__Start_Date__c</name>
+    </fields>
+</CustomObjectTranslation>

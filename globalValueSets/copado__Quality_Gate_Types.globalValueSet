@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <customValue>
-        <fullName>Apex Test with Validation</fullName>
-        <default>false</default>
-        <label>Apex Test with Validation</label>
-    </customValue>
-    <customValue>
         <fullName>Automation</fullName>
         <default>true</default>
         <label>Automation</label>
+    </customValue>
+    <customValue>
+        <fullName>Apex Test with Validation</fullName>
+        <default>false</default>
+        <label>Apex Test with Validation</label>
     </customValue>
     <customValue>
         <fullName>Compliance Check</fullName>
@@ -41,9 +41,9 @@
         <label>Static Code Analysis</label>
     </customValue>
     <customValue>
-        <fullName>Test</fullName>
+        <fullName>Validation</fullName>
         <default>false</default>
-        <label>Test</label>
+        <label>Validation</label>
     </customValue>
     <customValue>
         <fullName>URL Callout</fullName>
@@ -51,9 +51,9 @@
         <label>URL Callout</label>
     </customValue>
     <customValue>
-        <fullName>Validation</fullName>
+        <fullName>Test</fullName>
         <default>false</default>
-        <label>Validation</label>
+        <label>Test</label>
     </customValue>
     <customValue>
         <fullName>Compliance</fullName>
@@ -62,17 +62,17 @@
         <label>Compliance</label>
     </customValue>
     <customValue>
-        <fullName>Static Analysis</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Static Analysis</label>
-    </customValue>
-    <customValue>
         <fullName>Automation Template</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Automation Template</label>
     </customValue>
+    <customValue>
+        <fullName>Static Analysis</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Static Analysis</label>
+    </customValue>
     <masterLabel>Quality Gate Types</masterLabel>
-    <sorted>false</sorted>
+    <sorted>true</sorted>
 </GlobalValueSet>

@@ -227,6 +227,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Org_to_org__c</fullName>
+        <externalId>false</externalId>
+        <label>Org to org</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Parent_Details__c</fullName>
         <externalId>false</externalId>
         <label>Parent Details</label>
@@ -271,6 +281,16 @@
         <fullName>Roll_back_2__c</fullName>
         <externalId>false</externalId>
         <label>Roll back 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Roll_back_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Roll back 3</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -392,7 +412,22 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>duplicate__c</fullName>
+        <externalId>false</externalId>
+        <label>duplicate</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>School Name</label>
         <type>Text</type>
@@ -402,8 +437,31 @@
         <fullName>New_Student</fullName>
         <active>true</active>
         <label>New Student</label>
+        <picklistValues>
+            <picklist>Subjects__c</picklist>
+            <values>
+                <fullName>English%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hindi%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maths%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social%2C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

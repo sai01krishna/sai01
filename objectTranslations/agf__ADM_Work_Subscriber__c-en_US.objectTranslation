@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Always Send --></label>
+        <name>agf__Always_Send__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignment Type --></label>
+        <name>agf__Assignment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Auto Assigned</masterLabel>
+            <translation><!-- Auto Assigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manually Assigned</masterLabel>
+            <translation><!-- Manually Assigned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Distribution List --></label>
+        <name>agf__Distribution_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>agf__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Copy --></label>
+        <name>agf__Is_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Input --></label>
+        <name>agf__Recipient_Input__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>agf__UserId__c</name>
+        <relationshipLabel><!-- Work Subscribers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- WorkId --></label>
+        <name>agf__WorkId__c</name>
+        <relationshipLabel><!-- Work Subscribers --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

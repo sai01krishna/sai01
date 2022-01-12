@@ -107,7 +107,7 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>copado__JobStep__c.copado__ExecuteManualStep</actionName>
+            <actionName>copado__JobStep__c.copado__Complete_Manual_Task</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>0</sortOrder>
         </platformActionListItems>
@@ -125,7 +125,12 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>copado__Status__c</fields>
+        <fields>copado__Progress_Status__c</fields>
+        <fields>copado__End_Time__c</fields>
+        <fields>copado__Start_Time__c</fields>
         <relatedList>copado__Result__c.copado__JobStep__c</relatedList>
+        <sortField>copado__Start_Time__c</sortField>
+        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -133,7 +138,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0900000B8v5K</masterLabel>
+        <masterLabel>00h0900000C61WV</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

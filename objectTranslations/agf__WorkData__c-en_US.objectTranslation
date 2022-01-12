@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Date --></label>
+        <name>agf__Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusOfWork --></label>
+        <name>agf__StatusOfWork__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserId --></label>
+        <name>agf__UserId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>agf__Value__c</name>
+    </fields>
+</CustomObjectTranslation>

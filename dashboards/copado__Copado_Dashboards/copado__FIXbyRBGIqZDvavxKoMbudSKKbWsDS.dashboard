@@ -240,7 +240,7 @@
     </dashboardGridLayout>
     <dashboardType>SpecifiedUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>ssamudrala_prod@copado.com</runningUser>
+    <runningUser>ssamudrala_dev@copado.com</runningUser>
     <textColor>#000000</textColor>
     <title>CCM - Sprint Quality Gates Dashboard</title>
     <titleColor>#000000</titleColor>

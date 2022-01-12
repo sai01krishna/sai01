@@ -17,6 +17,7 @@
             <operator>equals</operator>
             <value>Deploy later</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

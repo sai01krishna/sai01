@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Alternate Roster Owner --></label>
+        <name>agf__Alternate_Roster_Owner__c</name>
+        <relationshipLabel><!-- Parent Clouds (Alternate Roster Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cloud Type --></label>
+        <name>agf__Cloud_Type__c</name>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infrastructure</masterLabel>
+            <translation><!-- Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Finance Business Partner --></label>
+        <name>agf__Finance_Business_Partner__c</name>
+        <relationshipLabel><!-- Parent Clouds (Finance Business Partner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Legal Representative --></label>
+        <name>agf__Legal_Representative__c</name>
+        <relationshipLabel><!-- Parent Clouds (Legal Representative) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent Cloud Type --></label>
+        <name>agf__Parent_Cloud_Type__c</name>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infrastructure</masterLabel>
+            <translation><!-- Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Should be set to true for assigning this Parent Cloud to Roster --></help>
+        <label><!-- Roster Enabled --></label>
+        <name>agf__Roster_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roster Owner --></label>
+        <name>agf__Roster_Owner__c</name>
+        <relationshipLabel><!-- Parent Clouds (Roster Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This is Srini&apos;s direct report that the cloud rolls up to --></help>
+        <label><!-- Senior Engineering Leader --></label>
+        <name>agf__Senior_Engineering_Leader__c</name>
+        <relationshipLabel><!-- Parent Clouds (Senior Engineering Leader) --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

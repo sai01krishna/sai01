@@ -1,0 +1,3 @@
+<apex:page standardController="agf__ADM_Work__c" recordSetVar="works" extensions="agf.ADM_WorkSetController">
+    <h2>This functionality is not supported any more. Please remove Notepads button from list view.</h2>
+</apex:page>

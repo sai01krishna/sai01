@@ -141,7 +141,16 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Epic_Highlight_Panel</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Epic_Highlight_Panel</fullName>
+        <fields>copado__Epic_Title__c</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Application__c</fields>
+        <fields>copado__Release__c</fields>
+        <fields>OwnerId</fields>
+        <label>Epic Highlight Panel</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -177,6 +186,16 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
     </fields>
     <fields>
         <fullName>copado__Epic_Details__c</fullName>
@@ -250,6 +269,16 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>copado__Technical_Assumptions__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Technical Assumptions</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
     </fields>
     <label>Epic</label>
     <listViews>

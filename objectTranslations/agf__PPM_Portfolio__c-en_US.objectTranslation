@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Portfolio Goals --></label>
+        <name>agf__Portfolio_Goals__c</name>
+    </fields>
+    <fields>
+        <help><!-- Color/icon used to better visualize the current Portfolio Health field value. --></help>
+        <label><!-- Portfolio Health Color --></label>
+        <name>agf__Portfolio_Health_Color__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio Health --></label>
+        <name>agf__Portfolio_Health__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Track</masterLabel>
+            <translation><!-- On Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Watch</masterLabel>
+            <translation><!-- Watch --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Portfolio Manager --></label>
+        <name>agf__Portfolio_Manager__c</name>
+        <relationshipLabel><!-- Portfolios (Portfolio Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portfolio Owner --></label>
+        <name>agf__Portfolio_Owner__c</name>
+        <relationshipLabel><!-- Portfolios (Portfolio Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Portfolio Summary --></label>
+        <name>agf__Portfolio_Summary__c</name>
+    </fields>
+</CustomObjectTranslation>

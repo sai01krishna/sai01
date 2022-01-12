@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Cloud Lead --></label>
+        <name>agf__Cloud_Lead__c</name>
+        <relationshipLabel><!-- Clouds (Cloud Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cloud Type --></label>
+        <name>agf__Cloud_Type__c</name>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Infrastructure</masterLabel>
+            <translation><!-- Infrastructure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Escalation Security Contact --></label>
+        <name>agf__Escalation_Security_Contact__c</name>
+        <relationshipLabel><!-- Clouds (Escalation Security Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent Cloud --></label>
+        <name>agf__Parent_Cloud__c</name>
+        <relationshipLabel><!-- Clouds --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Security Contact --></label>
+        <name>agf__Primary_Security_Contact__c</name>
+        <relationshipLabel><!-- Clouds (Primary Security Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Secondary Security Contact --></label>
+        <name>agf__Secondary_Security_Contact__c</name>
+        <relationshipLabel><!-- Clouds (Secondary Security Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Security Approval Group Name --></label>
+        <name>agf__Security_Approval_Group_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Guidance --></label>
+        <name>agf__Security_Guidance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Guidence --></label>
+        <name>agf__Security_Guidence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tertiary Security Contact --></label>
+        <name>agf__Tertiary_Security_Contact__c</name>
+        <relationshipLabel><!-- Clouds (Tertiary Security Contact) --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

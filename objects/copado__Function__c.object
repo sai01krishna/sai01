@@ -391,8 +391,8 @@ The class must implement the MCCallBack interface.</inlineHelpText>
         <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
         <excludedStandardButtons>Accept</excludedStandardButtons>
-        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
         <lookupDialogsAdditionalFields>copado__Type__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Description__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__API_Name__c</lookupDialogsAdditionalFields>

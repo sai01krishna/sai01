@@ -171,6 +171,12 @@
         <filterScope>Mine</filterScope>
         <label>My Invoices</label>
     </listViews>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Test</fullName>
+        <active>true</active>
+        <label>Test</label>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedBy</customTabListAdditionalFields>

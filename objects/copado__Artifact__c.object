@@ -141,11 +141,22 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__PackageCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__PackageCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Package_Type__c</fields>
+        <fields>copado__Artifact_Version__c</fields>
+        <fields>copado__DefaultBranch__c</fields>
+        <fields>copado__DefaultPath__c</fields>
+        <label>Package Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -192,6 +203,45 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__DataJSON__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Data JSON</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__DefaultBranch__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
+        <label>Default Branch</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__DefaultPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
+        <label>Default Path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -202,6 +252,18 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__LastJobExecutionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Job Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__No_Namespace__c</fullName>
@@ -1215,7 +1277,49 @@ The credential where the unmanaged package is created from.</inlineHelpText>
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>copado__Pipeline__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Package_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Artifact_Repository__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Artifact_Version__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__DefaultBranch__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__DefaultPath__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Pipeline__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Package_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Artifact_Version__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Artifact_Repository__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__DefaultBranch__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__DefaultPath__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Pipeline__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Package_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Repository__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Version__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__DefaultBranch__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__DefaultPath__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>copado__Pipeline__c</searchFilterFields>
+        <searchFilterFields>copado__Package_Type__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>copado__Artifact_Repository__c</searchFilterFields>
+        <searchFilterFields>copado__Artifact_Version__c</searchFilterFields>
+        <searchFilterFields>copado__DefaultBranch__c</searchFilterFields>
+        <searchFilterFields>copado__DefaultPath__c</searchFilterFields>
+        <searchResultsAdditionalFields>copado__Pipeline__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Package_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Artifact_Repository__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Artifact_Version__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__DefaultBranch__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__DefaultPath__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>copado__ArtifactNameCannotChange</fullName>

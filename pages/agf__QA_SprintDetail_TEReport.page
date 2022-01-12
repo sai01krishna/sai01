@@ -1,0 +1,7 @@
+<apex:page standardController="agf__ADM_Sprint__c" extensions="agf.QA_TEReportExtension" showHeader="false" sidebar="false">
+
+This page has been deprecated.
+
+
+
+</apex:page>

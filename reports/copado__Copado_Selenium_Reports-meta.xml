@@ -2,7 +2,7 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>ssamudrala_prod@copado.com</sharedTo>
+        <sharedTo>ssamudrala_dev@copado.com</sharedTo>
         <sharedToType>User</sharedToType>
     </folderShares>
     <name>Copado Selenium Reports</name>

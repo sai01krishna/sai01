@@ -141,11 +141,22 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__PackageVersionCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__PackageVersionCompactLayout</fullName>
+        <fields>copado__Version_number__c</fields>
+        <fields>copado__Release_Status__c</fields>
+        <fields>copado__Is_released__c</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Release__c</fields>
+        <fields>CreatedById</fields>
+        <label>Package Version Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -181,6 +192,27 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Data_JSON__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Data JSON</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__DefinitionFile__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Definition File</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Is_released__c</fullName>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
@@ -189,6 +221,17 @@
         <label>Is released</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copado__LastJobExecutionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Job Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__Package_Version_Id__c</fullName>
@@ -399,7 +442,44 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Package Versions</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>copado__Artifact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Version_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Version_number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Version_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Branch__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Is_released__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Release__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Artifact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Version_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Version_number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Version_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Branch__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Is_released__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Release__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Artifact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Version_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Version_number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Version_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Branch__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Is_released__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Release__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>copado__Artifact__c</searchFilterFields>
+        <searchFilterFields>copado__Version_Name__c</searchFilterFields>
+        <searchFilterFields>copado__Version_number__c</searchFilterFields>
+        <searchFilterFields>copado__Version_Description__c</searchFilterFields>
+        <searchFilterFields>copado__Branch__c</searchFilterFields>
+        <searchFilterFields>copado__Is_released__c</searchFilterFields>
+        <searchFilterFields>copado__Release__c</searchFilterFields>
+        <searchResultsAdditionalFields>copado__Artifact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Version_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Version_number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Version_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Branch__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Is_released__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Release__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
     <webLinks>

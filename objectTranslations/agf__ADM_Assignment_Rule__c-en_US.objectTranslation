@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Followers --></label>
+        <name>agf__Additional_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignee --></label>
+        <name>agf__Assignee_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules (Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Exception Request POC --></label>
+        <name>agf__Exception_Request_POC__c</name>
+        <relationshipLabel><!-- Assignment Rules (Exception Request POC) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Used to designate if an assignment rule should be applied to work records. --></help>
+        <label><!-- Inactive --></label>
+        <name>agf__Inactive__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this field is empty it will be pre-populated with the Product Owner for the rule&apos;s scrum team. --></help>
+        <label><!-- Product Owner --></label>
+        <name>agf__Product_Owner__c</name>
+        <relationshipLabel><!-- Assignment Rules (Product Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- QA Engineer --></label>
+        <name>agf__QA_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules (QA Engineer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Work record type this assignment rule is applicable for --></help>
+        <label><!-- Record Type --></label>
+        <name>agf__Record_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bug</masterLabel>
+            <translation><!-- Bug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investigation</masterLabel>
+            <translation><!-- Investigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Story</masterLabel>
+            <translation><!-- User Story --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scrum Team --></label>
+        <name>agf__Scrum_Team_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Senior Management POC --></label>
+        <name>agf__Senior_Management_POC_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules (Senior Management POC) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This user is assigned to Investigations with Severity Level 1 --></help>
+        <label><!-- Sev 1 Assignee --></label>
+        <name>agf__Sev_1_Assignee__c</name>
+        <relationshipLabel><!-- Assignment Rules (Sev 1 Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This user is assigned to Investigations with a Severity Level of 2. --></help>
+        <label><!-- Sev 2 Assignee --></label>
+        <name>agf__Sev_2_Assignee__c</name>
+        <relationshipLabel><!-- Assignment Rules (Sev 2 Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This user is assigned to Investigations with Severity Level 3 --></help>
+        <label><!-- Sev 3 Assignee --></label>
+        <name>agf__Sev_3_Assignee__c</name>
+        <relationshipLabel><!-- Assignment Rules (Sev 3 Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This user is assigned to Investigations with Severity Level 4 --></help>
+        <label><!-- Sev 4 Assignee --></label>
+        <name>agf__Sev_4_Assignee__c</name>
+        <relationshipLabel><!-- Assignment Rules (Sev 4 Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Performance Engineer --></label>
+        <name>agf__Systest_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules (Performance Engineer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tech Writer --></label>
+        <name>agf__Tech_Writer_Assignment__c</name>
+        <relationshipLabel><!-- Assignment Rules (Tech Writer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- UE Engineer --></label>
+        <name>agf__UE_Engineer__c</name>
+        <relationshipLabel><!-- Assignment Rules (UE Engineer) --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Product Owner is a required field --></errorMessage>
+        <name>agf__ProductOwnerReq</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The scrum team you selected is not active. --></errorMessage>
+        <name>agf__ScrumTeamIsActive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Scrum Team is a required field --></errorMessage>
+        <name>agf__ScrumTeamRequired</name>
+    </validationRules>
+</CustomObjectTranslation>
