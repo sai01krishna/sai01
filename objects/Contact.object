@@ -505,6 +505,22 @@
         <label>My Contacts</label>
     </listViews>
     <listViews>
+        <fullName>My_TAM_contacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CONTACT.PHONE1</field>
+            <operation>contains</operation>
+            <value>2</value>
+        </filters>
+        <label>My TAM contacts</label>
+    </listViews>
+    <listViews>
         <fullName>NewLastWeek</fullName>
         <filterScope>Everything</filterScope>
         <filters>
