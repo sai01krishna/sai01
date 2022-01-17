@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-
-        <members>School__c.Test_956__c</members>
-
-        <members>School__c.Primary_contact_disable__c</members>
-
-        <name>CustomField</name>
         <members>School__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
-        <members>School_object</members>
-        <name>PermissionSet</name>
- 
-
-        <members>School__c-New Student</members>
-        <name>Layout</name>
-
+        <name>CustomTab</name>
     </types>
     <version>53.0</version>
 </Package>
