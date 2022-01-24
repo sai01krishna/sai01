@@ -9467,6 +9467,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>School__c.Bit_buk_1__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>School__c.CDC_without_uat__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9568,6 +9573,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>School__c.duplicate__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>School__c.test_FLS_1__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -25799,6 +25809,10 @@
         <object>copado__User_Story__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>Test_A</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>agf__ADM_AddWorkToPrioritizer</apexPage>
         <enabled>false</enabled>

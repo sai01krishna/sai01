@@ -13,6 +13,10 @@
         <name>Age__c</name>
     </fields>
     <fields>
+        <label><!-- Bit buk 1 --></label>
+        <name>Bit_buk_1__c</name>
+    </fields>
+    <fields>
         <label><!-- CDC without uat --></label>
         <name>CDC_without_uat__c</name>
     </fields>
@@ -124,6 +128,10 @@
     <fields>
         <label><!-- duplicate --></label>
         <name>duplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- test FLS 1 --></label>
+        <name>test_FLS_1__c</name>
     </fields>
     <recordTypes>
         <label><!-- New Student --></label>

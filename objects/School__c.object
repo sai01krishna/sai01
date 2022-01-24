@@ -166,6 +166,16 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Bit_buk_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Bit buk 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CDC_without_uat__c</fullName>
         <externalId>false</externalId>
         <label>CDC without uat</label>
@@ -416,6 +426,16 @@
         <fullName>duplicate__c</fullName>
         <externalId>false</externalId>
         <label>duplicate</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>test_FLS_1__c</fullName>
+        <externalId>false</externalId>
+        <label>test FLS 1</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
