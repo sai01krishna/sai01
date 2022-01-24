@@ -176,26 +176,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>CT_1__c</fullName>
-        <externalId>false</externalId>
-        <label>CT 1</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>CT_2__c</fullName>
-        <externalId>false</externalId>
-        <label>CT 2</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
         <fullName>Class__c</fullName>
         <externalId>false</externalId>
         <inlineHelpText>Student Class ?</inlineHelpText>
@@ -255,16 +235,6 @@
         <scale>0</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Roll_back_1__c</fullName>
-        <externalId>false</externalId>
-        <label>Roll back 1</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -352,47 +322,12 @@
         </valueSet>
         <visibleLines>4</visibleLines>
     </fields>
-    <fields>
-        <fullName>Test_956__c</fullName>
-        <externalId>false</externalId>
-        <label>Test_956</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Test_Connection_beharvior__c</fullName>
-        <externalId>false</externalId>
-        <label>Test Connection beharvior</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ct3__c</fullName>
-        <externalId>false</externalId>
-        <label>ct3</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ct4__c</fullName>
-        <externalId>false</externalId>
-        <label>ct4</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <label>School</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>School Name</label>
         <type>Text</type>
@@ -402,8 +337,31 @@
         <fullName>New_Student</fullName>
         <active>true</active>
         <label>New Student</label>
+        <picklistValues>
+            <picklist>Subjects__c</picklist>
+            <values>
+                <fullName>English%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hindi%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maths%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social%2C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
