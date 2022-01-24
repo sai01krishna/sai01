@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>School</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Schools</value>
+    </caseValues>
+    <fields>
+        <label><!-- CT 2 --></label>
+        <name>CT_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 1 --></label>
+        <name>Roll_back_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Connection beharvior --></label>
+        <name>Test_Connection_beharvior__c</name>
+    </fields>
+    <fields>
+        <label><!-- ct3 --></label>
+        <name>ct3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ct4 --></label>
+        <name>ct4__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
