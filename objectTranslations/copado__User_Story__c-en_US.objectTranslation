@@ -13,6 +13,10 @@
         <name>copado__Commit_Files_Information</name>
     </fieldSets>
     <fieldSets>
+        <label><!-- Commit Page --></label>
+        <name>copado__Commit_Page</name>
+    </fieldSets>
+    <fieldSets>
         <label><!-- Copado Header Fields --></label>
         <name>copado__Copado_Header_Fields</name>
     </fieldSets>
@@ -56,6 +60,14 @@
         <label><!-- Work Manager Relations --></label>
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA Key --></label>
+        <name>JIRA_Key__c</name>
+    </fields>
     <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
@@ -735,6 +747,10 @@
             <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Jira</masterLabel>
+            <translation><!-- Jira --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Ready for testing</masterLabel>
             <translation><!-- Ready for testing --></translation>
         </picklistValues>
@@ -817,6 +833,18 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA key --></label>
+        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <recordTypes>
         <label><!-- Bug --></label>

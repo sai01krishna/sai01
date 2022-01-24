@@ -1051,7 +1051,7 @@
                                         <div class="slds-page-header__control buttons">
                                             <div class="slds-button-group" role="group">
                                                 <apex:outputPanel layout="none" rendered="{!pipelineMode == MANAGER}">
-                                                    <apex:commandButton onClick="lockScreen();openRebaseModal(); return false;" value="{!$Label.copado__mass_back_promote}" reRender="pageMsgs,headerPanel,filterWrapper" styleClass="slds-button slds-button_neutral" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}" />
+                                                    <apex:commandButton onClick="lockScreen();openRebaseModal(); return false;" value="{!$Label.copado__mass_back_promote}" reRender="pageMsgs,headerPanel,filterWrapper" styleClass="slds-button slds-button_neutral" />
                                                     <apex:commandButton onClick="togglePipelineMode(); return false;" styleClass="slds-button slds-button_brand" value="{!IF(pipelineMode == DIAGRAM, $Label.copado__view_pipeline, $Label.copado__view_pipeline_setup)}" reRender="pipelineWrapper, filterManagerPanel"></apex:commandButton>
                                                 </apex:outputPanel>
                                                 <apex:outputPanel layout="none" rendered="{!pipelineMode == DIAGRAM}">
@@ -1636,7 +1636,7 @@
 
                                             <apex:outputPanel rendered="{!AND(rebaseUserStoriesWrapper.size > 0, OR(AND(NOT(ISNULL(rebaseProject)), rebaseProject != '--None--'),AND(NOT(ISNULL(rebaseRelease)), rebaseRelease != '--None--')))}" layout="none" id="rebaseButtons">
                                                 <apex:commandLink action="{!goToPromotions}" rendered="{!rebasePromotionKeySize > 0}" target="_blank" value="{!$Label.copado__go_to_promotions}" onclick="lockScreen();" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" oncomplete="unlockScreen();" reRender="rebaseMainRender" />
-                                                <apex:commandLink target="_blank" value="{!$Label.copado__pipeline_back_promote}" onclick="lockScreen();" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createRebasePromotions" oncomplete="createRebasePromotions();" reRender="noRender" />
+                                                <apex:commandLink target="_blank" value="{!$Label.copado__pipeline_back_promote}" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}" onclick="lockScreen();" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createRebasePromotions" oncomplete="createRebasePromotions();" reRender="noRender" />
                                                 <apex:commandLink target="_blank" value="{!$Label.copado__pipeline_back_promote_and_deploy}" onclick="lockScreen();" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createRebasePromotionsAndDeploy" oncomplete="createRebasePromotionsAndDeploy();" reRender="noRender" />
                                             </apex:outputPanel>
                                             <apex:outputPanel layout="block" rendered="{!rebaseUserStoriesWrapper.size == 0}">
@@ -2011,9 +2011,10 @@
                                 </button>
                             </div>
                             <apex:outputPanel id="GeneralActionButtons" styleClass="slds-col slds-size_1-of-2" style="text-align:right;">
-                                <apex:commandButton value="{!$Label.copado__pipeline_validate_selections}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="validateSelections" action="{!createPromotionforValidation}" reRender="modalHeader, copadoErrorPanelForDialog, createdPromotionListPanel" onClick="lockScreen();" oncomplete="openPromotionListModal();renderPromotionPoller();" disabled="{!NOT(showUserStories)}" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}"/>
-                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote, $Label.copado__pipeline_back_promote)}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createPromotion" action="{!createPromotion}" reRender="copadoErrorPanel, notify, modalHeader, copadoErrorPanelForDialog,createdPromotionListButtons, createdPromotionListPanel" onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" />
-                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote_and_deploy, $Label.copado__pipeline_back_promote_and_deploy)}" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createPromotionAndDeploy" action="{!createPromotionListAndDeploy}"  onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" reRender="modalHeader, copadoErrorPanelForDialog, createdPromotionListPanel,promotionPoller" />
+                                <apex:commandButton value="{!$Label.copado__pipeline_validate_selections}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="validateSelections" action="{!createPromotionforValidation}" reRender="modalHeader,copadoErrorPanelForDialog,createdPromotionListPanel" onClick="lockScreen();" oncomplete="openPromotionListModal();renderPromotionPoller();" disabled="{!NOT(showUserStories)}" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}"/>
+                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote, $Label.copado__pipeline_back_promote)}" styleClass="slds-button slds-button_neutral slds-m-horizontal_small" id="createPromotion" action="{!createPromotion}" reRender="copadoErrorPanel,notify,modalHeader,copadoErrorPanelForDialog,createdPromotionListButtons,createdPromotionListPanel" onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}"/>
+                                <apex:commandButton value="{!IF(newOverlay.pathType == 'merge', $Label.copado__pipeline_promote_and_deploy, $Label.copado__pipeline_back_promote_and_deploy)}" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createPromotionAndDeploy" action="{!createPromotionListAndDeploy}"  onClick="lockScreen();" onComplete="openPromotionListModal();" disabled="{!NOT(showUserStories)}" reRender="modalHeader,copadoErrorPanelForDialog,createdPromotionListPanel,promotionPoller" rendered="{!OR(currentPipeline.copado__Platform__c == 'Salesforce',currentPipeline.copado__Platform__c == null)}"/>
+                                <apex:commandButton value="{!$Label.copado__create_promotion}" styleClass="slds-button slds-button_brand slds-m-horizontal_small" id="createMcPromotion" action="{!createPromotion}" reRender="mcPromotionMessages" onClick="lockScreen();" onComplete="unlockScreen();" disabled="{!NOT(showUserStories)}" rendered="{!AND(currentPipeline.copado__Platform__c != 'Salesforce',currentPipeline.copado__Platform__c != null)}"/> 
                             </apex:outputPanel>
                         </div>
                         <div class="slds-grid slds-wrap slds-clearfix">
@@ -2062,6 +2063,25 @@
                                 <span class="slds-text-heading_medium">
                                         {!newOverlay.fromEnvName}
                                     </span>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        <apex:outputPanel styleClass="slds-modal__content slds-p-around_medium" id="mcPromotionMessages">
+                            <apex:outputPanel layout="none" styleClass="error-panel">
+                                <div id="divToast" class="slds-notify_container slds-is-relative">
+                                    <apex:repeat value="{!pageMessagesMap}" var="severity">
+                                        <div class="slds-notify slds-notify_toast slds-theme_{!severity}" role="status">
+                                            <span class="slds-assistive-text"></span>
+                                            <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top">
+                                                <span class="slds-icon_container slds-icon__svg--default {!severity}ToastIcon"></span>
+                                            </span>
+                                            <div class="slds-notify__content">
+                                                <apex:repeat value="{!pageMessagesMap[severity]}" var="messages">
+                                                    <h2 class="slds-text-heading_small ">{!messages}</h2>
+                                                </apex:repeat>
+                                            </div>
+                                        </div>
+                                    </apex:repeat>
+                                </div>
                             </apex:outputPanel>
                         </apex:outputPanel>
                         <apex:outputPanel id="pins" layout="block" styleClass="slds-grid" style="width: 100%; margin-top: 15px;">
@@ -2343,6 +2363,13 @@
                                 <table id="dt4Deployment" class="compact row-border">
                                     <thead>
                                     <tr>
+                                        <apex:outputPanel layout="none" rendered="{!AND(currentPipeline.copado__Platform__c != null,currentPipeline.copado__Platform__c != 'Salesforce')}">
+                                            <td style="background-color: #fafaf9">
+                                                <h2 id="deploymentHT" class="slds-text-title_caps slds-hyphenate" style="padding-left:20px">
+                                                    Job Execution
+                                                </h2>
+                                            </td>
+                                        </apex:outputPanel>
                                         <apex:repeat value="{!$ObjectType.copado__Deployment__c.FieldSets.copado__Pipeline_Deployment_Modal}" var="usf">
                                             <td style="background-color: #fafaf9">
                                                 <h2 id="deploymentHT" class="slds-text-title_caps slds-hyphenate" style="padding-left:20px">
@@ -2360,6 +2387,13 @@
                                     <tbody>
                                     <apex:repeat value="{!LatestDeploymentsByEnvironment}" var="deployment">
                                         <tr>
+                                            <apex:outputPanel layout="none" rendered="{!AND(currentPipeline.copado__Platform__c != null,currentPipeline.copado__Platform__c != 'Salesforce')}">
+                                                <td style="padding-left:28px">
+                                                    <apex:repeat value="{!deployment.JobExecutions__r}" var="executions">
+                                                        <a href="#" onclick="copadoNavigateToUrl('{!executions.Id}','{!URLFOR($Action.copado__JobExecution__c.View,executions.Id)}', '_blank'); return false;"> {!executions.Name} </a>
+                                                    </apex:repeat>
+                                                </td>
+                                            </apex:outputPanel>
                                             <apex:repeat value="{!$ObjectType.copado__Deployment__c.FieldSets.copado__Pipeline_Deployment_Modal}" var="dep">
                                                 <td style="padding-left:28px">
                                                     <apex:outputPanel layout="none" rendered="{!dep.Label == $ObjectType.copado__Deployment__c.fields.Name.Label}">
@@ -2377,7 +2411,6 @@
                                                     </a>
                                                 </apex:outputPanel>
                                             </td>
-
                                         </tr>
                                     </apex:repeat>
                                     </tbody>

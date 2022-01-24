@@ -4,13 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>copado:userStoryCommitHeader</componentName>
-                <identifier>userStoryCommitHeader</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>copado:userStoryCommitBody</componentName>
-                <identifier>userStoryCommitBody</identifier>
+                <identifier>c_userStoryCommitHeader1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

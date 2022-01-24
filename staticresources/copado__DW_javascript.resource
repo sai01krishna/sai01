@@ -9,8 +9,9 @@ var stepId = stepId ? stepId : undefined;
 var namespace = namespace ? namespace : undefined;
 var sourceDomain = '';
 var targetDomain = '';
+var isRollback = isRollback ? isRollback : undefined;
 
-(app => {
+((app) => {
     ('use strict');
 
     var iconsList = [
@@ -61,7 +62,7 @@ var targetDomain = '';
     ];
     var svgStruct = [];
 
-    app.setDataTableId = value => {
+    app.setDataTableId = (value) => {
         dataTableId = `${value}Table`;
     };
 
@@ -97,32 +98,17 @@ var targetDomain = '';
     var checkDataTableRow = (tr, tableId, rows, currentPage) => {
         var table = $copado(`#${tableId}`).DataTable();
 
-        if (
-            $copado(tr)
-                .find('td:first')
-                .find('input[type="checkbox"]')[0]
-        ) {
+        if ($copado(tr).find('td:first').find('input[type="checkbox"]')[0]) {
             // remove the previous selection mark
             rows.each((index, row) => {
-                if (
-                    $copado(row)
-                        .find('td:first')
-                        .find('input[type="checkbox"]').length > 0
-                ) {
-                    $copado(row)
-                        .find('td:first')
-                        .find('input[type="checkbox"]')[0].checked = false;
+                if ($copado(row).find('td:first').find('input[type="checkbox"]').length > 0) {
+                    $copado(row).find('td:first').find('input[type="checkbox"]')[0].checked = false;
                 }
             });
 
             // mark the picked row
-            $copado(tr)
-                .find('td:first')
-                .find('input[type="checkbox"]')[0].checked = true;
-            app.selection = $copado(tr)
-                .find('td:first')
-                .find('input[type="checkbox"]')
-                .attr('recordId');
+            $copado(tr).find('td:first').find('input[type="checkbox"]')[0].checked = true;
+            app.selection = $copado(tr).find('td:first').find('input[type="checkbox"]').attr('recordId');
             if ($copado('.disabled').length > 0) {
                 $copado('.disabled').prop('disabled', false);
                 $copado('.disabled').removeClass('disabled');
@@ -131,20 +117,14 @@ var targetDomain = '';
         }
     };
 
-    app.handleTabs = elem => {
+    app.handleTabs = (elem) => {
         var open = $copado(elem.target).data('open');
         if (open === true) {
             $copado('#tabbingUl li').removeClass('slds-is-active');
-            $copado(elem.target)
-                .closest('li')
-                .addClass('slds-is-active');
+            $copado(elem.target).closest('li').addClass('slds-is-active');
             var targetId = $copado(elem.target).attr('aria-controls');
-            $copado('div.slds-show')
-                .removeClass('slds-show')
-                .addClass('slds-hide');
-            $copado(`#${targetId}`)
-                .removeClass('slds-hide')
-                .addClass('slds-show');
+            $copado('div.slds-show').removeClass('slds-show').addClass('slds-hide');
+            $copado(`#${targetId}`).removeClass('slds-hide').addClass('slds-show');
         }
     };
 
@@ -155,9 +135,7 @@ var targetDomain = '';
         var currentPage = 0;
 
         if (tableId) {
-            activePaginationSelected = $copado(`#${tableId}_length`)
-                .find('select')
-                .val(); // get the pagination row count
+            activePaginationSelected = $copado(`#${tableId}_length`).find('select').val(); // get the pagination row count
             table = $copado(`#${tableId}`).DataTable();
 
             // get page number
@@ -167,37 +145,24 @@ var targetDomain = '';
             });
 
             // show all rows
-            $copado(`#${tableId}_length`)
-                .find('select')
-                .val(-1)
-                .trigger('change');
-            rows = $copado(`#${tableId}`)
-                .find('tbody')
-                .find('tr');
+            $copado(`#${tableId}_length`).find('select').val(-1).trigger('change');
+            rows = $copado(`#${tableId}`).find('tbody').find('tr');
 
             // click event
-            rows.click(event => {
+            rows.click((event) => {
                 checkDataTableRow(event.currentTarget, tableId, rows, currentPage);
             });
 
             // remove disabled from button if deployment is cloned, we are checking any checkbox in the datatable with checked to remove disable class from a button and break the process
             rows.each((index, row) => {
-                if (
-                    $copado(row)
-                        .find('td:first')
-                        .find('input[type="checkbox"]')[0].checked === true &&
-                    $copado('.disabled-Buttons').length > 0
-                ) {
+                if ($copado(row).find('td:first').find('input[type="checkbox"]')[0] && $copado(row).find('td:first').find('input[type="checkbox"]')[0].checked === true && $copado('.disabled-Buttons').length > 0) {
                     $copado('.disabled-Buttons').removeClass('disabled');
                     return false;
                 }
             });
 
             // return the pagination to first situation
-            $copado(`#${tableId}_length`)
-                .find('select')
-                .val(activePaginationSelected)
-                .trigger('change');
+            $copado(`#${tableId}_length`).find('select').val(activePaginationSelected).trigger('change');
 
             $copado(`#${tableId}`).removeClass('slds-hidden');
         }
@@ -210,8 +175,8 @@ var targetDomain = '';
     };
 
     app.startDataTables = () => {
-        var tablesList = ['orgTable', 'gitTable', 'targetTable', 'dataTemplateTable'];
-        var isTableFound = tablesList.find(table => {
+        var tablesList = ['orgTable', 'gitTable', 'targetTable', 'dataTemplateTable', 'rollbackTable'];
+        var isTableFound = tablesList.find((table) => {
             return table === dataTableId;
         });
 
@@ -239,10 +204,7 @@ var targetDomain = '';
                 },
                 fnInitComplete: () => {
                     $copado(`#${dataTableId}`).show();
-                    $copado(`#${dataTableId}`)
-                        .find('th')
-                        .first()
-                        .removeClass('sorting_asc');
+                    $copado(`#${dataTableId}`).find('th').first().removeClass('sorting_asc');
                     $copado('#progress').hide();
                 },
                 dom: '<"top"f>rt<"bottom"ilp><"clear">'
@@ -250,7 +212,7 @@ var targetDomain = '';
         }
     };
 
-    app.renderSVG = elemId => {
+    app.renderSVG = (elemId) => {
         var elem = $copado(elemId);
         var struct = svgStruct[elemId];
         var imageURL, SVG, SVGUse;
@@ -270,7 +232,7 @@ var targetDomain = '';
 
     app.applyRenderSVG = () => {
         if (iconsList) {
-            iconsList.forEach(element => {
+            iconsList.forEach((element) => {
                 app.renderSVG('.' + element.svgButtonsClass);
             });
         }
@@ -280,7 +242,7 @@ var targetDomain = '';
         var className;
 
         if (globalSldsResourcePath) {
-            iconsList.forEach(item => {
+            iconsList.forEach((item) => {
                 className = item.styleClass ? `slds-button__icon ${item.styleClass}` : 'slds-button__icon';
                 svgStruct['.' + item.svgButtonsClass] = {
                     imageURL: `${globalSldsResourcePath}/icons/utility-sprite/svg/symbols.svg#${item.name}`,
@@ -291,11 +253,11 @@ var targetDomain = '';
     };
 
     /* JQX datatable modals */
-    app.checkIfRefreshCacheCompleted = modalId => {
+    app.checkIfRefreshCacheCompleted = (modalId) => {
         dw.closeModals(modalId);
     };
 
-    app.createStep = justSaveAndClose => {
+    app.createStep = (justSaveAndClose) => {
         getMetadataGridConfig();
         app.conf.jsonData.selectedMetadata = app.grid.selectedMetadata;
         var noMetadataSelected = !app.conf.jsonData.selectedMetadata || !app.conf.jsonData.selectedMetadata.length;
@@ -311,7 +273,7 @@ var targetDomain = '';
 
         if (!noMetadataSelected && (justSaveAndClose || !justSaveAndClose)) {
             var core = app.conf.ns ? window[app.conf.ns.split('__')[0]] : window;
-            core.DW_SelectChangesExtension.insertStep(app.conf.data.deploymentId, function(result, event) {
+            core.DW_SelectChangesExtension.insertStep(app.conf.data.deploymentId, isRollback, function (result, event) {
                 if (result && event.status) {
                     app.redirectToOperation(result, justSaveAndClose);
                 }
@@ -326,14 +288,14 @@ var targetDomain = '';
         coGridHelper.datasource = app.grid.datasource;
         sel = sel || coGridHelper.getSelectedObj();
         // Attachment Name
-        var attachmentName = 'MetaData';
+        var attachmentName = isRollback ? 'Selected items to rollback' : 'MetaData';
         app.conf.data.stepId &&
             coGridHelper.saveSelected(
                 app.conf.data.stepId,
                 attachmentName,
                 null,
                 true,
-                function() {
+                function () {
                     if (!justSaveAndClose) {
                         goToNextPage();
                     } else {
@@ -341,7 +303,8 @@ var targetDomain = '';
                     }
                     return;
                 },
-                sel
+                sel,
+                isRollback
             );
     };
 
@@ -405,13 +368,13 @@ var targetDomain = '';
         datatype: 'array'
     };
 
-    app.prepareErrorGrid = jobId => {
+    app.prepareErrorGrid = (jobId) => {
         var result = sforce.connection.query(
             "SELECT Id, Body, BodyLength, ContentType, Name, ParentId FROM Attachment WHERE Name = '" +
                 jobId +
                 ".json' ORDER BY CreatedDate DESC LIMIT 1",
             {
-                onSuccess: res => {
+                onSuccess: (res) => {
                     // adapter wrapper
                     if (res.records) {
                         res = Base64.decode(res.records.Body);
@@ -424,7 +387,7 @@ var targetDomain = '';
                         if (records[0] && records[0].m && (records[0].m.templateId || records[0].m.exception)) {
                             if (!records[0].m.exception) {
                                 var newResultArray = [];
-                                records.forEach(function(element) {
+                                records.forEach(function (element) {
                                     var newResult = {
                                         deployedRecords: element.m.deployedRecords,
                                         failedRecords: element.m.failedRecords,
@@ -486,7 +449,7 @@ var targetDomain = '';
                         $copado('#tab-default-2__item').addClass('enabled-tab');
                     }
                 },
-                onFailure: res => {
+                onFailure: (res) => {
                     console.error(res);
                 }
             }
@@ -587,25 +550,25 @@ var targetDomain = '';
         ];
     };
 
-    app.downloadRecordMatchingCSV = elem => {
+    app.downloadRecordMatchingCSV = (elem) => {
         var templateName = elem.split(',')[0];
         var deploymentId = elem.split(',')[1];
         templateName = templateName + '.csv';
         var contentDocumentId = '';
 
         sforce.connection.query("SELECT ContentDocumentId FROM ContentDocumentLink WHERE LinkedEntityId IN ('" + deploymentId + "')", {
-            onSuccess: response => {
+            onSuccess: (response) => {
                 var records = response.getArray('records');
                 if (records) {
-                    records.forEach(contentDocumentLink => {
+                    records.forEach((contentDocumentLink) => {
                         contentDocumentId = contentDocumentLink.ContentDocumentId;
 
                         sforce.connection.query("SELECT VersionData,Title FROM Contentversion WHERE ContentDocumentId ='" + contentDocumentId + "'", {
-                            onSuccess: response => {
+                            onSuccess: (response) => {
                                 var records = response.getArray('records');
                                 if (records) {
                                     var versionData;
-                                    records.forEach(contentVersionItem => {
+                                    records.forEach((contentVersionItem) => {
                                         if (contentVersionItem.Title === templateName) {
                                             versionData = contentVersionItem.VersionData;
                                         }
@@ -622,12 +585,12 @@ var targetDomain = '';
                                     link.click();
                                 }
                             },
-                            onFailure: error => {}
+                            onFailure: (error) => {}
                         });
                     });
                 }
             },
-            onFailure: error => {}
+            onFailure: (error) => {}
         });
     };
 
@@ -681,12 +644,12 @@ var targetDomain = '';
         return element[0].outerHTML;
     };
 
-    app.openModals = param => {
+    app.openModals = (param) => {
         $copado('[id=notificationModal' + param + ']').show();
         $copado('[id=backDrop' + param + ']').show();
     };
 
-    app.closeModals = param => {
+    app.closeModals = (param) => {
         $copado('[id=notificationModal' + param + ']').hide();
         $copado('[id=backDrop' + param + ']').hide();
     };
@@ -698,7 +661,7 @@ var targetDomain = '';
         unlockScreen();
     };
 
-    app.checkDisable = isSource => {
+    app.checkDisable = (isSource) => {
         var flag = false;
         if (isSource) {
             if (deploymentId.length == 0) {
@@ -708,7 +671,7 @@ var targetDomain = '';
             }
         } else {
             flag = false;
-            $copado('input[type="checkbox"]').each(function() {
+            $copado('input[type="checkbox"]').each(function () {
                 if ($copado(this).prop('checked') == true) {
                     flag = true;
                     $copado('input.disabled').removeClass('disabled');
@@ -725,7 +688,7 @@ var targetDomain = '';
         app.grid = jqx.grid;
     };
 
-    app.redirectToRelationalDiagramLWC = dataTemplateId => {
+    app.redirectToRelationalDiagramLWC = (dataTemplateId) => {
         // for dev orgs it need to have c: but for namespace context in managed package it should be copado
         namespace = namespace == '' ? 'c' : 'copado';
         var compDefinition = {

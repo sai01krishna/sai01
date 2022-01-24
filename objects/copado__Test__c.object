@@ -190,6 +190,29 @@
         <visibleLines>3</visibleLines>
     </fields>
     <fields>
+        <fullName>copado__ExtensionConfiguration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The displayed values are based on the active Extension Configuration records available in your org.</inlineHelpText>
+        <label>Tool</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>copado__ExtensionConfiguration__c.copado__Status__c</field>
+                <operation>equals</operation>
+                <value>Active</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__ExtensionConfiguration__c</referenceTo>
+        <relationshipLabel>Tests</relationshipLabel>
+        <relationshipName>ChildTests</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__Feature__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -197,6 +220,29 @@
         <label>Feature</label>
         <referenceTo>copado__Application_Feature__c</referenceTo>
         <relationshipLabel>Tests</relationshipLabel>
+        <relationshipName>Tests</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copado__Integration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated</inlineHelpText>
+        <label>Tool - Deprecated</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>copado__ExtensionConfiguration__c.copado__Status__c</field>
+                <operation>equals</operation>
+                <value>Active</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>copado__ExtensionConfiguration__c</referenceTo>
+        <relationshipLabel>Tests - Deprecated</relationshipLabel>
         <relationshipName>Tests</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>

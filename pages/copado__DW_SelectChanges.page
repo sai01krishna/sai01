@@ -5,8 +5,8 @@
     <apex:includeScript value="{!URLFOR($Resource.utilsV2) }" />
     <c:IncludeStaticsResourceComponent addJquery="true" addJSON2js="true" addCometdjs="true" addJcometdjs="true" addJSzipjs="true"
     />
-    <apex:includeScript value="{!$Resource.copado__DW_javascript}"/>
-    <apex:stylesheet value="{!$Resource.copado__DW_custom_css}"/>
+    <apex:includeScript value="{!$Resource.copado__DW_javascript}" />
+    <apex:stylesheet value="{!$Resource.copado__DW_custom_css}" />
 
     <script>
         var globalSldsResourcePath = '{!URLFOR($Asset.SLDS)}';
@@ -14,38 +14,71 @@
         var currentStepValue = '{!currentStepValue}';
         var Copado_Licenses = '{!CurrentUserLicenses}';
         //***IMPORTANT***  use exactly the same name(jqxdatatable_config) for the configuration for future uses on new pages
-        var jqxdatatable_config = {
-            data:{
-                orgId: '{!deployment.copado__From_Org__c}' ? '{!deployment.copado__From_Org__c}' : '{!DeploymentStepRecord.copado__Git_Repository__c}',
-                orgName: '{!JSENCODE(deployment.From_Org__r.Environment__r.Name)}',
-                targetOrgId: '{!DestinationOrg.copado__To_Org__c}',
-                targetOrgName: '{!JSENCODE(DestinationOrg.To_Org__r.Environment__r.Name)}',
-                envId: '{!JSENCODE(deployment.copado__Source_Environment__c)}',
-                deploymentId: '{!deployment.Id}',
-                stepId: ''
-            },
-            elts: {},
-            server: {
-                baseUrl: '{!JSENCODE(urlBase)}',
-                metadataUrl: '{!JSENCODE(metadataURL)}&parentId={!deployment.copado__From_Org__c}',
-                typesUrl: '{!JSENCODE(urlBase)}gitTypes{!JSENCODE(urlParameters)}'
-            },
-            jsonData: {
-                selectedMetadata: []
-            },
 
-            ns: '{!JSENCODE(namespace)}',
-            scalableGrid: '{!AND(JSENCODE(deployment.copado__Deployment_Source_Type__c) == "org",scalableGrid)}',
-            gridMode: '{!deployment.copado__From_Org__c}' ? 'gitCommitCompare' : 'gitCommitLegacy',
-            attachmentName: '{!deployment.copado__From_Org__c}' ? 'MetaData' : '{!JSENCODE(DeploymentStepRecord.copado__Commit_Id__c)}' + '.json',
-            eltMainId: 'metadataGrid',
-            height: '335px',
-            renderCondition: "{!JSENCODE(deployment.copado__Deployment_Source_Type__c) == 'org'}"
-        };
+        var isRollback = '{!JSENCODE(deployment.Name)}'.startsWith('Rollback ');
+
+        if (isRollback) {
+            var sourceName = '{!JSENCODE(deployment.Rolled_back_Deployment__r.Name)}';
+            var jqxdatatable_config = {
+                data: {
+                    targetOrgId: '{!DestinationOrg.copado__To_Org__c}',
+                    targetOrgName: '{!JSENCODE(DestinationOrg.To_Org__r.Environment__r.Name)}',
+                    orgName: '{!JSENCODE(deployment.Rolled_back_Deployment__r.Name)}',
+                    deploymentId: '{!deployment.Id}',
+                    stepId: '{!stepId}',
+                    deleteStepId: '{!deleteStepId}',
+                },
+                elts: {},
+                server: {
+                    baseUrl: '{!JSENCODE(urlBase)}',
+                    typesUrl: '{!JSENCODE(urlBase)}gitTypes{!JSENCODE(urlParameters)}'
+                },
+                jsonData: {
+                    selectedMetadata: []
+                },
+
+                ns: '{!JSENCODE(namespace)}',
+                scalableGrid: true,
+                gridMode: 'gitCommitCompare',
+                attachmentName: 'Rollback Index.json',
+                eltMainId: 'metadataGrid',
+                height: '335px',
+                renderCondition: true
+            };
+        } else {
+            var jqxdatatable_config = {
+                data: {
+                    orgId: '{!deployment.copado__From_Org__c}' ? '{!deployment.copado__From_Org__c}' : '{!DeploymentStepRecord.copado__Git_Repository__c}',
+                    orgName: '{!JSENCODE(deployment.From_Org__r.Environment__r.Name)}',
+                    targetOrgId: '{!DestinationOrg.copado__To_Org__c}',
+                    targetOrgName: '{!JSENCODE(DestinationOrg.To_Org__r.Environment__r.Name)}',
+                    envId: '{!JSENCODE(deployment.copado__Source_Environment__c)}',
+                    deploymentId: '{!deployment.Id}',
+                    stepId: ''
+                },
+                elts: {},
+                server: {
+                    baseUrl: '{!JSENCODE(urlBase)}',
+                    metadataUrl: '{!JSENCODE(metadataURL)}&parentId={!deployment.copado__From_Org__c}',
+                    typesUrl: '{!JSENCODE(urlBase)}gitTypes{!JSENCODE(urlParameters)}'
+                },
+                jsonData: {
+                    selectedMetadata: []
+                },
+
+                ns: '{!JSENCODE(namespace)}',
+                scalableGrid: '{!AND(JSENCODE(deployment.copado__Deployment_Source_Type__c) == "org",scalableGrid)}',
+                gridMode: '{!deployment.copado__From_Org__c}' ? 'gitCommitCompare' : 'gitCommitLegacy',
+                attachmentName: '{!deployment.copado__From_Org__c}' ? 'MetaData' : '{!JSENCODE(DeploymentStepRecord.copado__Commit_Id__c)}' + '.json',
+                eltMainId: 'metadataGrid',
+                height: '335px',
+                renderCondition: "{!JSENCODE(deployment.copado__Deployment_Source_Type__c) == 'org'}"
+            };
+        }
     </script>
 
     <apex:includeScript value="{!URLFOR($Resource.orgMetadata) }" />
-    <apex:includeScript value="{!URLFOR($Resource.JsRemoting) }"/>
+    <apex:includeScript value="{!URLFOR($Resource.JsRemoting) }" />
 
     <apex:form id="selectChangesForm">
         <apex:actionFunction name="assignFileData" action="{!assignZipBytes}" reRender="compContainer">
@@ -56,7 +89,7 @@
         <c:CopadoSpinner />
 
         <apex:outputPanel layout="block" id="headerComponent">
-            <c:DW_Header currentStep="{!currentStepValue}" stepNameList="{!stepsList}"/>
+            <c:DW_Header currentStep="{!currentStepValue}" stepNameList="{!stepsList}" />
         </apex:outputPanel>
 
         <div class="co-dw-container">
@@ -90,9 +123,8 @@
                             </div>
                         </apex:outputPanel>
                     </apex:outputPanel>
-
                     <apex:outputPanel id="jqxMetadataGridComponent">
-                        <c:JQX_MetadataGrid refreshMetadata="true" bigMetadata="true" tabs="true" />
+                        <c:JQX_MetadataGrid refreshMetadata="true" bigMetadata="true" tabs="true" isRollback="{!isRollback}"/>
                     </apex:outputPanel>
 
                     <apex:actionFunction name="goToNextPage" action="{!confirmAndGoNextStep}" onComplete="dw.buttonOnComplete();unlockScreen();"
@@ -177,8 +209,8 @@
 
     <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
     <apex:outputPanel id="compContainer">
-        <apex:outputPanel layout="none" >
-            <c:ResolveConflict preDefAtt="{!zipBytesSource}" preDefAttTarget="{!zipBytesTarget}" showPromoHeader="false"/>
+        <apex:outputPanel layout="none">
+            <c:ResolveConflict preDefAtt="{!zipBytesSource}" preDefAttTarget="{!zipBytesTarget}" showPromoHeader="false" />
         </apex:outputPanel>
     </apex:outputPanel>
 

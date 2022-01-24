@@ -5,7 +5,7 @@
         <actionButtonLabel>License Manager Article</actionButtonLabel>
         <actionButtonLink>https://docs.copado.com/category/ycqzgzqz6d-license-manager</actionButtonLink>
         <body>Please ignore this prompt</body>
-        <customApplication>copado__Copado_Change_Management</customApplication>
+        <customApplication>copado__Copado_Plan_Lightning</customApplication>
         <delayDays>1</delayDays>
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayPosition>MiddleCenter</displayPosition>
@@ -17,8 +17,9 @@
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <startDate>2021-05-02</startDate>
         <stepNumber>1</stepNumber>
-        <targetPageKey1>copado__License_Manager</targetPageKey1>
-        <targetPageType>standard__navItemPage</targetPageType>
+        <targetPageKey1>copado__Kanban_Board__c</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
         <timesToDisplay>1</timesToDisplay>
         <title>Deactivated</title>
         <uiFormulaRule>
