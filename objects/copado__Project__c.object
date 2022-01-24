@@ -156,6 +156,44 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>Change_Management_Integration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Change Management Integration</label>
+        <referenceTo>Change_Management_Integration_Credential__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <inlineHelpText>Add here the Id of the record within your external Project Management system.</inlineHelpText>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Workspace_Id__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For Rally, the workspace ID is required in addition to the External Project Id.</inlineHelpText>
+        <label>Workspace Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Deployment_Flow__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
@@ -279,6 +317,109 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
+    <fields>
+        <fullName>copadoccmint__Copado_Integration_Setting__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Copado Integration Setting</label>
+        <referenceTo>copadoccmint__Copado_Integration_Setting__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Enable_Community_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable to sync User Stories assigned to community users.</inlineHelpText>
+        <label>Enable Community Users</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Enable_Logs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If you are fetching more then 500 records from the third party platform, we recommend you to disable this checkbox to be able to prevent heap size too large issue.</inlineHelpText>
+        <label>Enable Logs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__JQL_Extended_Filter__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If you want to add an additional filter to your JIRA callout, you can just modify this field.
+Usage exp: issueType=Story and resolution=Duplicate</inlineHelpText>
+        <label>JQL Extended Filter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Project_External_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Project External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Sprint_Per_Batch_Chunk_Size__c</fullName>
+        <defaultValue>50</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If in case, you are getting too many callout issue due to more number of User Stories per Sprint or due to more number of sprint.
+    You can reduce the batch size in this field.</inlineHelpText>
+        <label>Sprint Per Batch Chunk Size</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Team_Info__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Comma separated Team Name/Id to fetch Team sprints. Exp: Frontend Team,Backend Team,QA Team</inlineHelpText>
+        <label>Team Info</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Workspace_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Workspace Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Project</label>
     <listViews>
         <fullName>copado__All</fullName>
@@ -318,4 +459,37 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Sync_External_User_Stories</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Sync External User Stories</masterLabel>
+        <openType>noSidebar</openType>
+        <page>CopadoSyncUserStories</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>copadoccmint__Sync_External_User_Stories</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Sync External User Stories</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/copadoccmint__SyncUserStories?pid={!copado__Project__c.Id}&amp;isSprint=false</url>
+    </webLinks>
+    <webLinks>
+        <fullName>copadoccmint__Sync_External_User_Stories_With_Sprint</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Sync External User Stories With Sprint</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/copadoccmint__SyncUserStories?pid={!copado__Project__c.Id}&amp;isSprint=true</url>
+    </webLinks>
 </CustomObject>
