@@ -20,6 +20,7 @@
             <operator>equals</operator>
             <value>Approved,Permissions Assigned</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Matrix</format>
     <groupingsAcross>
