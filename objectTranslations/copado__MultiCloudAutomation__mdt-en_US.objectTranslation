@@ -13,6 +13,10 @@
         <name>copado__PackageVersionCreateApiName__c</name>
     </fields>
     <fields>
+        <label><!-- PackageVersionPublishAPIName --></label>
+        <name>copado__PackageVersionPublishAPIName__c</name>
+    </fields>
+    <fields>
         <label><!-- PlatformName --></label>
         <name>copado__PlatformName__c</name>
     </fields>

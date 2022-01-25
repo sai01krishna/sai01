@@ -56,6 +56,11 @@
         <relationshipLabel><!-- Environments (Deployment Job Template Override) --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled --></help>
+        <label><!-- Enable Rollback --></label>
+        <name>copado__Enable_Rollback__c</name>
+    </fields>
+    <fields>
         <help><!-- If enabled, when a Back Promotion is completed and contains Metadata found in User Stories in the destination Environment, the status of the User Story Metadata records of these User Stories will be updated to &quot;Back Promoted&quot;. --></help>
         <label><!-- Index Back Promotion Metadata --></label>
         <name>copado__Index_Back_Promotion_metadata__c</name>
