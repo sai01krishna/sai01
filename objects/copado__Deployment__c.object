@@ -978,6 +978,22 @@ copado__SUM_Deployed__c / copado__Deployment_Jobs_Count__c,
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__Rolled_back_Deployment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Identifies the original deployment that was rolled back for reporting purposes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies the original deployment that was rolled back for reporting purposes</inlineHelpText>
+        <label>Rolled back Deployment</label>
+        <referenceTo>copado__Deployment__c</referenceTo>
+        <relationshipLabel>Deployments (Rolled back Deployment)</relationshipLabel>
+        <relationshipName>RolledBackDeployments</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>copado__SUM_Deployed__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>

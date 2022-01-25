@@ -12,9 +12,27 @@
         <relationshipLabel><!-- Packages --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Data JSON --></label>
+        <name>copado__DataJSON__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional. --></help>
+        <label><!-- Default Branch --></label>
+        <name>copado__DefaultBranch__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional. --></help>
+        <label><!-- Default Path --></label>
+        <name>copado__DefaultPath__c</name>
+    </fields>
+    <fields>
         <help><!-- The description of the package --></help>
         <label><!-- Description --></label>
         <name>copado__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Job Execution Id --></label>
+        <name>copado__LastJobExecutionId__c</name>
     </fields>
     <fields>
         <help><!-- Enables the package creation with no namespace; available only for unlocked packages. --></help>

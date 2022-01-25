@@ -145,7 +145,7 @@
     <compactLayouts>
         <fullName>copado__Job_Step</fullName>
         <fields>Name</fields>
-        <fields>copado__Type__c</fields>
+        <fields>copado__CustomType__c</fields>
         <fields>copado__JobTemplate__c</fields>
         <fields>copado__JobExecution__c</fields>
         <fields>copado__Status__c</fields>
@@ -188,8 +188,9 @@
     <fields>
         <fullName>copado__CustomType__c</fullName>
         <deprecated>false</deprecated>
+        <description>Defines the type of configuration required for this step.</description>
         <externalId>false</externalId>
-        <label>Custom Type</label>
+        <label>Type</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -342,7 +343,7 @@ BLANKVALUE(
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Result</label>
+        <label>Last Result</label>
         <referenceTo>copado__Result__c</referenceTo>
         <relationshipLabel>Job Steps</relationshipLabel>
         <relationshipName>JobSteps</relationshipName>
@@ -376,8 +377,9 @@ BLANKVALUE(
     <fields>
         <fullName>copado__Type__c</fullName>
         <deprecated>false</deprecated>
+        <description>Defines the behaviour this step will have when executed.</description>
         <externalId>false</externalId>
-        <label>Type</label>
+        <label>Behaviour</label>
         <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
