@@ -34,6 +34,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__PackageVersionPublishAPIName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>PackageVersionPublishAPIName</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__PlatformName__c</fullName>
         <caseSensitive>false</caseSensitive>
         <deprecated>false</deprecated>

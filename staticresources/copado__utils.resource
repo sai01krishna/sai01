@@ -219,16 +219,16 @@ dw.u.deleteAttach = function(parentId, name) {
     var rv = {};
     if(result.size > 0){
         try{
-            var records = result.getArray("records");            
+            var records = result.getArray("records");
             var idsForDeletion = [];
             for(var i=0; i<records.length; i++){
-                idsForDeletion.push(records[i].Id);                
+                idsForDeletion.push(records[i].Id);
             }
             var delRes = sforce.connection.deleteIds(idsForDeletion);
 
             for(var i = 0; i<delRes.length; i++){
-                
-                if(delRes[i].success == "false"){                    
+
+                if(delRes[i].success == "false"){
                     throw delRes[i].errors.message;
                     break;
                 }
@@ -250,11 +250,27 @@ dw.u.deleteAttach = function(parentId, name) {
         console.warn('no attachment found');
         return rv;
     }
-    
+
 }
 
 function htmlEntities(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+dw.u.upsertFile = function(parentId, filename, data) {
+    var cv = new sforce.SObject("ContentVersion");
+    cv.Title=filename;
+    cv.PathOnClient= filename;
+    cv.VersionData= Base64.encode(data);
+
+    var existingFile = dw.u.getFile(parentId, filename);
+    if (existingFile && existingFile[0]) {
+        //cv.ContentDocumentId = getContentDocuments(parentId)[0].ContentDocumentId;
+        cv.ContentDocumentId = existingFile[0].ContentDocumentId;
+    } else {
+        cv.FirstPublishLocationId = parentId;
+    }
+    sforce.connection.create([cv]);
 }
 
 dw.u.getFile = function(parentId, fileName) {
@@ -267,6 +283,11 @@ dw.u.getFile = function(parentId, fileName) {
         documentIds.add(documents[i].ContentDocumentId);
     }
     var versions = getContentVersion([...documentIds].join("','"), fileName);
+    return versions;
+};
+
+dw.u.getFileById = function(Id) {
+    var versions = getContentVersionById(Id);
     return versions;
 };
 
@@ -372,7 +393,13 @@ function getContentDocuments(parentId) {
 }
 
 function getContentVersion(documentIds, fileName) {
-    var query = "SELECT VersionData FROM ContentVersion WHERE PathOnClient = '" + htmlEntities(fileName).replace(/'/g, "\\'") + "' AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true LIMIT 1";
+    var query = "SELECT VersionData,ContentDocumentId FROM ContentVersion WHERE PathOnClient = '" + htmlEntities(fileName).replace(/'/g, "\\'") + "' AND ContentDocumentId IN ('" + documentIds + "') AND IsLatest = true ORDER BY LastModifiedDate DESC LIMIT 1";
+    var versions = sforce.connection.query(query);
+    return versions.getArray("records");
+}
+
+function getContentVersionById(Id) {
+    var query = "SELECT VersionData FROM ContentVersion WHERE Id = '" + Id + "'";
     var versions = sforce.connection.query(query);
     return versions.getArray("records");
 }
@@ -455,7 +482,7 @@ dw.u.upsertAttach = function(parentId, name, body, alreadyCheck, newName) {
     } else {
         att.name = name;
     }
-    
+
     att.body = Base64.encode(body);
 
     if (Id) {
@@ -552,19 +579,24 @@ dw.u.getSavedStepData = function(type, isNotJSON) {
 };
 
 
-dw.u.getSavedData = function(id, type, isNotJSON) {
-    var attach = dw.u.getAttach(id, type);
-    if (attach.length > 0) {
-        try {
-            // Save the last modified date of this attachment in case the caller needs it ( scratch org.resource needs it )
-            dw.u.getSavedData_AttachmentLastModifiedDate = attach[0].LastModifiedDate;
-            //decode the attach body
-            var res = Base64.decode(attach[0].Body);
-            //parse json
-            return isNotJSON ? res : $copado.parseJSON(res);
+dw.u.getSavedData = function(id, type, isNotJSON, isRollback) {
+    if (isRollback) {
+        var file = dw.u.getFileContent(id, type);
+        return file;
+    } else {
+        var attach = dw.u.getAttach(id, type);
+        if (attach.length > 0) {
+            try {
+                // Save the last modified date of this attachment in case the caller needs it ( scratch org.resource needs it )
+                dw.u.getSavedData_AttachmentLastModifiedDate = attach[0].LastModifiedDate;
+                //decode the attach body
+                var res = Base64.decode(attach[0].Body);
+                //parse json
+                return isNotJSON ? res : $copado.parseJSON(res);
 
-        } catch (e) {
-            console.log('Exception on saved data:', e);
+            } catch (e) {
+                console.log('Exception on saved data:', e);
+            }
         }
     }
     return false;
@@ -732,7 +764,7 @@ var coGridHelper = {
      * get selected items from the datasource
      * @return {[type]} [description]
      */
-    getSelectedObj: function() {
+    getSelectedObj: function(isRollback) {
         // NR: when there is no coGridHelper (because it is not a partial selection), we return empty array
         if (!coGridHelper.datasource)
             return [];
@@ -751,13 +783,15 @@ var coGridHelper = {
                 cb: data[len].cb,
                 ai: data[len].ai,
                 vk: data[len].vk,
+                a: data[len].a,
+                f: data[len].f
             };
 
             if (typeof data[len].r !== 'undefined') {
                 o.r = data[len].r;
             } else {
-            //MY: When retrieve only is undefined set it as false by default. Backend depends on the parameter so it
-            //should never be undefined in the attachment that we create for backend to use
+                //MY: When retrieve only is undefined set it as false by default. Backend depends on the parameter so it
+                //should never be undefined in the attachment that we create for backend to use
                 o.r = false;
             }
 
@@ -808,10 +842,10 @@ var coGridHelper = {
      * @param  {[type]} type                 Attachment Name
      * @param  {[type]} additionalValidation function for additional validations
      * @param  {[type]} allowEmpty           skip length validation
-     * @param  {[type]} callcack             
+     * @param  {[type]} callcack
      * @return {[type]}                      false
      */
-    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel) {
+    saveSelected: function(id, type, additionalValidation, allowEmpty, callback, sel, isRollback) {
         console.debug('... Saving Attachment');
         var me = coGridHelper;
         //validations
@@ -827,7 +861,7 @@ var coGridHelper = {
             return false;
         }
         var valid = !additionalValidation ? true : additionalValidation(me._selectedNames);
-        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback);
+        valid && me.remoteSaveMeta(id, sel || me._selectedNames, type, callback, isRollback);
 
         return false;
     },
@@ -840,9 +874,368 @@ var coGridHelper = {
      * @param  {[type]} callcack function on callback
      * @return {[type]}          void
      */
-    remoteSaveMeta: function(id, items, type, callback) {
-        console.log(items);
-        dw.u.upsertAttach(id, type, JSON.stringify(items));
+    // write
+    remoteSaveMeta: function(id, items, type, callback, isRollback) {
+        if (isRollback) {
+            if (type === 'Selected items to rollback') {
+                var deletedItems=[];
+                var createdUpdatedItems=[];
+                items.forEach((item) => {
+                    if(item.a === 'create'){
+                        deletedItems.push(item);
+                    }
+                    else{
+                        createdUpdatedItems.push(item);
+                    }
+                });
+                if (createdUpdatedItems.length) {
+                    dw.u.upsertFile(id, type+'_Git Promotion', JSON.stringify(createdUpdatedItems));
+                }
+
+                if (deletedItems.length) {
+                    dw.u.upsertFile(id, type+'_Delete Metadata', JSON.stringify(deletedItems));
+                }
+            }
+            else {
+                dw.u.upsertFile(id, type, JSON.stringify(items));
+            }
+        } else {
+            dw.u.upsertAttach(id, type, JSON.stringify(items));
+        }
         callback && callback();
     }
 };
+
+// taken directly from copado-commons/copado-metadata-service/src/main/resources/metadataTypes.json ... update when necessary.
+var metadataTypes = {
+    "ext:actionLinkGroupTemplate": "ActionLinkGroupTemplate",
+    "ext:ai": "AIApplication",
+    "ext:aiapplicationconfig": "AIApplicationConfig",
+    "ext:animationRule": "AnimationRule",
+    "ext:app": "CustomApplication",
+    "ext:appMenu": "AppMenu",
+    "ext:approvalProcess": "ApprovalProcess",
+    "ext:asset": "ContentAsset",
+    "ext:assignmentRules": "AssignmentRules",
+    "ext:assistantRecommendationType": "AssistantRecommendationType",
+    "ext:authprovider": "AuthProvider",
+    "ext:autoResponseRules": "AutoResponseRules",
+    "ext:blacklistedConsumer": "BlacklistedConsumer",
+    "ext:bot": "EinsteinBot",
+    "ext:brandingSet": "BrandingSet",
+    "ext:cachePartition": "PlatformCachePartition",
+    "ext:callCenter": "CallCenter",
+    "ext:callCoachingMediaProvider": "CallCoachingMediaProvider",
+    "ext:campaignInfluenceModel": "CampaignInfluenceModel",
+    "ext:Canvas": "CanvasMetadata",
+    "ext:CaseSubjectParticle": "CaseSubjectParticle",
+    "ext:channelLayout": "ChannelLayout",
+    "ext:ChatterExtension": "ChatterExtension",
+    "ext:cleanDataService": "CleanDataService",
+    "ext:cls": "ApexClass",
+    "ext:community": "Community",
+    "ext:communityTemplateDefinition": "CommunityTemplateDefinition",
+    "ext:communityThemeDefinition": "CommunityThemeDefinition",
+    "ext:component": "ApexComponent",
+    "ext:config": "NotificationTypeConfig",
+    "ext:connectedApp": "ConnectedApp",
+    "ext:corsWhitelistOrigin": "CorsWhitelistOrigin",
+    "ext:crt": "Certificate",
+    "ext:cspTrustedSite": "CspTrustedSite",
+    "ext:customApplicationComponent": "CustomApplicationComponent",
+    "ext:customHelpMenuSection": "CustomHelpMenuSection",
+    "ext:customPermission": "CustomPermission",
+    "ext:dashboard": "Dashboard",
+    "ext:datacategorygroup": "DataCategoryGroup",
+    "ext:dataSource": "ExternalDataSource",
+    "ext:delegateGroup": "DelegateGroup",
+    "ext:delivery": "EventDelivery",
+    "ext:deployment": "RecordActionDeployment",
+    "ext:duplicateRule": "DuplicateRule",
+    "ext:email": "EmailTemplate",
+    "ext:EmbeddedServiceBranding": "EmbeddedServiceBranding",
+    "ext:EmbeddedServiceConfig": "EmbeddedServiceConfig",
+    "ext:EmbeddedServiceFlowConfig": "EmbeddedServiceFlowConfig",
+    "ext:EmbeddedServiceMenuSettings": "EmbeddedServiceMenuSettings",
+    "ext:entitlementProcess": "EntitlementProcess",
+    "ext:entitlementTemplate": "EntitlementTemplate",
+    "ext:entityImplements": "EntityImplements",
+    "ext:escalationRules": "EscalationRules",
+    "ext:externalServiceRegistration": "ExternalServiceRegistration",
+    "ext:feedFilter": "CustomFeedFilter",
+    "ext:flexipage": "FlexiPage",
+    "ext:flow": "Flow",
+    "ext:flowCategory": "FlowCategory",
+    "ext:flowDefinition": "FlowDefinition",
+    "ext:geodata": "EclairGeoData",
+    "ext:globalValueSet": "GlobalValueSet",
+    "ext:globalValueSetTranslation": "GlobalValueSetTranslation",
+    "ext:group": "Group",
+    "ext:homePageComponent": "HomePageComponent",
+    "ext:homePageLayout": "HomePageLayout",
+    "ext:iframeWhiteListUrlSettings": "IframeWhiteListUrlSettings",
+    "ext:inboundNetworkConnection": "InboundNetworkConnection",
+    "ext:indx": "CustomIndex",
+    "ext:installedPackage": "InstalledPackage",
+    "ext:keywords": "KeywordList",
+    "ext:labels": "CustomLabels",
+    "ext:layout": "Layout",
+    "ext:LeadConvertSetting": "LeadConvertSettings",
+    "ext:letter": "Letterhead",
+    "ext:lightningBolt": "LightningBolt",
+    "ext:lightningExperienceTheme": "LightningExperienceTheme",
+    "ext:lightningOnboardingConfig": "LightningOnboardingConfig",
+    "ext:liveChatAgentConfig": "LiveChatAgentConfig",
+    "ext:liveChatButton": "LiveChatButton",
+    "ext:liveChatDeployment": "LiveChatDeployment",
+    "ext:liveChatSensitiveDataRule": "LiveChatSensitiveDataRule",
+    "ext:managedContentType": "ManagedContentType",
+    "ext:managedTopics": "ManagedTopics",
+    "ext:matchingRule": "MatchingRules",
+    "ext:md": "CustomMetadata",
+    "ext:messageChannel": "LightningMessageChannel",
+    "ext:milestoneType": "MilestoneType",
+    "ext:mlDataDefinition": "MLDataDefinition",
+    "ext:mlPrediction": "MLPredictionDefinition",
+    "ext:MobileApplicationDetail": "MobileApplicationDetail",
+    "ext:mutingpermissionset": "MutingPermissionSet",
+    "ext:myDomainDiscoverableLogin": "MyDomainDiscoverableLogin",
+    "ext:namedCredential": "NamedCredential",
+    "ext:network": "Network",
+    "ext:networkBranding": "NetworkBranding",
+    "ext:notifications": "ApexEmailNotifications",
+    "ext:notiftype": "CustomNotificationType",
+    "ext:null": "Document",
+    "ext:oauthcustomscope": "OauthCustomScope",
+    "ext:object": "CustomObject",
+    "ext:objectTranslation": "CustomObjectTranslation",
+    "ext:orchestrationContext": "OrchestrationContext",
+    "ext:outboundNetworkConnection": "OutboundNetworkConnection",
+    "ext:page": "ApexPage",
+    "ext:pathAssistant": "PathAssistant",
+    "ext:permissionset": "PermissionSet",
+    "ext:permissionsetgroup": "PermissionSetGroup",
+    "ext:platformEventChannel": "PlatformEventChannel",
+    "ext:platformEventChannelMember": "PlatformEventChannelMember",
+    "ext:platformEventSubscriberConfig": "PlatformEventSubscriberConfig",
+    "ext:portal": "Portal",
+    "ext:postTemplate": "PostTemplate",
+    "ext:presenceDeclineReason": "PresenceDeclineReason",
+    "ext:presenceUserConfig": "PresenceUserConfig",
+    "ext:profile": "Profile",
+    "ext:profilePasswordPolicy": "ProfilePasswordPolicy",
+    "ext:profileSessionSetting": "ProfileSessionSetting",
+    "ext:prompt": "Prompt",
+    "ext:queue": "Queue",
+    "ext:queueRoutingConfig": "QueueRoutingConfig",
+    "ext:quickAction": "QuickAction",
+    "ext:recommendationStrategy": "RecommendationStrategy",
+    "ext:redirectWhitelistUrl": "RedirectWhitelistUrl",
+    "ext:remoteSite": "RemoteSiteSetting",
+    "ext:report": "Report",
+    "ext:reportType": "ReportType",
+    "ext:resource": "StaticResource",
+    "ext:role": "Role",
+    "ext:rule": "ModerationRule",
+    "ext:samlssoconfig": "SamlSsoConfig",
+    "ext:scf": "Scontrol",
+    "ext:serviceChannel": "ServiceChannel",
+    "ext:servicePresenceStatus": "ServicePresenceStatus",
+    "ext:settings": "Settings",
+    "ext:sharingRules": "SharingRules",
+    "ext:sharingSet": "SharingSet",
+    "ext:site": "SiteDotCom",
+    "ext:skill": "Skill",
+    "ext:snapshot": "AnalyticSnapshot",
+    "ext:standardValueSet": "StandardValueSet",
+    "ext:standardValueSetTranslation": "StandardValueSetTranslation",
+    "ext:subscription": "EventSubscription",
+    "ext:synonymDictionary": "SynonymDictionary",
+    "ext:tab": "CustomTab",
+    "ext:territory2Model": "Territory2Model",
+    "ext:territory2Type": "Territory2Type",
+    "ext:testSuite": "ApexTestSuite",
+    "ext:topicsForObjects": "TopicsForObjects",
+    "ext:transactionSecurityPolicy": "TransactionSecurityPolicy",
+    "ext:translation": "Translations",
+    "ext:trigger": "ApexTrigger",
+    "ext:userCriteria": "UserCriteria",
+    "ext:userProvisioningConfig": "UserProvisioningConfig",
+    "ext:wapp": "WaveApplication",
+    "ext:wdash": "WaveDashboard",
+    "ext:wdf": "WaveDataflow",
+    "ext:wds": "WaveDataset",
+    "ext:weblink": "CustomPageWebLink",
+    "ext:wlens": "WaveLens",
+    "ext:workflow": "Workflow",
+    "ext:workSkillRouting": "WorkSkillRouting",
+    "ext:xmd": "WaveXmd",
+    "ext:xml": "EmailServicesFunction",
+    "type:ActionLinkGroupTemplate": "actionLinkGroupTemplates:actionLinkGroupTemplate",
+    "type:AIApplication": "aiApplications:ai",
+    "type:AIApplicationConfig": "aiApplicationConfigs:aiapplicationconfig",
+    "type:AnalyticSnapshot": "analyticSnapshots:snapshot",
+    "type:AnimationRule": "animationRules:animationRule",
+    "type:ApexClass": "classes:cls",
+    "type:ApexComponent": "components:component",
+    "type:ApexEmailNotifications": "apexEmailNotifications:notifications",
+    "type:ApexPage": "pages:page",
+    "type:ApexTestSuite": "testSuites:testSuite",
+    "type:ApexTrigger": "triggers:trigger",
+    "type:AppMenu": "appMenus:appMenu",
+    "type:ApprovalProcess": "approvalProcesses:approvalProcess",
+    "type:AssignmentRules": "assignmentRules:assignmentRules",
+    "type:AssistantRecommendationType": "assistantRecommendationTypes:assistantRecommendationType",
+    "type:AuraDefinitionBundle": "aura:null",
+    "type:AuthProvider": "authproviders:authprovider",
+    "type:AutoResponseRules": "autoResponseRules:autoResponseRules",
+    "type:BlacklistedConsumer": "blacklistedConsumers:blacklistedConsumer",
+    "type:Bot": "bots:bot",
+    "type:BrandingSet": "brandingSets:brandingSet",
+    "type:CallCenter": "callCenters:callCenter",
+    "type:CallCoachingMediaProvider": "callCoachingMediaProviders:callCoachingMediaProvider",
+    "type:CampaignInfluenceModel": "campaignInfluenceModels:campaignInfluenceModel",
+    "type:CanvasMetadata": "Canvases:Canvas",
+    "type:CaseSubjectParticle": "CaseSubjectParticles:CaseSubjectParticle",
+    "type:Certificate": "certs:crt",
+    "type:ChannelLayout": "channelLayouts:channelLayout",
+    "type:ChatterExtension": "ChatterExtensions:ChatterExtension",
+    "type:ChatterExtensions": "ChatterExtensions:ChatterExtension",
+    "type:CleanDataService": "cleanDataServices:cleanDataService",
+    "type:Community": "communities:community",
+    "type:CommunityTemplateDefinition": "communityTemplateDefinitions:communityTemplateDefinition",
+    "type:CommunityThemeDefinition": "communityThemeDefinitions:communityThemeDefinition",
+    "type:ConnectedApp": "connectedApps:connectedApp",
+    "type:ContentAsset": "contentassets:asset",
+    "type:CorsWhitelistOrigin": "corsWhitelistOrigins:corsWhitelistOrigin",
+    "type:CspTrustedSite": "cspTrustedSites:cspTrustedSite",
+    "type:CustomApplication": "applications:app",
+    "type:CustomApplicationComponent": "customApplicationComponents:customApplicationComponent",
+    "type:CustomFeedFilter": "feedFilters:feedFilter",
+    "type:CustomHelpMenuSection": "customHelpMenuSections:customHelpMenuSection",
+    "type:CustomIndex": "customindex:indx",
+    "type:CustomLabels": "labels:labels",
+    "type:CustomMetadata": "customMetadata:md",
+    "type:CustomNotificationType": "notificationtypes:notiftype",
+    "type:CustomObject": "objects:object",
+    "type:CustomObjectTranslation": "objectTranslations:objectTranslation",
+    "type:CustomPageWebLink": "weblinks:weblink",
+    "type:CustomPermission": "customPermissions:customPermission",
+    "type:CustomSite": "sites:site",
+    "type:CustomTab": "tabs:tab",
+    "type:Dashboard": "dashboards:dashboard",
+    "type:DataCategoryGroup": "datacategorygroups:datacategorygroup",
+    "type:DelegateGroup": "delegateGroups:delegateGroup",
+    "type:Document": "documents:null",
+    "type:DuplicateRule": "duplicateRules:duplicateRule",
+    "type:EclairGeoData": "eclair:geodata",
+    "type:EmailServicesFunction": "emailservices:xml",
+    "type:EmailTemplate": "email:email",
+    "type:EmbeddedServiceBranding": "EmbeddedServiceBranding:EmbeddedServiceBranding",
+    "type:EmbeddedServiceConfig": "EmbeddedServiceConfig:EmbeddedServiceConfig",
+    "type:EmbeddedServiceFlowConfig": "EmbeddedServiceFlowConfig:EmbeddedServiceFlowConfig",
+    "type:EmbeddedServiceMenuSettings": "EmbeddedServiceMenuSettings:EmbeddedServiceMenuSettings",
+    "type:EntitlementProcess": "entitlementProcesses:entitlementProcess",
+    "type:EntitlementTemplate": "entitlementTemplates:entitlementTemplate",
+    "type:EntityImplements": "entityImplements:entityImplements",
+    "type:EscalationRules": "escalationRules:escalationRules",
+    "type:EventDelivery": "eventDeliveries:delivery",
+    "type:EventSubscription": "eventSubscriptions:subscription",
+    "type:ExternalDataSource": "dataSources:dataSource",
+    "type:ExternalServiceRegistration": "externalServiceRegistrations:externalServiceRegistration",
+    "type:FlexiPage": "flexipages:flexipage",
+    "type:Flow": "flows:flow",
+    "type:FlowCategory": "flowCategories:flowCategory",
+    "type:FlowDefinition": "flowDefinitions:flowDefinition",
+    "type:GlobalValueSet": "globalValueSets:globalValueSet",
+    "type:GlobalValueSetTranslation": "globalValueSetTranslations:globalValueSetTranslation",
+    "type:Group": "groups:group",
+    "type:HomePageComponent": "homePageComponents:homePageComponent",
+    "type:HomePageLayout": "homePageLayouts:homePageLayout",
+    "type:IframeWhiteListUrlSettings": "iframeWhiteListUrlSettings:iframeWhiteListUrlSettings",
+    "type:InboundNetworkConnection": "inboundNetworkConnections:inboundNetworkConnection",
+    "type:InstalledPackage": "installedPackages:installedPackage",
+    "type:KeywordList": "moderation:keywords",
+    "type:Layout": "layouts:layout",
+    "type:LeadConvertSettings": "LeadConvertSettings:LeadConvertSetting",
+    "type:Letterhead": "letterhead:letter",
+    "type:LightningBolt": "lightningBolts:lightningBolt",
+    "type:LightningComponentBundle": "lwc:null",
+    "type:LightningExperienceTheme": "lightningExperienceThemes:lightningExperienceTheme",
+    "type:LightningMessageChannel": "messageChannels:messageChannel",
+    "type:LightningOnboardingConfig": "lightningOnboardingConfigs:lightningOnboardingConfig",
+    "type:LiveChatAgentConfig": "liveChatAgentConfigs:liveChatAgentConfig",
+    "type:LiveChatButton": "liveChatButtons:liveChatButton",
+    "type:LiveChatDeployment": "liveChatDeployments:liveChatDeployment",
+    "type:LiveChatSensitiveDataRule": "liveChatSensitiveDataRule:liveChatSensitiveDataRule",
+    "type:ManagedContentType": "managedContentTypes:managedContentType",
+    "type:ManagedTopics": "managedTopics:managedTopics",
+    "type:MatchingRules": "matchingRules:matchingRule",
+    "type:MilestoneType": "milestoneTypes:milestoneType",
+    "type:MLDataDefinition": "mlDataDefinitions:mlDataDefinition",
+    "type:MLPredictionDefinition": "mlPredictions:mlPrediction",
+    "type:MobileApplicationDetail": "MobileApplicationDetails:MobileApplicationDetail",
+    "type:ModerationRule": "moderation:rule",
+    "type:MutingPermissionSet": "mutingpermissionsets:mutingpermissionset",
+    "type:MyDomainDiscoverableLogin": "myDomainDiscoverableLogins:myDomainDiscoverableLogin",
+    "type:NamedCredential": "namedCredentials:namedCredential",
+    "type:NetworkBranding": "networkBranding:networkBranding",
+    "type:Network": "networks:network",
+    "type:NotificationTypeConfig": "notificationTypeConfig:config",
+    "type:OauthCustomScope": "oauthcustomscopes:oauthcustomscope",
+    "type:OrchestrationContext": "iot:orchestrationContext",
+    "type:OutboundNetworkConnection": "outboundNetworkConnections:outboundNetworkConnection",
+    "type:PathAssistant": "pathAssistants:pathAssistant",
+    "type:PermissionSet": "permissionsets:permissionset",
+    "type:PermissionSetGroup": "permissionsetgroups:permissionsetgroup",
+    "type:PlatformCachePartition": "cachePartitions:cachePartition",
+    "type:PlatformEventChannel": "platformEventChannels:platformEventChannel",
+    "type:PlatformEventChannelMember": "platformEventChannelMembers:platformEventChannelMember",
+    "type:PlatformEventSubscriberConfig": "PlatformEventSubscriberConfigs:platformEventSubscriberConfig",
+    "type:Portal": "portals:portal",
+    "type:PostTemplate": "postTemplates:postTemplate",
+    "type:PresenceDeclineReason": "presenceDeclineReasons:presenceDeclineReason",
+    "type:PresenceUserConfig": "presenceUserConfigs:presenceUserConfig",
+    "type:Profile": "profiles:profile",
+    "type:ProfilePasswordPolicy": "profilePasswordPolicies:profilePasswordPolicy",
+    "type:ProfileSessionSetting": "profileSessionSettings:profileSessionSetting",
+    "type:Prompt": "prompts:prompt",
+    "type:Queue": "queues:queue",
+    "type:QueueRoutingConfig": "queueRoutingConfigs:queueRoutingConfig",
+    "type:QuickAction": "quickActions:quickAction",
+    "type:RecommendationStrategy": "recommendationStrategies:recommendationStrategy",
+    "type:RecordActionDeployment": "recordActionDeployments:deployment",
+    "type:RedirectWhitelistUrl": "redirectWhitelistUrls:redirectWhitelistUrl",
+    "type:RemoteSiteSetting": "remoteSiteSettings:remoteSite",
+    "type:Report": "reports:report",
+    "type:ReportType": "reportTypes:reportType",
+    "type:Role": "roles:role",
+    "type:SamlSsoConfig": "samlssoconfigs:samlssoconfig",
+    "type:Scontrol": "scontrols:scf",
+    "type:ServiceChannel": "serviceChannels:serviceChannel",
+    "type:ServicePresenceStatus": "servicePresenceStatuses:servicePresenceStatus",
+    "type:Settings": "settings:settings",
+    "type:SharingRules": "sharingRules:sharingRules",
+    "type:SharingSet": "sharingSets:sharingSet",
+    "type:SiteDotCom": "siteDotComSites:site",
+    "type:Skill": "skills:skill",
+    "type:StandardValueSet": "standardValueSets:standardValueSet",
+    "type:StandardValueSetTranslation": "standardValueSetTranslations:standardValueSetTranslation",
+    "type:StaticResource": "staticresources:resource",
+    "type:SynonymDictionary": "synonymDictionaries:synonymDictionary",
+    "type:Territory2Type": "territory2Types:territory2Type",
+    "type:TopicsForObjects": "topicsForObjects:topicsForObjects",
+    "type:UserProvisioningConfig": "userProvisioningConfigs:userProvisioningConfig",
+    "type:TransactionSecurityPolicy": "transactionSecurityPolicies:transactionSecurityPolicy",
+    "type:Translations": "translations:translation",
+    "type:UserCriteria": "userCriteria:userCriteria",
+    "type:WaveApplication": "wave:wapp",
+    "type:WaveDashboard": "wave:wdash",
+    "type:WaveDataflow": "wave:wdf",
+    "type:WaveDataset": "wave:wds",
+    "type:WaveLens": "wave:wlens",
+    "type:WaveXmd": "wave:xmd",
+    "type:Workflow": "workflows:workflow",
+    "type:WaveRecipe": "wave:wdpr",
+    "type:WorkSkillRouting": "workSkillRoutings:workSkillRouting"
+  }
