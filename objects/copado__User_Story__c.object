@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -5869,6 +5872,29 @@
         <label>Work Manager Relations</label>
     </fieldSets>
     <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>JIRA_Key__c</fullName>
+        <externalId>false</externalId>
+        <label>JIRA Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Acceptance_Criteria_Status__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -6198,6 +6224,21 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__Feature__c</fullName>
+        <businessStatus>Hidden</businessStatus>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <referenceTo>copado__Copado_Feature__c</referenceTo>
+        <relationshipLabel>User Stories</relationshipLabel>
+        <relationshipName>User_Stories</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>copado__Functional_Specifications__c</fullName>
@@ -7146,6 +7187,26 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                     <default>false</default>
                     <label>Cancelled</label>
                 </value>
+                <value>
+                    <fullName>Jira</fullName>
+                    <default>false</default>
+                    <label>Jira</label>
+                </value>
+                <value>
+                    <fullName>UAT progress</fullName>
+                    <default>false</default>
+                    <label>UAT progress</label>
+                </value>
+                <value>
+                    <fullName>Uat to Approved</fullName>
+                    <default>false</default>
+                    <label>Uat to Approved</label>
+                </value>
+                <value>
+                    <fullName>TEst</fullName>
+                    <default>false</default>
+                    <label>TEst</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -7373,6 +7434,41 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__Enable_Logs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Logs</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__External_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copadoccmint__JIRA_key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>JIRA key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
     </fields>
     <label>User Story</label>
     <listViews>
@@ -7864,6 +7960,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>
@@ -8309,6 +8417,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
             <values>
                 <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8758,6 +8878,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>
@@ -9203,6 +9335,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
             <values>
                 <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -741,6 +741,18 @@
             <masterLabel>Rejected</masterLabel>
             <translation><!-- Rejected --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>TEst</masterLabel>
+            <translation><!-- TEst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT progress</masterLabel>
+            <translation><!-- UAT progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uat to Approved</masterLabel>
+            <translation><!-- Uat to Approved --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <help><!-- If checked, the User Story will not be indexed for Copado&apos;s Overlap Awareness. --></help>
