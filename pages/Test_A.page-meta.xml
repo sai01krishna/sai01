@@ -5,11 +5,6 @@
     <confirmationTokenRequired>false</confirmationTokenRequired>
     <label>Test A</label>
     <packageVersions>
-        <majorNumber>1</majorNumber>
-        <minorNumber>158</minorNumber>
-        <namespace>agf</namespace>
-    </packageVersions>
-    <packageVersions>
         <majorNumber>18</majorNumber>
         <minorNumber>32</minorNumber>
         <namespace>copado</namespace>
