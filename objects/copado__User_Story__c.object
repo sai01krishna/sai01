@@ -7192,6 +7192,21 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                     <default>false</default>
                     <label>Jira</label>
                 </value>
+                <value>
+                    <fullName>UAT progress</fullName>
+                    <default>false</default>
+                    <label>UAT progress</label>
+                </value>
+                <value>
+                    <fullName>Uat to Approved</fullName>
+                    <default>false</default>
+                    <label>Uat to Approved</label>
+                </value>
+                <value>
+                    <fullName>TEst</fullName>
+                    <default>false</default>
+                    <label>TEst</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -7945,6 +7960,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>
@@ -8390,6 +8417,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
             <values>
                 <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -8839,6 +8878,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
                 <fullName>Rejected</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
     </recordTypes>
     <recordTypes>
@@ -9284,6 +9335,18 @@ IMAGE(&quot;/img/samples/color_yellow.gif&quot;, &quot;white&quot;, 15,
             </values>
             <values>
                 <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TEst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Uat to Approved</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
