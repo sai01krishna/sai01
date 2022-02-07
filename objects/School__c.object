@@ -166,19 +166,9 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>CT_1__c</fullName>
+        <fullName>CDC_without_uat__c</fullName>
         <externalId>false</externalId>
-        <label>CT 1</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>CT_2__c</fullName>
-        <externalId>false</externalId>
-        <label>CT 2</label>
+        <label>CDC without uat</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -207,9 +197,9 @@
         <type>Phone</type>
     </fields>
     <fields>
-        <fullName>Org_to_org__c</fullName>
+        <fullName>Coonection_behavior__c</fullName>
         <externalId>false</externalId>
-        <label>Org to org</label>
+        <label>Coonection behavior</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -227,6 +217,14 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Primary_contact_disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary contact disable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Promoted_To__c</fullName>
         <externalId>false</externalId>
         <formula>Class__c  + 1</formula>
@@ -240,9 +238,9 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Roll_back_1__c</fullName>
+        <fullName>Roll_back_2__c</fullName>
         <externalId>false</externalId>
-        <label>Roll back 1</label>
+        <label>Roll back 2</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -324,37 +322,12 @@
         </valueSet>
         <visibleLines>4</visibleLines>
     </fields>
-    <fields>
-        <fullName>Test_Connection_beharvior__c</fullName>
-        <externalId>false</externalId>
-        <label>Test Connection beharvior</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ct3__c</fullName>
-        <externalId>false</externalId>
-        <label>ct3</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>ct4__c</fullName>
-        <externalId>false</externalId>
-        <label>ct4</label>
-        <length>255</length>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
     <label>School</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>School Name</label>
         <type>Text</type>
