@@ -6,6 +6,50 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Sales Console</label>
     <navType>Console</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__User_Story</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Utility</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Bug</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>User_Story_Record_Page2</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
+        <recordType>copado__User_Story__c.copado__Investigation</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Lead</tabs>
     <tabs>standard-Account</tabs>

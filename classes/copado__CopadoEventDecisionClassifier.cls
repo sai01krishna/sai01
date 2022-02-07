@@ -15,6 +15,9 @@ global class CopadoEventDecisionClassifier extends copado.CopadoEventGenerator {
     global static List<Object> getEventDecisions(Map<Id,SObject> newRecords, Map<Id,SObject> oldRecords, String triggerContext, String code) {
         return null;
     }
+    global static List<Object> getEventDecisions(Map<Id,SObject> newRecords, Map<Id,SObject> oldRecords, String triggerContext, String code, String objectApi) {
+        return null;
+    }
     global static void toggleEventGeneration(Boolean disable) {
 
     }
