@@ -4,5 +4,11 @@
         <members>Activity.Test_Field_deployment__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>Admin</members>
+        <members>Indus EM High School</members>
+        <members>Read Only</members>
+        <name>Profile</name>
+    </types>
     <version>53.0</version>
 </Package>
