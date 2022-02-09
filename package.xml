@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>Activity.Test_Field_deployment__c</members>
-        <name>CustomField</name>
-    </types>
-    <types>
-        <members>Admin</members>
-        <members>Indus EM High School</members>
-        <members>Read Only</members>
-        <name>Profile</name>
+        <members>TestonFeb9</members>
+        <members>TestonFeb9/Report_for_testing_9ST</members>
+        <name>Report</name>
     </types>
     <version>53.0</version>
 </Package>
