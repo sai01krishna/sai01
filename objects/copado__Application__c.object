@@ -141,7 +141,16 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Application_Highlight_Panel</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Application_Highlight_Panel</fullName>
+        <fields>Name</fields>
+        <fields>copado__Release_Status__c</fields>
+        <fields>copado__Stability_Icon__c</fields>
+        <fields>copado__Parent_Application__c</fields>
+        <fields>copado__Product_Manager__c</fields>
+        <label>Application Highlight Panel</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -237,15 +246,15 @@
         <fullName>copado__Stability_Icon__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <formula>IMAGE( 
+        <formula>TEXT(copado__Stability__c) + &quot; &quot; +
+IMAGE( 
 CASE( copado__Stability__c, 
 &quot;Stable&quot;, &quot;/img/samples/flag_green.gif&quot;,
 &quot;Uncertain&quot;, &quot;/img/samples/flag_yellow.gif&quot;,
 &quot;Unstable&quot;, &quot;/img/samples/flag_red.gif&quot;, 
 &quot;/s.gif&quot;), 
 &quot;Stability Icon&quot;)</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Stability Icon</label>
+        <label>Stability Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>

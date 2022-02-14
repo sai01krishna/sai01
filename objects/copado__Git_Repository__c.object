@@ -286,6 +286,15 @@
         <label>Custom Fields</label>
     </fieldSets>
     <fields>
+        <fullName>copado__Allow_Functions_Git_Cache__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Allow Functions Git Cache</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Branch_Base_URL__c</fullName>
         <deprecated>false</deprecated>
         <description>This field enables Copado to create a link to the Git branches&apos; information on your provider&apos;s end.</description>

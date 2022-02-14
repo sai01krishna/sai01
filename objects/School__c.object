@@ -207,6 +207,16 @@
         <type>Phone</type>
     </fields>
     <fields>
+        <fullName>Org_to_org__c</fullName>
+        <externalId>false</externalId>
+        <label>Org to org</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Parent_Details__c</fullName>
         <externalId>false</externalId>
         <label>Parent Details</label>
@@ -364,8 +374,31 @@
         <fullName>New_Student</fullName>
         <active>true</active>
         <label>New Student</label>
+        <picklistValues>
+            <picklist>Subjects__c</picklist>
+            <values>
+                <fullName>English%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hindi%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maths%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Science%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social%2C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
