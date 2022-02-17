@@ -176,6 +176,14 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Bundle_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bundle 1</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>CDC_without_uat__c</fullName>
         <externalId>false</externalId>
         <label>CDC without uat</label>
@@ -451,7 +459,7 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
