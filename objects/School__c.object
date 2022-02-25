@@ -372,6 +372,16 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>test_FLS_1__c</fullName>
+        <externalId>false</externalId>
+        <label>test FLS 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
     <nameField>
         <label>School Name</label>
