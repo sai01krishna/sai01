@@ -407,14 +407,6 @@
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Test_19_2v__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Test 19.2v</label>
-        <trackTrending>false</trackTrending>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Test_956__c</fullName>
         <externalId>false</externalId>
         <label>Test_956</label>
