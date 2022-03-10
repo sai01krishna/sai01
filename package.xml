@@ -4,5 +4,5 @@
         <members>School__c.Test_19_2v_2__c</members>
         <name>CustomField</name>
     </types>
-    <version>53.0</version>
+    <version>54.0</version>
 </Package>
