@@ -343,6 +343,14 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Test_19_2v__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Test 19.2v</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Test_Connection_beharvior__c</fullName>
         <externalId>false</externalId>
         <label>Test Connection beharvior</label>
