@@ -3,7 +3,7 @@
 
 # Log file
 *.log
-
+*.copado__
 # BlueJ files
 *.ctxt
 
