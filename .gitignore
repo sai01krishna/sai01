@@ -3,9 +3,10 @@
 
 # Log file
 *.log
-
+*.copado__
 # BlueJ files
 *.ctxt
+*.copado__
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
