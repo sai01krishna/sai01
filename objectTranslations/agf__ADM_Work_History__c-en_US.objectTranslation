@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Sprint (Old) --></label>
+        <name>agf__Sprint_Old__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sprint --></label>
+        <name>agf__Sprint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- Work History --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

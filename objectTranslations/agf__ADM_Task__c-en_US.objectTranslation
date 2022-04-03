@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Actual Hours --></label>
+        <name>agf__Actual_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>agf__Assigned_To__c</name>
+        <relationshipLabel><!-- Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quality --></label>
+        <name>agf__Capex_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>agf__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed On --></label>
+        <name>agf__Completed_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due By --></label>
+        <name>agf__Due_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours Remaining --></label>
+        <name>agf__Hours_Remaining__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>agf__Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- SprintId --></label>
+        <name>agf__SprintId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Hours --></label>
+        <name>agf__Starting_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>agf__Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting on someone else</masterLabel>
+            <translation><!-- Waiting on someone else --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>agf__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- Tasks --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Assigned To cannot be blank --></errorMessage>
+        <name>agf__Assigned_To_is_not_null</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Subject cannot be blank --></errorMessage>
+        <name>agf__Subject_is_not_null</name>
+    </validationRules>
+</CustomObjectTranslation>

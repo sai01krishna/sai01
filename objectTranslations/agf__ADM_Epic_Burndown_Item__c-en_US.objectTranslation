@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Closed --></label>
+        <name>agf__Closed__c</name>
+    </fields>
+    <fields>
+        <help><!-- A compound key of Date-Work Id to guarantee each work record only has 1 entry per day --></help>
+        <label><!-- Compound Key --></label>
+        <name>agf__Compound_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>agf__Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Epic --></label>
+        <name>agf__Epic__c</name>
+        <relationshipLabel><!-- Epic Burndown Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Metric --></label>
+        <name>agf__Metric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>agf__Status__c</name>
+    </fields>
+</CustomObjectTranslation>

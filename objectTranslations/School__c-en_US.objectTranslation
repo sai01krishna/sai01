@@ -13,6 +13,14 @@
         <name>Age__c</name>
     </fields>
     <fields>
+        <label><!-- Bit buk 1 --></label>
+        <name>Bit_buk_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- CDC without uat --></label>
+        <name>CDC_without_uat__c</name>
+    </fields>
+    <fields>
         <label><!-- CT 1 --></label>
         <name>CT_1__c</name>
     </fields>
@@ -31,6 +39,10 @@
         <name>Contact_Number__c</name>
     </fields>
     <fields>
+        <label><!-- Coonection behavior --></label>
+        <name>Coonection_behavior__c</name>
+    </fields>
+    <fields>
         <label><!-- Org to org --></label>
         <name>Org_to_org__c</name>
     </fields>
@@ -39,12 +51,24 @@
         <name>Parent_Details__c</name>
     </fields>
     <fields>
+        <label><!-- Primary contact disable --></label>
+        <name>Primary_contact_disable__c</name>
+    </fields>
+    <fields>
         <label><!-- Promoted To --></label>
         <name>Promoted_To__c</name>
     </fields>
     <fields>
         <label><!-- Roll back 1 --></label>
         <name>Roll_back_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 2 --></label>
+        <name>Roll_back_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 3 --></label>
+        <name>Roll_back_3__c</name>
     </fields>
     <fields>
         <help><!-- Email --></help>
@@ -86,6 +110,10 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Test_956 --></label>
+        <name>Test_956__c</name>
+    </fields>
+    <fields>
         <label><!-- Test Connection beharvior --></label>
         <name>Test_Connection_beharvior__c</name>
     </fields>
@@ -96,6 +124,14 @@
     <fields>
         <label><!-- ct4 --></label>
         <name>ct4__c</name>
+    </fields>
+    <fields>
+        <label><!-- duplicate --></label>
+        <name>duplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- test FLS 1 --></label>
+        <name>test_FLS_1__c</name>
     </fields>
     <recordTypes>
         <label><!-- New Student --></label>

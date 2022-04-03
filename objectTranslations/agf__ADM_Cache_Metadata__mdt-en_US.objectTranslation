@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- OrgCacheEnabled --></label>
+        <name>agf__OrgCacheEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- SessionCacheEnabled --></label>
+        <name>agf__SessionCacheEnabled__c</name>
+    </fields>
+</CustomObjectTranslation>

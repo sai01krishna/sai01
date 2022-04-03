@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Percentage of time allocated to the PTOn project between the PTOn Start date and End date. --></help>
+        <label><!-- Allocation % --></label>
+        <name>agf__Allocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved --></label>
+        <name>agf__Approved__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the number of actual days you plan to spend on your PTOn. --></help>
+        <label><!-- Days --></label>
+        <name>agf__Days__c</name>
+    </fields>
+    <fields>
+        <help><!-- Describe your PTOn project or Out of Office in this field. --></help>
+        <label><!-- Description --></label>
+        <name>agf__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>agf__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>agf__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>agf__User__c</name>
+        <relationshipLabel><!-- Out Of Office Logs --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <description><!-- Use to add company holidays into the system --></description>
+        <label><!-- Company Holiday --></label>
+        <name>agf__CompanyHoliday</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Time out of the office away from the Scrum Team. --></description>
+        <label><!-- Out of Office --></label>
+        <name>agf__OutofOffice</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- PTOn (Paid Time ON) time spent working on a project external to the Scrum Team. --></description>
+        <label><!-- PTOn (Paid Time On) --></label>
+        <name>agf__PTOn</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- The start date should always be before or same day as the End date --></errorMessage>
+        <name>agf__Start_Date_before_End_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

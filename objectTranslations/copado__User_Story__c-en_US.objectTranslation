@@ -61,14 +61,6 @@
         <name>copado__Work_Manager_Relations</name>
     </fieldSets>
     <fields>
-        <label><!-- External Id --></label>
-        <name>External_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA Key --></label>
-        <name>JIRA_Key__c</name>
-    </fields>
-    <fields>
         <label><!-- Acceptance Criteria Status --></label>
         <name>copado__Acceptance_Criteria_Status__c</name>
         <picklistValues>
@@ -205,11 +197,6 @@
         <help><!-- Number of Apex Class methods that failed during the Apex Test Run execution. --></help>
         <label><!-- Failing Methods --></label>
         <name>copado__Failing_Methods__c</name>
-    </fields>
-    <fields>
-        <label><!-- Feature --></label>
-        <name>copado__Feature__c</name>
-        <relationshipLabel><!-- User Stories --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Functional Specifications --></label>
@@ -747,10 +734,6 @@
             <translation><!-- In Progress --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Jira</masterLabel>
-            <translation><!-- Jira --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Ready for testing</masterLabel>
             <translation><!-- Ready for testing --></translation>
         </picklistValues>
@@ -845,18 +828,6 @@
     <fields>
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
-    </fields>
-    <fields>
-        <label><!-- Enable Logs --></label>
-        <name>copadoccmint__Enable_Logs__c</name>
-    </fields>
-    <fields>
-        <label><!-- External Id --></label>
-        <name>copadoccmint__External_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- JIRA key --></label>
-        <name>copadoccmint__JIRA_key__c</name>
     </fields>
     <recordTypes>
         <label><!-- Bug --></label>

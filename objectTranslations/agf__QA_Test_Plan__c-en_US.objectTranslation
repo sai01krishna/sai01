@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- All features should  have either a Feature Request Bug/Work record or a Bug List to track bugs.  Please enter the URL to this Record --></help>
+        <label><!-- Bug List --></label>
+        <name>agf__BugList__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the Brief Description of the Test Plan. --></help>
+        <label><!-- Brief Description --></label>
+        <name>agf__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Url to the functional specification, if one exists --></help>
+        <label><!-- Functional Specification --></label>
+        <name>agf__Functional_Specification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the Scope of the Test Plan --></help>
+        <label><!-- Scope --></label>
+        <name>agf__Scope__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please mention the Scrum Team. --></help>
+        <label><!-- Scrum Team --></label>
+        <name>agf__Scrum_Team__c</name>
+        <relationshipLabel><!-- Test Plans --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Your test strategy should at a minimum cover what you will be testing, what you won&apos;t be testing, and what you understand the major risk areas to be. --></help>
+        <label><!-- Test Strategy --></label>
+        <name>agf__Test_Strategy__c</name>
+    </fields>
+</CustomObjectTranslation>

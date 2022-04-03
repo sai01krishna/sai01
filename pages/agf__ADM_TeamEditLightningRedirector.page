@@ -1,0 +1,16 @@
+<apex:page controller="agf.ADM_ScrumTeamWorkExtension">  
+    <apex:includeLightning />
+
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:ADM_TeamEditApp", function() {
+          $Lightning.createComponent("c:ADM_TeamEdit",
+          { recordId : '{!URLENCODE(recordId)}', teamId : '{!URLENCODE(recordId)}'},
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+</apex:page>

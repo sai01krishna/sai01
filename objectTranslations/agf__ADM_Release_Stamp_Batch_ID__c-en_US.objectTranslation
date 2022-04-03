@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Action --></label>
+        <name>agf__Action__c</name>
+        <picklistValues>
+            <masterLabel>Copy</masterLabel>
+            <translation><!-- Copy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Copy All</masterLabel>
+            <translation><!-- Copy All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer</masterLabel>
+            <translation><!-- Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transfer All</masterLabel>
+            <translation><!-- Transfer All --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch ID --></label>
+        <name>agf__Batch_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release From --></label>
+        <name>agf__Release_From__c</name>
+        <relationshipLabel><!-- Release Stamp Batch IDs (Release From) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Release To --></label>
+        <name>agf__Release_To__c</name>
+        <relationshipLabel><!-- Release Stamp Batch IDs (Release To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>agf__Release__c</name>
+        <relationshipLabel><!-- Release Stamp Batch IDs --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

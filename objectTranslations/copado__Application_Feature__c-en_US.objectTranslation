@@ -57,7 +57,6 @@
         <relationshipLabel><!-- Features (Product Owner) --></relationshipLabel>
     </fields>
     <fields>
-        <help><!-- Status of Feature --></help>
         <label><!-- Status --></label>
         <name>copado__Status__c</name>
         <picklistValues>

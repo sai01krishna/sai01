@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Frequency --></label>
+        <name>agf__Frequency__c</name>
+        <relationshipLabel><!-- Priority Mapping --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Impact --></label>
+        <name>agf__Impact__c</name>
+        <relationshipLabel><!-- Priority Mapping --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>agf__Priority__c</name>
+        <relationshipLabel><!-- Priority Mapping --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

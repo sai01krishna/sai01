@@ -36,4 +36,9 @@
         <default>false</default>
         <label>Shipping</label>
     </standardValue>
+    <standardValue>
+        <fullName>Marketing, Loyalty, Commerce, and Rewards Programs</fullName>
+        <default>false</default>
+        <label>Marketing, Loyalty, Commerce, and Rewards Programs</label>
+    </standardValue>
 </StandardValueSet>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Change List Description --></label>
+        <name>agf__Change_List_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Changes --></label>
+        <name>agf__Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Names With Changes --></label>
+        <name>agf__Field_Names_With_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Been Closed --></label>
+        <name>agf__Has_Been_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Been Opened --></label>
+        <name>agf__Has_Been_Opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>agf__User__c</name>
+        <relationshipLabel><!-- Work Cache --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- Work Cache --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

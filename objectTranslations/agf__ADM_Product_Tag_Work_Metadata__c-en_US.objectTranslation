@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Product Tag --></label>
+        <name>agf__Product_Tag__c</name>
+        <relationshipLabel><!-- Product Tag Work Metadata --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>agf__Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Metadata --></label>
+        <name>agf__Work_Metadata__c</name>
+    </fields>
+</CustomObjectTranslation>

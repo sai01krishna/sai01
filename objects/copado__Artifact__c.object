@@ -156,6 +156,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -1276,7 +1277,49 @@ The credential where the unmanaged package is created from.</inlineHelpText>
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>copado__Pipeline__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Package_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Artifact_Repository__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__Artifact_Version__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__DefaultBranch__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>copado__DefaultPath__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Pipeline__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Package_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Artifact_Version__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__Artifact_Repository__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__DefaultBranch__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>copado__DefaultPath__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Pipeline__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Package_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Repository__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__Artifact_Version__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__DefaultBranch__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>copado__DefaultPath__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>copado__Pipeline__c</searchFilterFields>
+        <searchFilterFields>copado__Package_Type__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>RECORDTYPE</searchFilterFields>
+        <searchFilterFields>copado__Artifact_Repository__c</searchFilterFields>
+        <searchFilterFields>copado__Artifact_Version__c</searchFilterFields>
+        <searchFilterFields>copado__DefaultBranch__c</searchFilterFields>
+        <searchFilterFields>copado__DefaultPath__c</searchFilterFields>
+        <searchResultsAdditionalFields>copado__Pipeline__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Package_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Artifact_Repository__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__Artifact_Version__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__DefaultBranch__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>copado__DefaultPath__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
         <fullName>copado__ArtifactNameCannotChange</fullName>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- School --></value>
+    </caseValues>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit buk 1 --></label>
+        <name>Bit_buk_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- CDC without uat --></label>
+        <name>CDC_without_uat__c</name>
+    </fields>
+    <fields>
+        <label>Guten Morgen</label>
+        <name>CT_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- CT 2 --></label>
+        <name>CT_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Student Class ? --></help>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mobile number --></help>
+        <label><!-- Contact Number --></label>
+        <name>Contact_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Coonection behavior --></label>
+        <name>Coonection_behavior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org to org --></label>
+        <name>Org_to_org__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Details --></label>
+        <name>Parent_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary contact disable --></label>
+        <name>Primary_contact_disable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promoted To --></label>
+        <name>Promoted_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 1 --></label>
+        <name>Roll_back_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 2 --></label>
+        <name>Roll_back_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Roll back 3 --></label>
+        <name>Roll_back_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email --></help>
+        <label><!-- Student Email --></label>
+        <name>Student_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- New Student --></help>
+        <label><!-- Student Name --></label>
+        <name>Student_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formula field --></label>
+        <name>Studying__c</name>
+    </fields>
+    <fields>
+        <help><!-- Student can choose the subjects --></help>
+        <label><!-- Subjects --></label>
+        <name>Subjects__c</name>
+        <picklistValues>
+            <masterLabel>English,</masterLabel>
+            <translation><!-- English, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hindi,</masterLabel>
+            <translation><!-- Hindi, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maths,</masterLabel>
+            <translation><!-- Maths, --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Science.</masterLabel>
+            <translation><!-- Science. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social,</masterLabel>
+            <translation><!-- Social, --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test_956 --></label>
+        <name>Test_956__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Connection beharvior --></label>
+        <name>Test_Connection_beharvior__c</name>
+    </fields>
+    <fields>
+        <label><!-- ct3 --></label>
+        <name>ct3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ct4 --></label>
+        <name>ct4__c</name>
+    </fields>
+    <fields>
+        <label><!-- duplicate --></label>
+        <name>duplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- test FLS 1 --></label>
+        <name>test_FLS_1__c</name>
+    </fields>
+    
+    <nameFieldLabel><!-- School Name --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- New Student --></label>
+        <name>New_Student</name>
+    </recordTypes>
+</CustomObjectTranslation>

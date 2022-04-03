@@ -1,0 +1,5 @@
+<apex:page standardController="agf__QA_Test_Plan__c" extensions="agf.QA_TPUserStoryListExtension" showHeader="false" sidebar="false">
+
+This page has been deprecated.
+
+</apex:page>

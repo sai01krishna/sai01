@@ -6,50 +6,6 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Service Console</label>
     <navType>Console</navType>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Investigation</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Bug</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__User_Story</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Utility</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
     <setupExperience>service</setupExperience>
     <tabs>standard-Case</tabs>
     <tabs>standard-Contact</tabs>
@@ -57,9 +13,13 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>standard-home</tabs>
+    <tabs>School__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningService_UtilityBar</utilityBar>
     <workspaceConfig>
+        <mappings>
+            <tab>School__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-Account</tab>
         </mappings>

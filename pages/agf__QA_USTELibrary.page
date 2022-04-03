@@ -1,0 +1,5 @@
+<apex:page standardController="agf__ADM_Work__c" extensions="agf.QA_TreeLibrary" showHeader="false" sidebar="false">
+
+This page has been deprecated.
+
+</apex:page>

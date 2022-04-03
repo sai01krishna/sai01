@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Accomplishment Date --></label>
+        <name>agf__Accomplishment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomplishment Number --></label>
+        <name>agf__Accomplishment_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomplishment Summary --></label>
+        <name>agf__Accomplishment_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accomplishment Type --></label>
+        <name>agf__Accomplishment_Type__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned</masterLabel>
+            <translation><!-- Planned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Planned Date --></label>
+        <name>agf__Planned_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Health of the associated Portfolio. --></help>
+        <label><!-- Portfolio Health --></label>
+        <name>agf__Portfolio_Health__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portfolio --></label>
+        <name>agf__Portfolio__c</name>
+        <relationshipLabel><!-- Accomplishments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Health of the associated Program. --></help>
+        <label><!-- Program Health --></label>
+        <name>agf__Program_Health__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>agf__Program__c</name>
+        <relationshipLabel><!-- Accomplishments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Health of the associated project. --></help>
+        <label><!-- Project Health --></label>
+        <name>agf__Project_Health__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>agf__Project__c</name>
+        <relationshipLabel><!-- Accomplishments --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Identifies whether this accomplishment is to be published or not. --></help>
+        <label><!-- Publish --></label>
+        <name>agf__Publish__c</name>
+    </fields>
+</CustomObjectTranslation>

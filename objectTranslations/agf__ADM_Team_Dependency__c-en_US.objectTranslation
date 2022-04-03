@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Associated with Program --></label>
+        <name>agf__Associated_with_Program__c</name>
+        <relationshipLabel><!-- Team Dependencies (Associated with Program) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If the deliverable is needed by a specific date, indicate that in this field. --></help>
+        <label><!-- Needed by (date) --></label>
+        <name>agf__Deliver_By__c</name>
+    </fields>
+    <fields>
+        <help><!-- Short description (255 chars max) of the work that is needed from the other team. More detailed description can be added to the Notes field. --></help>
+        <label><!-- Deliverable --></label>
+        <name>agf__Deliverable__c</name>
+    </fields>
+    <fields>
+        <help><!-- - Small: requires up to 1 sprint to complete work by 1 resource ^M
+- Medium: requires 1 month to complete work by 1-2 resources ^M
+- Large: requires 1 release to complete work by &gt; 2 resources --></help>
+        <label><!-- Dependency Size --></label>
+        <name>agf__Dependency_Size__c</name>
+        <picklistValues>
+            <masterLabel>Large</masterLabel>
+            <translation><!-- Large --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small</masterLabel>
+            <translation><!-- Small --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The status of this dependency.
+
+Prioritized = Deliverable has a user story and is prioritized on the backlog.
+
+Committed = Team is confident the work can be done in the needed timeframe and PO committed to maintaining the priority of the deliverable. --></help>
+        <label><!-- Dependency Status --></label>
+        <name>agf__Dependency_Status__c</name>
+        <picklistValues>
+            <masterLabel>Committed</masterLabel>
+            <translation><!-- Committed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>More Info Needed</masterLabel>
+            <translation><!-- More Info Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never</masterLabel>
+            <translation><!-- Never --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prioritized</masterLabel>
+            <translation><!-- Prioritized --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The team that is dependent on another team to provide the deliverable. --></help>
+        <label><!-- Team With Dependency --></label>
+        <lookupFilter>
+            <errorMessage><!-- The Team With Dependency you selected is not active. --></errorMessage>
+        </lookupFilter>
+        <name>agf__Dependent_Team__c</name>
+        <relationshipLabel><!-- Dependencies we have on other teams --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The work that is dependent on the completion of  the specified deliverable. --></help>
+        <label><!-- Work With Dependency --></label>
+        <name>agf__Dependent_User_Story__c</name>
+        <relationshipLabel><!-- Team Dependencies needed for this work --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Epic --></label>
+        <name>agf__Epic__c</name>
+        <relationshipLabel><!-- Team Dependencies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Notes concerning the dependency or deliverable (e.g. why it is needed, acceptance criteria, more detailed description, etc.) --></help>
+        <label><!-- Notes --></label>
+        <name>agf__Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- The team that will provide the deliverable to fulfill this dependency. --></help>
+        <label><!-- Team Providing Deliverable --></label>
+        <lookupFilter>
+            <errorMessage><!-- The Team Providing Deliverable you selected is not active. --></errorMessage>
+        </lookupFilter>
+        <name>agf__Provider_Team__c</name>
+        <relationshipLabel><!-- Dependencies other teams have on us --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The record representing the work to satisfy the deliverable of this dependency. --></help>
+        <label><!-- Work For Deliverable --></label>
+        <name>agf__Provider_User_Story__c</name>
+        <relationshipLabel><!-- Team Dependencies on this work --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The build in which you would like the deliverable completed. If the deliverable is not associated with a specific build, enter the major product release corresponding to the season in which this deliverable is needed (e.g. 162 - Winter &apos;10). --></help>
+        <label><!-- Target Build --></label>
+        <name>agf__Target_Build__c</name>
+        <relationshipLabel><!-- Team Dependencies --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The position of the work on the backlog of the team doing the work. --></help>
+        <label><!-- Work Position on Backlog --></label>
+        <name>agf__User_Story_Position_on_Backlog__c</name>
+    </fields>
+    <fields>
+        <help><!-- The build in which the work is scheduled to be completed. --></help>
+        <label><!-- Work Scheduled Build --></label>
+        <name>agf__User_Story_Scheduled_Release__c</name>
+    </fields>
+    <fields>
+        <help><!-- The sprint in which the work is scheduled to be completed. --></help>
+        <label><!-- Work Scheduled Sprint --></label>
+        <name>agf__User_Story_Scheduled_Sprint__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- A user story for the deliverable must be linked to the dependency in order to set the dependency status to &quot;Prioritized&quot; or &quot;Committed&quot;. --></errorMessage>
+        <name>agf__Check_Provider_User_Story</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Team With Dependency you selected is not active. --></errorMessage>
+        <name>agf__Dependent_Team_Is_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The &apos;Needed By&apos; date cannot be in the past. --></errorMessage>
+        <name>agf__Needed_By_Date_in_Future</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Team Providing Deliverable you selected is not active. --></errorMessage>
+        <name>agf__Provider_Team_Is_Active</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Team Providing Deliverable and Team With Dependency cannot be the same! --></errorMessage>
+        <name>agf__Teams_Cannot_Be_The_Same</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Generate_graph_for_my_team --></label>
+        <name>agf__Generate_graph_for_my_team</name>
+    </webLinks>
+</CustomObjectTranslation>

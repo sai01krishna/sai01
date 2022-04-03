@@ -1,0 +1,5 @@
+<apex:page id="page" controller="agf.QA_AddTestCasesController" >
+
+This page has been deprecated.
+
+</apex:page>

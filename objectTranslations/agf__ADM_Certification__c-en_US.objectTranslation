@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Comments --></label>
+        <name>agf__Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certified On --></label>
+        <name>agf__Certified_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Certified --></label>
+        <name>agf__Certified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>agf__Type__c</name>
+        <picklistValues>
+            <masterLabel>Product Owner</masterLabel>
+            <translation><!-- Product Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scrum Master</masterLabel>
+            <translation><!-- Scrum Master --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>agf__User__c</name>
+        <relationshipLabel><!-- Certifications --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- User is required to save Certification data --></errorMessage>
+        <name>agf__User_Required_on_Certification_record</name>
+    </validationRules>
+</CustomObjectTranslation>

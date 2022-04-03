@@ -281,8 +281,8 @@
         <customTabListAdditionalFields>copado__Failures__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Total_time__c</customTabListAdditionalFields>
         <excludedStandardButtons>Accept</excludedStandardButtons>
-        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
         <lookupDialogsAdditionalFields>copado__Org__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Status__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>copado__Tests_run__c</lookupDialogsAdditionalFields>

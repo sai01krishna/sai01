@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Execution --></label>
+        <name>agf__Execution__c</name>
+        <relationshipLabel><!-- Execution-Bugs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work --></label>
+        <name>agf__Work__c</name>
+        <relationshipLabel><!-- Execution-Bugs --></relationshipLabel>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Execution cannot be null --></errorMessage>
+        <name>agf__Execution_cannot_be_null</name>
+    </validationRules>
+</CustomObjectTranslation>

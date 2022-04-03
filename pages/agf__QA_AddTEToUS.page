@@ -1,0 +1,5 @@
+<apex:page controller="agf.QA_TreeLibrary" extensions="agf.QA_AddTEtoUSExtension" tabStyle="agf__QA_Test_Execution__c">
+
+This page has been deprecated.
+
+</apex:page>

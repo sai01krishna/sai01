@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Question --></label>
+        <name>agf__Question__c</name>
+        <relationshipLabel><!-- Default Test  Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Case --></label>
+        <name>agf__Test_Case__c</name>
+        <relationshipLabel><!-- Default Test  Cases --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

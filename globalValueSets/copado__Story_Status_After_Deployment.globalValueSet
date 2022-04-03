@@ -16,16 +16,16 @@
         <label>Completed</label>
     </customValue>
     <customValue>
-        <fullName>Testing Complete</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Testing Complete</label>
-    </customValue>
-    <customValue>
         <fullName>Ready to Test</fullName>
         <default>false</default>
         <isActive>false</isActive>
         <label>Ready to Test</label>
+    </customValue>
+    <customValue>
+        <fullName>Testing Complete</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Testing Complete</label>
     </customValue>
     <customValue>
         <fullName>Complete</fullName>

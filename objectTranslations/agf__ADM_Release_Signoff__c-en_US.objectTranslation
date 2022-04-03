@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AppStore Approval --></label>
+        <name>agf__AppStore_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- AppStore --></label>
+        <name>agf__AppStore__c</name>
+        <relationshipLabel><!-- Release Signoff (AppStore) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>agf__Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>GO</masterLabel>
+            <translation><!-- GO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO GO</masterLabel>
+            <translation><!-- NO GO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Build --></label>
+        <name>agf__Build__c</name>
+        <relationshipLabel><!-- Release Signoff --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>agf__Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Core Approval --></label>
+        <name>agf__Core_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Core --></label>
+        <name>agf__Core__c</name>
+        <relationshipLabel><!-- Release Signoff (Core) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Approved --></label>
+        <name>agf__Date_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineering Exec Approval --></label>
+        <name>agf__Dev_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineering Exec --></label>
+        <name>agf__Dev__c</name>
+        <relationshipLabel><!-- Release Signoff (Engineering Exec) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Doc Approval --></label>
+        <name>agf__Doc_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Doc --></label>
+        <name>agf__Doc__c</name>
+        <relationshipLabel><!-- Release Signoff (Doc) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- L10N Approval --></label>
+        <name>agf__L10N_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- L10N --></label>
+        <name>agf__L10N__c</name>
+        <relationshipLabel><!-- Release Signoff (L10N) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Platform Approval --></label>
+        <name>agf__Platform_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Platform --></label>
+        <name>agf__Platform__c</name>
+        <relationshipLabel><!-- Release Signoff (Platform) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Approval --></label>
+        <name>agf__Product_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>agf__Product__c</name>
+        <relationshipLabel><!-- Release Signoff (Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cross-Cloud Exec Approval --></label>
+        <name>agf__QA_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cross-Cloud Exec --></label>
+        <name>agf__QA__c</name>
+        <relationshipLabel><!-- Release Signoff (Cross-Cloud Exec) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQE --></label>
+        <name>agf__QE__c</name>
+        <relationshipLabel><!-- Release Signoff (TQE) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- QPD Approval --></label>
+        <name>agf__QPD_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- QPD --></label>
+        <name>agf__QPD__c</name>
+        <relationshipLabel><!-- Release Signoff (QPD) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RM Approval --></label>
+        <name>agf__RM_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- RM --></label>
+        <name>agf__RM__c</name>
+        <relationshipLabel><!-- Release Signoff (RM) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Release Approved --></label>
+        <name>agf__Release_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security Approval --></label>
+        <name>agf__Security_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Security --></label>
+        <name>agf__Security__c</name>
+        <relationshipLabel><!-- Release Signoff (Security) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Staggered Release --></label>
+        <name>agf__Staggered_Release__c</name>
+    </fields>
+    <fields>
+        <label><!-- PerfEng Approval --></label>
+        <name>agf__Systest_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- PerfEng --></label>
+        <name>agf__Systest__c</name>
+        <relationshipLabel><!-- Release Signoff (PerfEng) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TQE Approval --></label>
+        <name>agf__TQE_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- TechOps Approval --></label>
+        <name>agf__TechOps_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- TechOps --></label>
+        <name>agf__TechOps__c</name>
+        <relationshipLabel><!-- Release Signoff (TechOps) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tech SVP Approval --></label>
+        <name>agf__Tech_SVP_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tech SVP --></label>
+        <name>agf__Tech_SVP__c</name>
+        <relationshipLabel><!-- Release Signoff (Tech SVP) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- UX Approval --></label>
+        <name>agf__UE_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- UX --></label>
+        <name>agf__UE__c</name>
+        <relationshipLabel><!-- Release Signoff (UX) --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <description><!-- GUS --></description>
+        <label><!-- GUS --></label>
+        <name>agf__GUS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- R0 --></label>
+        <name>agf__R0</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- R1 --></label>
+        <name>agf__R1</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- R2 --></label>
+        <name>agf__R2</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This is the overall release signoff record --></description>
+        <label><!-- Release Freeze --></label>
+        <name>agf__Release_Freeze</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sandbox --></label>
+        <name>agf__Sandbox</name>
+    </recordTypes>
+</CustomObjectTranslation>

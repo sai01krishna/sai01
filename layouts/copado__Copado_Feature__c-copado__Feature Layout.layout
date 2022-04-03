@@ -131,6 +131,16 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>IsotopeSubscription</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Clone</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>PrintableView</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>9</sortOrder>
@@ -165,29 +175,7 @@
             <actionType>StandardButton</actionType>
             <sortOrder>6</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>IsotopeSubscription</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Clone</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
     </platformActionList>
-    <relatedLists>
-        <customButtons>copado__Assign_to_Release</customButtons>
-        <customButtons>copado__Import_to_User_Story</customButtons>
-        <fields>NAME</fields>
-        <fields>copado__User_Story_Title__c</fields>
-        <fields>copado__Status__c</fields>
-        <fields>copado__Project__c</fields>
-        <fields>copado__Sprint__c</fields>
-        <fields>copado__Priority__c</fields>
-        <fields>OWNER.ALIAS</fields>
-        <relatedList>copado__User_Story__c.copado__Feature__c</relatedList>
-    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>

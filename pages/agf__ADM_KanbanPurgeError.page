@@ -1,0 +1,15 @@
+<apex:page >
+
+<apex:form >
+
+  <apex:slds />
+
+    <div class="slds-grid slds-grid_vertical" style="padding:100px">
+
+      <h1>There was an error with your request. Please make sure you entered a valid team ID.</h1>
+
+    </div>
+
+</apex:form>
+
+</apex:page>

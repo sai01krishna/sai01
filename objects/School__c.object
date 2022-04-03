@@ -166,6 +166,42 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Bit_buk_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Bit buk 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bundle 1</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bundle 2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CDC_without_uat__c</fullName>
+        <externalId>false</externalId>
+        <label>CDC without uat</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CT_1__c</fullName>
         <externalId>false</externalId>
         <label>CT 1</label>
@@ -207,6 +243,16 @@
         <type>Phone</type>
     </fields>
     <fields>
+        <fullName>Coonection_behavior__c</fullName>
+        <externalId>false</externalId>
+        <label>Coonection behavior</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Org_to_org__c</fullName>
         <externalId>false</externalId>
         <label>Org to org</label>
@@ -225,6 +271,14 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_contact_disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary contact disable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>Promoted_To__c</fullName>
@@ -253,6 +307,16 @@
         <fullName>Roll_back_2__c</fullName>
         <externalId>false</externalId>
         <label>Roll back 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Roll_back_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Roll back 3</label>
         <length>255</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -343,6 +407,24 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>Test_19_2v__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Test 19.2v</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Test_956__c</fullName>
+        <externalId>false</externalId>
+        <label>Test_956</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Test_Connection_beharvior__c</fullName>
         <externalId>false</externalId>
         <label>Test Connection beharvior</label>
@@ -372,7 +454,32 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
+    <fields>
+        <fullName>duplicate__c</fullName>
+        <externalId>false</externalId>
+        <label>duplicate</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>test_FLS_1__c</fullName>
+        <externalId>false</externalId>
+        <label>test FLS 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>School</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>School Name</label>
         <type>Text</type>

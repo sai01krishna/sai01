@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Category --></label>
+        <name>agf__Category__c</name>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application Testing</masterLabel>
+            <translation><!-- Application Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Core Testing</masterLabel>
+            <translation><!-- Core Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error Handling</masterLabel>
+            <translation><!-- Error Handling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functionality</masterLabel>
+            <translation><!-- Functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Globalization</masterLabel>
+            <translation><!-- Globalization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Help</masterLabel>
+            <translation><!-- Help --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance and System Testing</masterLabel>
+            <translation><!-- Performance and System Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Testing</masterLabel>
+            <translation><!-- Platform Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regression Testing</masterLabel>
+            <translation><!-- Regression Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UI testing</masterLabel>
+            <translation><!-- UI testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade Script</masterLabel>
+            <translation><!-- Upgrade Script --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Editable --></label>
+        <name>agf__Editable__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>agf__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- More Info --></label>
+        <name>agf__More_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obsolete --></label>
+        <name>agf__Obsolete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question_Text --></label>
+        <name>agf__Question_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>agf__URL__c</name>
+    </fields>
+</CustomObjectTranslation>

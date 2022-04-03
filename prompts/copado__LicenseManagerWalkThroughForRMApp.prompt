@@ -10,9 +10,8 @@
         <dismissButtonLabel>Dismiss</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
-        <isPublished>true</isPublished>
+        <isPublished>false</isPublished>
         <masterLabel>License Manager Walkthrough for Release Manager app Step 1</masterLabel>
-        <publishedDate>2021-12-02</publishedDate>
         <shouldDisplayActionButton>true</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2021-05-02</startDate>

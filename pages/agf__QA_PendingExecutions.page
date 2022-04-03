@@ -1,0 +1,5 @@
+<apex:page controller="agf.QA_PendingExecutionsController" title="Your Pending Test Executions" sidebar="false">
+
+This page has been deprecated.
+
+</apex:page>

@@ -190,6 +190,7 @@
         <deprecated>false</deprecated>
         <description>Defines the type of configuration required for this step.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Defines the type of configuration required for this step.</inlineHelpText>
         <label>Type</label>
         <length>255</length>
         <required>false</required>
@@ -224,12 +225,12 @@
                 <value>
                     <fullName>before</fullName>
                     <default>false</default>
-                    <label>before</label>
+                    <label>Before Deployment</label>
                 </value>
                 <value>
                     <fullName>after</fullName>
                     <default>false</default>
-                    <label>after</label>
+                    <label>After Deployment</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -379,6 +380,7 @@ BLANKVALUE(
         <deprecated>false</deprecated>
         <description>Defines the behaviour this step will have when executed.</description>
         <externalId>false</externalId>
+        <inlineHelpText>Defines the behaviour this step will have when executed.</inlineHelpText>
         <label>Behaviour</label>
         <required>true</required>
         <trackTrending>false</trackTrending>
