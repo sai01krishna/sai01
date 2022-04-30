@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SecuritySettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <canUsersGrantLoginAccess>true</canUsersGrantLoginAccess>
-    <enableAdminLoginAsAnyUser>true</enableAdminLoginAsAnyUser>
+    <enableAdminLoginAsAnyUser>false</enableAdminLoginAsAnyUser>
     <enableAuditFieldsInactiveOwner>false</enableAuditFieldsInactiveOwner>
     <enableAuraSecureEvalPref>true</enableAuraSecureEvalPref>
     <enableRequireHttpsConnection>true</enableRequireHttpsConnection>
-    <networkAccess>
-        <ipRanges>
-            <end>35.234.89.246</end>
-            <start>35.234.89.246</start>
-        </ipRanges>
-        <ipRanges>
-            <end>34.141.10.40</end>
-            <start>34.141.10.40</start>
-        </ipRanges>
-        <ipRanges>
-            <end>34.107.90.223</end>
-            <start>34.107.90.223</start>
-        </ipRanges>
-        <ipRanges>
-            <end>34.91.173.111</end>
-            <start>34.91.173.111</start>
-        </ipRanges>
-        <ipRanges>
-            <end>34.91.55.187</end>
-            <start>34.91.55.187</start>
-        </ipRanges>
-        <ipRanges>
-            <end>34.90.11.138</end>
-            <start>34.90.11.138</start>
-        </ipRanges>
-    </networkAccess>
+    <networkAccess/>
     <passwordPolicies>
         <complexity>AlphaNumeric</complexity>
-        <expiration>Never</expiration>
+        <expiration>NinetyDays</expiration>
         <historyRestriction>3</historyRestriction>
         <lockoutInterval>FifteenMinutes</lockoutInterval>
         <maxLoginAttempts>TenAttempts</maxLoginAttempts>

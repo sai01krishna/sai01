@@ -5,56 +5,16 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Salesforce CMS</label>
     <navType>Console</navType>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Bug</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Investigation</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__User_Story</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>User_Story_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>copado__User_Story__c</pageOrSobjectType>
-        <recordType>copado__User_Story__c.copado__Utility</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
     <tabs>standard-CmsAuthorHome</tabs>
     <tabs>standard-CmsChannel</tabs>
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
+    <tabs>School__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>School__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>
         </mappings>
