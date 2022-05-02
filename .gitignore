@@ -4,13 +4,6 @@
 # Log file
 *.log
 *.copado__
-
-#package.xml file is recreated on the fly by Copado, no need to track unnecessary changes of this file
-src/package.xml
-
-#package.xml file is recreated on the fly by Copado, no need to track unnecessary changes of this file
-package.xml
-
 # BlueJ files
 *.ctxt
 *.copado__
