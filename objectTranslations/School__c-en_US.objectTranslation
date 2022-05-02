@@ -118,19 +118,19 @@
         <name>Test_Connection_beharvior__c</name>
     </fields>
     <fields>
-        <label><!-- ct3 --></label>
+        <label></label>
         <name>ct3__c</name>
     </fields>
     <fields>
-        <label><!-- ct4 --></label>
+        <label></label>
         <name>ct4__c</name>
     </fields>
     <fields>
-        <label><!-- duplicate --></label>
+        <label></label>
         <name>duplicate__c</name>
     </fields>
     <fields>
-        <label><!-- test FLS 1 --></label>
+        <label></label>
         <name>test_FLS_1__c</name>
     </fields>
     <recordTypes>
