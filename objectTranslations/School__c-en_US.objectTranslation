@@ -9,15 +9,15 @@
         <value>Schools</value>
     </caseValues>
     <fields>
-        <label><!-- Age --></label>
+        <label></label>
         <name>Age__c</name>
     </fields>
     <fields>
-        <label><!-- Bit buk 1 --></label>
+        <label></label>
         <name>Bit_buk_1__c</name>
     </fields>
     <fields>
-        <label><!-- CDC without uat --></label>
+        <label></label>
         <name>CDC_without_uat__c</name>
     </fields>
     <fields>
