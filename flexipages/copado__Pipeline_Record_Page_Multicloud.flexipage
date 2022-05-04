@@ -226,8 +226,8 @@
                     <name>uiBehavior</name>
                     <value>required</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.copado__Promotion_Automation__c</fieldItem>
-                <identifier>RecordPromotion_Automation__cField</identifier>
+                <fieldItem>Record.copado__Promotion_Job_Template__c</fieldItem>
+                <identifier>RecordPromotion_Job_Template__cField</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -239,12 +239,8 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Promotion_Job_Template__c</fieldItem>
-                <identifier>RecordPromotion_Job_Template__cField</identifier>
+                <fieldItem>Record.copado__CommitJobTemplate__c</fieldItem>
+                <identifier>RecordCommitJobTemplate_cField1</identifier>
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.copado__Platform__c}</leftValue>
@@ -258,23 +254,6 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Deployment_Automation__c</fieldItem>
-                <identifier>RecordDeployment_Automation__cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Platform__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>Salesforce</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>

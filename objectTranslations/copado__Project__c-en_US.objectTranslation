@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- Change Management Integration --></label>
+        <name>Change_Management_Integration__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Add here the Id of the record within your external Project Management system. --></help>
+        <label><!-- External Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Rally, the workspace ID is required in addition to the External Project Id. --></help>
+        <label><!-- Workspace Id --></label>
+        <name>Workspace_Id__c</name>
+    </fields>
+    <fields>
         <help><!-- If working with Copado Change Management, the Project must be linked to a Pipeline. --></help>
         <label><!-- Pipeline --></label>
         <name>copado__Deployment_Flow__c</name>
@@ -59,4 +74,56 @@
             <translation><!-- Planned --></translation>
         </picklistValues>
     </fields>
+    <fields>
+        <label><!-- Copado Integration Setting --></label>
+        <name>copadoccmint__Copado_Integration_Setting__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enable to sync User Stories assigned to community users. --></help>
+        <label><!-- Enable Community Users --></label>
+        <name>copadoccmint__Enable_Community_User__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you are fetching more then 500 records from the third party platform, we recommend you to disable this checkbox to be able to prevent heap size too large issue. --></help>
+        <label><!-- Enable Logs --></label>
+        <name>copadoccmint__Enable_Logs__c</name>
+    </fields>
+    <fields>
+        <help><!-- If you want to add an additional filter to your JIRA callout, you can just modify this field.
+Usage exp: issueType=Story and resolution=Duplicate --></help>
+        <label><!-- JQL Extended Filter --></label>
+        <name>copadoccmint__JQL_Extended_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project External Id --></label>
+        <name>copadoccmint__Project_External_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- If in case, you are getting too many callout issue due to more number of User Stories per Sprint or due to more number of sprint.
+    You can reduce the batch size in this field. --></help>
+        <label><!-- Sprint Per Batch Chunk Size --></label>
+        <name>copadoccmint__Sprint_Per_Batch_Chunk_Size__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comma separated Team Name/Id to fetch Team sprints. Exp: Frontend Team,Backend Team,QA Team --></help>
+        <label><!-- Team Info --></label>
+        <name>copadoccmint__Team_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workspace Id --></label>
+        <name>copadoccmint__Workspace_Id__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Sync_External_User_Stories --></label>
+        <name>Sync_External_User_Stories</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sync_External_User_Stories --></label>
+        <name>copadoccmint__Sync_External_User_Stories</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sync_External_User_Stories_With_Sprint --></label>
+        <name>copadoccmint__Sync_External_User_Stories_With_Sprint</name>
+    </webLinks>
 </CustomObjectTranslation>

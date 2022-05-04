@@ -61,7 +61,7 @@
         <name>copado__Max_Record_Limit__c</name>
     </fields>
     <fields>
-        <label><!-- Template Source Credential --></label>
+        <label><!-- Template Schema Credential --></label>
         <name>copado__Template_Source_Org__c</name>
         <relationshipLabel><!-- Data Templates --></relationshipLabel>
     </fields>

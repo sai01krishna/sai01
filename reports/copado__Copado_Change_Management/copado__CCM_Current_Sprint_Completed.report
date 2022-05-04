@@ -60,6 +60,7 @@
             <operator>equals</operator>
             <value>100.0</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

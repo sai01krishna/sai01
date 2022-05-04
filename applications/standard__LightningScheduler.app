@@ -12,5 +12,6 @@
     <tabs>standard-WorkType</tabs>
     <tabs>standard-OperatingHours</tabs>
     <tabs>standard-ServiceAppointment</tabs>
+    <tabs>School__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
