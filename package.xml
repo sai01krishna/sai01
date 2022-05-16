@@ -2,7 +2,6 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>myOuterClass</members>
-        <members>myOuterClass2</members>
         <name>ApexClass</name>
     </types>
     <version>54.0</version>
