@@ -4,6 +4,9 @@
         <field>OWNER</field>
     </columns>
     <columns>
+        <field>OWNER2</field>
+    </columns>
+    <columns>
         <field>ACCOUNT.NAME</field>
     </columns>
     <columns>
