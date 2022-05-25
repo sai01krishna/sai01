@@ -4,5 +4,6 @@ public class CommitClass2 {
      // myInnerClass code here
      //second comment
      //testclass
+     //comment 25th
    }
    }
