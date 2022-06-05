@@ -5,5 +5,7 @@ public class CommitClass2 {
      //second comment
      //testclass
      //comment 25th
+     //remove component
+     //First comment on 5 june
    }
    }
