@@ -7,5 +7,6 @@ public class CommitClass2 {
      //comment 25th
      //remove component
      //First comment on 5 june
+       //second comment on 5 june - class2
    }
    }
