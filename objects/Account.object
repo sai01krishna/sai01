@@ -456,6 +456,16 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>Snapp_shot__c</fullName>
+        <externalId>false</externalId>
+        <label>Snapp shot</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Test_June_11__c</fullName>
         <externalId>false</externalId>
         <label>Test June 11</label>
