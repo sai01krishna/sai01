@@ -30,8 +30,4 @@
         <object>Contact</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
-    <recordTypeVisibilities>
-        <recordType>Account.sai_test</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
 </PermissionSet>
