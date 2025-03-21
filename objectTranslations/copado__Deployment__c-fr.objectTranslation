@@ -141,6 +141,12 @@
         <relationshipLabel><!-- Deployments --></relationshipLabel>
     </fields>
     <fields>
+        <help><!-- Identifies the original deployment that was rolled back for reporting purposes --></help>
+        <label><!-- Rolled back Deployment --></label>
+        <name>copado__Rolled_back_Deployment__c</name>
+        <relationshipLabel><!-- Deployments (Rolled back Deployment) --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- SUM Deployed --></label>
         <name>copado__SUM_Deployed__c</name>
     </fields>

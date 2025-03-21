@@ -14,9 +14,21 @@
         <name>copado__Configuration__c</name>
     </fields>
     <fields>
+        <help><!-- The displayed values are based on the active Extension Configuration records available in your org. --></help>
+        <label><!-- Tool --></label>
+        <name>copado__ExtensionConfiguration__c</name>
+        <relationshipLabel><!-- Tests --></relationshipLabel>
+    </fields>
+    <fields>
         <label><!-- Feature --></label>
         <name>copado__Feature__c</name>
         <relationshipLabel><!-- Tests --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Deprecated --></help>
+        <label><!-- Tool - Deprecated --></label>
+        <name>copado__Integration__c</name>
+        <relationshipLabel><!-- Tests - Deprecated --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Priority --></label>

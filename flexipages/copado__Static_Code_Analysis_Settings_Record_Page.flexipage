@@ -7,6 +7,16 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
+                            <value>copado__Static_Code_Analysis_Settings__c.copado__Generate_Default_Rule_Set</value>
+                            <visibilityRule>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                                    <operator>CONTAINS</operator>
+                                    <rightValue>PMD</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
                             <value>ChangeOwnerOne</value>
                         </valueListItems>
                         <valueListItems>
@@ -53,7 +63,7 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
                 <identifier>RecordNameField</identifier>
@@ -206,19 +216,19 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__CodeScan_Version__c</fieldItem>
-                <identifier>Recordcopado__CodeScan_Version__cField</identifier>
+                <identifier>RecordCodeScan_Version__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__CodeScan_Token__c</fieldItem>
-                <identifier>Recordcopado__CodeScan_Token__cField</identifier>
+                <identifier>RecordCodeScan_Token__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__CodeScan_URL__c</fieldItem>
-                <identifier>Recordcopado__CodeScan_URL__cField</identifier>
+                <identifier>RecordCodeScan_URL__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -240,7 +250,7 @@
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.copado__Cloud_Organization__c</fieldItem>
-                <identifier>Recordcopado__Cloud_Organization__cField</identifier>
+                <identifier>RecordCloud_Organization__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>

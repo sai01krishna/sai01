@@ -151,12 +151,6 @@
                 <identifier>RecordImage_Name__cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.copado__Worker_Size__c</fieldItem>
-                <identifier>RecordWorker_Size__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-730db199-f6c9-4431-ae6f-3af1a7f6a41d</name>
         <type>Facet</type>
     </flexiPageRegions>

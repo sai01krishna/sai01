@@ -141,7 +141,15 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Data_Template_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Data_Template_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Template_Source_Org__c</fields>
+        <fields>copado__Main_Object__c</fields>
+        <fields>copado__Active__c</fields>
+        <label>Data Template Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -206,6 +214,7 @@
     </fields>
     <fields>
         <fullName>copado__Batch_Size__c</fullName>
+        <defaultValue>200</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Batch Size</label>
@@ -254,6 +263,7 @@
     </fields>
     <fields>
         <fullName>copado__Filter_Logic__c</fullName>
+        <defaultValue>TEXT(1)</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <label>Filter Logic</label>
@@ -309,7 +319,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <label>Template Source Credential</label>
+        <label>Template Schema Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Data Templates</relationshipLabel>
         <relationshipName>Data_Templates</relationshipName>

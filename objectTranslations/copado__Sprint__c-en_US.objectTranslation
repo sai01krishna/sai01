@@ -79,6 +79,10 @@
         <label><!-- Working days in sprint --></label>
         <name>copado__Working_days_in_sprint__c</name>
     </fields>
+    <fields>
+        <label><!-- External Id --></label>
+        <name>copadoccmint__External_Id__c</name>
+    </fields>
     <validationRules>
         <errorMessage><!-- You must introduce an End Date greater than the Start Date. --></errorMessage>
         <name>copado__EndDate_Should_be_Greater_than_StartDate</name>

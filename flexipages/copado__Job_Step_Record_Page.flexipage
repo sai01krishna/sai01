@@ -7,12 +7,22 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>copado__JobStep__c.copado__ExecuteManualStep</value>
+                            <value>copado__JobStep__c.copado__Complete_Manual_Task</value>
                             <visibilityRule>
+                                <booleanFilter>1 AND 2 AND 3</booleanFilter>
                                 <criteria>
-                                    <leftValue>{!Record.copado__Type__c}</leftValue>
+                                    <leftValue>{!Record.copado__CustomType__c}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>Manual</rightValue>
+                                    <rightValue>Manual Task</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.copado__JobExecution__r.Name}</leftValue>
+                                    <operator>NE</operator>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.copado__Status__c}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Success</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -58,49 +68,8 @@
                     <name>readOnly</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <componentName>copado:jobStepManual</componentName>
-                <identifier>jobStepManual</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Manual</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>readOnly</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>copado:jobStepFlow</componentName>
-                <identifier>jobStepFlow</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Flow</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>readOnly</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>copado:jobStepFunction</componentName>
-                <identifier>jobStepFunction</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.copado__Type__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Function</rightValue>
-                    </criteria>
-                </visibilityRule>
+                <componentName>copado:customJobStepsModal</componentName>
+                <identifier>c_customJobStepsModal1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-9a5d0a09-992c-46c8-af20-1821e1f73834</name>
@@ -115,16 +84,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
                 <identifier>RecordNameField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Type__c</fieldItem>
-                <identifier>RecordType__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -153,8 +112,32 @@
     <flexiPageRegions>
         <itemInstances>
             <fieldInstance>
+                <fieldItem>Record.copado__Status__c</fieldItem>
+                <identifier>RecordStatus_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
                 <fieldItem>Record.copado__JobTemplate__c</fieldItem>
-                <identifier>RecordJobTemplate__cField</identifier>
+                <identifier>RecordJobTemplate_cField1</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__JobTemplate__r.Name}</leftValue>
+                        <operator>NE</operator>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__JobExecution__c</fieldItem>
+                <identifier>RecordJobExecution_cField1</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.copado__JobExecution__r.Name}</leftValue>
+                        <operator>NE</operator>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -165,16 +148,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.copado__Order__c</fieldItem>
                 <identifier>RecordOrder__cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.copado__Result__c</fieldItem>
-                <identifier>RecordResult__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -225,6 +198,12 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.copado__ConfigJson__c</fieldItem>
+                <identifier>RecordConfigJson_cField1</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-74d0e4c9-3e6f-401d-9b47-eab8e611f69b</name>
         <type>Facet</type>
     </flexiPageRegions>

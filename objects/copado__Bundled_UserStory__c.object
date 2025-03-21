@@ -272,11 +272,6 @@
             <isRequired>false</isRequired>
         </availableFields>
         <availableFields>
-            <field>copado__User_Story__r.copado__Feature__c</field>
-            <isFieldManaged>false</isFieldManaged>
-            <isRequired>false</isRequired>
-        </availableFields>
-        <availableFields>
             <field>copado__User_Story__r.copado__Functional_Specifications__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>

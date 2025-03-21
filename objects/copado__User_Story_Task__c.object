@@ -141,7 +141,14 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__User_Story_Task_compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__User_Story_Task_compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Subject__c</fields>
+        <fields>copado__Status__c</fields>
+        <label>User Story Task compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>

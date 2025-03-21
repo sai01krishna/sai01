@@ -726,6 +726,15 @@
         <visibleLines>5</visibleLines>
     </fields>
     <fields>
+        <fullName>copado__Is_Rolled_Back__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Rolled Back?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Last_Deployment_Execution_Id__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -959,4 +968,22 @@
         <errorMessage>Back Promotions to Scratch Orgs are not allowed</errorMessage>
     </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Rollback</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Rollback (beta)</masterLabel>
+        <openType>newWindow</openType>
+        <page>copado__RollbackWizard</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+    </webLinks>
 </CustomObject>

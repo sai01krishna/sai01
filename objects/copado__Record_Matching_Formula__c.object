@@ -160,7 +160,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <inlineHelpText>The Credential from where Copado retrieves the list of objects and fields available to build the formula.</inlineHelpText>
-        <label>Configuration Source Credential</label>
+        <label>Configuration Schema Credential</label>
         <referenceTo>copado__Org__c</referenceTo>
         <relationshipLabel>Record Matching Formulas</relationshipLabel>
         <relationshipName>Record_Matching_Formulas</relationshipName>

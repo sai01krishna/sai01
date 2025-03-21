@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Details --></label>
+        <name>copado__Details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the type of Application that relates to the Extension. --></help>
+        <label><!-- Extension Application --></label>
+        <name>copado__ExtensionApplication__c</name>
+        <picklistValues>
+            <masterLabel>Test</masterLabel>
+            <translation><!-- Test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the name of the CMDT Extension for which you are creating the record. --></help>
+        <label><!-- Extension Name --></label>
+        <name>copado__Extension_Name__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>copado__Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Pending</masterLabel>
+            <translation><!-- Setup Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Select the type of test you want to execute with the Extension. --></help>
+        <label><!-- Test Type --></label>
+        <name>copado__Type__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional</masterLabel>
+            <translation><!-- Functional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Static Code Analysis</masterLabel>
+            <translation><!-- Static Code Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Test</masterLabel>
+            <translation><!-- Unit Test --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

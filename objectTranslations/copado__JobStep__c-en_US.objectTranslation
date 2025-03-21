@@ -9,7 +9,7 @@
         <name>copado__ConfigJson__c</name>
     </fields>
     <fields>
-        <label><!-- Custom Type --></label>
+        <label><!-- Type --></label>
         <name>copado__CustomType__c</name>
     </fields>
     <fields>
@@ -59,7 +59,7 @@
         <name>copado__ResultDataJson__c</name>
     </fields>
     <fields>
-        <label><!-- Result --></label>
+        <label><!-- Last Result --></label>
         <name>copado__Result__c</name>
         <relationshipLabel><!-- Job Steps --></relationshipLabel>
     </fields>
@@ -72,7 +72,7 @@
         <name>copado__Status__c</name>
     </fields>
     <fields>
-        <label><!-- Type --></label>
+        <label><!-- Behaviour --></label>
         <name>copado__Type__c</name>
         <picklistValues>
             <masterLabel>Flow</masterLabel>

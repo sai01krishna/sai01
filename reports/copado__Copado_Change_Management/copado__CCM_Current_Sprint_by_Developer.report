@@ -57,6 +57,7 @@
             <operator>notEqual</operator>
             <value>Rejected,Cancelled</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

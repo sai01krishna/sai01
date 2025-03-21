@@ -5,11 +5,15 @@
         <name>copado__Category__c</name>
     </fields>
     <fields>
-        <label><!-- ExecuteVia --></label>
+        <label><!-- Deprecated - ExecuteVia --></label>
         <name>copado__ExecuteVia__c</name>
     </fields>
     <fields>
-        <label><!-- Namespace --></label>
+        <label><!-- JobTemplate --></label>
+        <name>copado__JobTemplate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated - Namespace --></label>
         <name>copado__Namespace__c</name>
     </fields>
     <fields>

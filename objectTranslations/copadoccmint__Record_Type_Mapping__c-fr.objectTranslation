@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Project --></label>
+        <name>copadoccmint__Project__c</name>
+        <relationshipLabel><!-- Record Type Mappings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Record Type Name --></label>
+        <name>copadoccmint__Salesforce_Record_Type_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Third Party Record Type Name --></label>
+        <name>copadoccmint__Third_Party_Record_Type_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

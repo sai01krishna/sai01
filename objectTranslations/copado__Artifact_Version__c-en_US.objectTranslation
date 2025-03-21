@@ -11,9 +11,21 @@
         <name>copado__Branch__c</name>
     </fields>
     <fields>
+        <label><!-- Data JSON --></label>
+        <name>copado__Data_JSON__c</name>
+    </fields>
+    <fields>
+        <label><!-- Definition File --></label>
+        <name>copado__DefinitionFile__c</name>
+    </fields>
+    <fields>
         <help><!-- Package versions are being created as beta and you can promote them to be released. When a version is released this checkbox will be checked. --></help>
         <label><!-- Is released --></label>
         <name>copado__Is_released__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Job Execution Id --></label>
+        <name>copado__LastJobExecutionId__c</name>
     </fields>
     <fields>
         <help><!-- Package version id is in use in order to specify ancestry among package versions and for promoting a package version. --></help>

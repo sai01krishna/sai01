@@ -4,6 +4,10 @@
         <label><!-- Copado User Story Metadata Columns --></label>
         <name>copado__Copado_User_Story_Metadata_Columns</name>
     </fieldSets>
+    <fieldSets>
+        <label><!-- MC Promotion User Story Metadata --></label>
+        <name>copado__MC_Promotion_User_Story_Metadata</name>
+    </fieldSets>
     <fields>
         <help><!-- Action to be performed with the current metadata when committing --></help>
         <label><!-- Action --></label>

@@ -469,6 +469,7 @@
                                                     <option value="Test">{!$Label.StepTypeTest}</option>
                                                     <option value="Git MetaData">{!$Label.STEP_TYPE_GIT_METADATA}</option>
                                                     <option value="Git Promotion" data-non-user-selectable="true" disabled="disabled">Git Promotion</option>
+                                                    <option value="{!$Label.Rollback}" data-non-user-selectable="true" disabled="disabled">{!$Label.Rollback}</option>
                                                     <option value="Automation">{!$Label.Automation}</option>
                                                     <option value="Function">Function</option>
                                                     <option value="Salesforce Flow">{!$Label.SALESFORCE_FLOW}</option>

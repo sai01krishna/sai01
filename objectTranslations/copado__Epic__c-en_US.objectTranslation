@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     <fields>
+        <label><!-- External ID --></label>
+        <name>External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- JIRA Key --></label>
+        <name>JIRA_Key__c</name>
+    </fields>
+    <fields>
         <label><!-- Application --></label>
         <name>copado__Application__c</name>
         <relationshipLabel><!-- Epics --></relationshipLabel>
@@ -8,6 +16,10 @@
     <fields>
         <label><!-- Cancelled Reason --></label>
         <name>copado__Cancelled_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>copado__Description__c</name>
     </fields>
     <fields>
         <label><!-- Epic Details --></label>
@@ -45,5 +57,9 @@
             <masterLabel>Planned</masterLabel>
             <translation><!-- Planned --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Technical Assumptions --></label>
+        <name>copado__Technical_Assumptions__c</name>
     </fields>
 </CustomObjectTranslation>

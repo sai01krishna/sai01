@@ -142,6 +142,15 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Job_Execution</fullName>
+        <fields>Name</fields>
+        <fields>copado__Template__c</fields>
+        <fields>copado__Source__c</fields>
+        <fields>copado__Destination__c</fields>
+        <fields>copado__Status__c</fields>
+        <label>Job Execution</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>

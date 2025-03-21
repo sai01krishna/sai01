@@ -17,6 +17,7 @@
             <operator>equals</operator>
             <value>Completed Successfully,Completed with Errors</value>
         </criteriaItems>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

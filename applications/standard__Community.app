@@ -11,4 +11,5 @@
     <tabs>standard-IdeaTheme</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>School__c</tabs>
 </CustomApplication>

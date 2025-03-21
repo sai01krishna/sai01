@@ -69,7 +69,7 @@ var apexTestResult = {
     getUserStoryAttachment: function(name, parentId){
         var me = apexTestResult;
         try{
-            var result = sforce.connection.query("Select Id, Name, Body from Attachment where Name='"+name+"' and ParentId='"+parentId+"' limit 1");
+            let result = sforce.connection.query("Select Id, Name, Body from Attachment where Name='"+name+"' and ParentId='"+parentId+"' Order By LastModifiedDate DESC limit 1");
             records = result.getArray("records");
             return records;
         }
@@ -78,39 +78,117 @@ var apexTestResult = {
             return;
         }
     },
+    getUserStoryAllAttachments: function(name, parentId){
+        try{
+            let result = sforce.connection.query("Select Id from Attachment where Name='"+name+"' and ParentId='"+parentId+"'");
+            var records = result.getArray("records");
+            return records;
+        }
+        catch(error){
+            console.error('Error getting all attachment by name and parentId: '+error);
+            return;
+        }
+    },
+    getUserStoryMetadataRecords: function(userStoryId) {
+        var me = apexTestResult;
+        try {
+            // NOTE: this will fail if any of this fields have no FLS for the current user.
+            var result = sforce.connection.query(("SELECT {Co}Metadata_API_Name__c, {Co}Type__c FROM {Co}User_Story_Metadata__c WHERE {Co}User_Story__c = '" + userStoryId + "'").replace(/\{Co\}/g, me.ns));
+
+            records = result.getArray("records");
+            return records;
+        }
+        catch(error){
+            console.error('Error getting child user story metadata records by user story id: '+error);
+            return;
+        }
+    },
     getOrgTestClasses: function(cb){
         var me = apexTestResult;
-        url = copadoApp.urlBase+'testClasses/'+copadoApp.orgId+copadoApp.urlParameters;
 
-        console.log('getOrgTestClasses, ', url);
-        
-        utilsV2.onSuccessCB = function(res){
-            console.log('getOrgTestClasses callback, Raw', res);
-            var obj = $copado.parseJSON(res);
-            console.log('getOrgTestClasses callback, ', obj);
-            
-            if(obj.ok){ //we have to check ok having a value, because is where heroku is setting the msg
-                if(me.retries>=me.maxretries){
-                    console.error('Maximum retries were reached.');
-                    return false;
-                }
-                setTimeout(function(){
-                    me.getOrgTestClasses(cb);
-                    me.retries++;
-                }, 2000);
-            }
-            else{
-                //checking is the response is an array we get sure that heroku has retrieved the list of classes
-                if(obj instanceof Array){
-                    for(var i=0; i<obj.length; i++){
-                        me.orgTestClasses.push(obj[i].n);
+        var useBackendLogic = true;
+        var isUsingDxExtension = me.isUsingDxExtension();
+        if (isUsingDxExtension) {
+            var core = me.ns ? window[me.ns.split('__')[0]] : window;
+
+            core.RetrieveOrgTestClasses.isApexTestsV2ToggleOff(function (result, event) {
+                if (event.status) {
+                    if (result == true) {
+                        useBackendLogic = false;
+                        newApexLogic();
+                    } else {
+                        useBackendLogic = true;
                     }
-                    cb();
+                } else {
+                    useBackendLogic = true;
+                }
 
-                }                
-            }            
+                if (useBackendLogic) {
+                    oldBackendLogic();
+                }
+            });
+        } else {
+            oldBackendLogic();
         }
-        utilsV2.getRemote(url);
+
+        function newApexLogic() {
+            core.RetrieveOrgTestClasses.execute(me.userStory[me.ns + 'Org_Credential__c'], function (result, event) {
+                if (event.status) {
+                    result = JSON.parse(result.replaceAll('&quot;', '"'));
+                    var testClasses = result.searchRecords;
+
+                    for (var i = 0; i < testClasses.length; i++) {
+                        me.orgTestClasses.push(testClasses[i].Name);
+                    }
+
+                    cb();
+                } else {
+                    if (me.retries >= me.maxretries) {
+                        console.error('Maximum retries were reached.');
+                        return false;
+                    }
+                    setTimeout(function () {
+                        me.getOrgTestClasses(cb);
+                        me.retries++;
+                    }, 2000);
+                }
+            });
+        }
+
+        function oldBackendLogic() {
+
+            url = copadoApp.urlBase+'testClasses/'+copadoApp.orgId+copadoApp.urlParameters;
+
+            console.log('getOrgTestClasses, ', url);
+        
+            utilsV2.onSuccessCB = function(res){
+                console.log('getOrgTestClasses callback, Raw', res);
+                var obj = $copado.parseJSON(res);
+                console.log('getOrgTestClasses callback, ', obj);
+            
+                if(obj.ok){ //we have to check ok having a value, because is where heroku is setting the msg
+                    if(me.retries>=me.maxretries){
+                        console.error('Maximum retries were reached.');
+                        return false;
+                    }
+                    setTimeout(function(){
+                        me.getOrgTestClasses(cb);
+                        me.retries++;
+                    }, 2000);
+                }
+                else{
+                    //checking is the response is an array we get sure that heroku has retrieved the list of classes
+                    if(obj instanceof Array){
+                        for(var i=0; i<obj.length; i++){
+                            me.orgTestClasses.push(obj[i].n);
+                        }
+                        cb();
+
+                    }                
+                }            
+            }
+            utilsV2.getRemote(url);
+        }
     },
     getUserStoryAttachments: function(){
         var me = apexTestResult;
@@ -150,6 +228,30 @@ var apexTestResult = {
                     me.userStoryClassesArray.push(cl);
                 }
             }
+
+            var isUsingDxExtension = me.isUsingDxExtension();
+            if (isUsingDxExtension) {
+                var metadataRecords = me.getUserStoryMetadataRecords(copadoApp.userStoryId);
+
+                for(var i = 0; i < Object.keys(metadataRecords).length; i++){
+                    var metadataRecord = metadataRecords[i];
+
+                    var fileName = metadataRecord[me.ns + 'Metadata_API_Name__c'];
+                    var fileType = metadataRecord[me.ns + 'Type__c'];
+                    var ns = fileName.split('__').length > 1 ? fileName.split('__')[0] : '';
+                    var item = {n:fileName, ns:ns};
+
+                    if (fileType == 'ApexClass') {
+                        me.userStoryClassesArray.push(item);
+                    }
+
+                    if (fileType == 'ApexTrigger') {
+                        me.userStoryTriggersArray.push(item);
+                    }
+                    
+                }
+            }
+
             return;
         }
         catch(error){
@@ -157,6 +259,19 @@ var apexTestResult = {
             console.error('Error getting attachment: '+error);
             return;
         }
+    },
+    isUsingDxExtension : function() {
+        var me = apexTestResult;
+        var DX_PLATFORM = 'SFDX';
+
+        var pipelinePlatform = 
+            me.userStory[me.ns+'Project__r'][me.ns+'Deployment_Flow__r'][me.ns+'Platform__c']
+            ||
+            me.userStory[me.ns+'Release__r'][me.ns+'Project__r'][me.ns+'Deployment_Flow__r'][me.ns+'Platform__c'];
+
+        var environmentPlatform = me.userStory[me.ns+'Environment__r'][me.ns+'Platform__c'];
+
+        return pipelinePlatform == DX_PLATFORM || environmentPlatform == DX_PLATFORM;
     },
     setCookie: function(cname, cvalue, exdays) {
         var d = new Date();
@@ -211,8 +326,14 @@ var apexTestResult = {
         apexTestsButton.attr('disabled', true);
 
         try{
-            sforce.connection.deleteIds([me._apexTestResultAttachmentID]);
-        }catch(e){}
+            let result = me.getUserStoryAllAttachments('ApexTestResult',copadoApp.userStoryId);
+            if(result.length > 0){
+                const attachmentIds = result.map(result => result.Id);
+                sforce.connection.deleteIds(attachmentIds);
+            }
+        }catch(e){
+            console.error('error occured while deleting the attachment', e);
+        }
         //launch the tests
         me.getOrgTestClasses(function(){
 
@@ -474,8 +595,12 @@ var apexTestResult = {
         var me = apexTestResult;
 
         // NOTE: this will fail if any of this fields have no FLS for the current user.
-        var soql = ("Select Id, {Co}Has_Apex_Code__c, {Co}Apex_Code_Coverage__c, "+
-            " {Co}Classes_Without_Coverage__c, {Co}Triggers_Without_Coverage__c, {Co}Failing_Methods__c"+
+        var soql = ("Select Id, {Co}Has_Apex_Code__c, {Co}Apex_Code_Coverage__c, " +
+            " {Co}Classes_Without_Coverage__c, {Co}Triggers_Without_Coverage__c, {Co}Failing_Methods__c," +
+            " {Co}Project__r.{Co}Deployment_Flow__r.{Co}Platform__c," + 
+            " {Co}Release__r.{Co}Project__r.{Co}Deployment_Flow__r.{Co}Platform__c," +
+            " {Co}Environment__r.{Co}Platform__c, " +
+            " {Co}Org_Credential__c" +
             " from {Co}User_Story__c where Id='"+copadoApp.userStoryId+"' limit 1").replace(/\{Co\}/g, me.ns);
         console.warn(soql);
         var result = sforce.connection.query(soql);

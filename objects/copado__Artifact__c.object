@@ -141,7 +141,17 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__PackageCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__PackageCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Package_Type__c</fields>
+        <fields>copado__Artifact_Version__c</fields>
+        <fields>copado__DefaultBranch__c</fields>
+        <fields>copado__DefaultPath__c</fields>
+        <label>Package Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -192,6 +202,45 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>copado__DataJSON__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Data JSON</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__DefaultBranch__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to specify the default branch in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
+        <label>Default Branch</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>copado__DefaultPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to specify the default folder of your source code in the repository from where new packages, versions, builds, images... are created. This parameter is optional.</inlineHelpText>
+        <label>Default Path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>copado__Description__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -202,6 +251,18 @@
         <trackTrending>false</trackTrending>
         <type>LongTextArea</type>
         <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>copado__LastJobExecutionId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Job Execution Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>copado__No_Namespace__c</fullName>

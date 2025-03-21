@@ -106,7 +106,6 @@
                     adjustWith();
                 },
                 getAttachments: function(){
-                    console.log('Querying attachments...');
                     var me = copadoApp;
                     var doneCount = me.jobIds.length;
                     for(var i=0; i<me.jobIds.length; i++){
@@ -147,7 +146,7 @@
                 init: function(){
                     var me = copadoApp;
                     if(me.deploymentId != ''){
-                        var s = $copado("[data-stepType='MetaData'], [data-stepType='Git MetaData'], [data-stepType='Git Promotion']");
+                        var s = $copado("[data-stepType='MetaData'], [data-stepType='Git MetaData'], [data-stepType='Git Promotion'],[data-stepType='Rollback']");
                         for(var i=0; i<s.length; i++){
                             me.jobIds.push(s[i].id.split('_')[1]);
                             console.log('Data',s[i].id.split('_')[1]);

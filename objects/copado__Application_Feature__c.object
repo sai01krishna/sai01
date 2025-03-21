@@ -141,7 +141,17 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>copado__Feature_Highlight_Panel</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Feature_Highlight_Panel</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Application__c</fields>
+        <fields>copado__Epic__c</fields>
+        <fields>copado__Product_Owner__c</fields>
+        <fields>copado__Priority__c</fields>
+        <label>Feature Highlight Panel</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Copado&apos;s Feature object enables you to manage Features related to User Stories &amp; Applications. Features are made up of multiple User Stories.</description>

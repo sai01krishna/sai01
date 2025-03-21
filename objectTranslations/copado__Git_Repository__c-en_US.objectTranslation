@@ -9,6 +9,10 @@
         <name>copado__CustomFields</name>
     </fieldSets>
     <fields>
+        <label><!-- Allow Functions Git Cache --></label>
+        <name>copado__Allow_Functions_Git_Cache__c</name>
+    </fields>
+    <fields>
         <help><!-- Base URL of your Repository branches, e.g.: https://github.com/[COMPANY]/[REPOSITORY]/tree/ --></help>
         <label><!-- Branch Base URL --></label>
         <name>copado__Branch_Base_URL__c</name>

@@ -24,5 +24,6 @@
     <tabs>standard-OtherUserProfile</tabs>
     <tabs>standard-Case</tabs>
     <tabs>standard-Forecasting3</tabs>
+    <tabs>School__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
